@@ -1,3 +1,7 @@
+# Emacs
+auto/
+
+# Jekyll/Ruby
 .bundle
 _site
 .sass-cache
