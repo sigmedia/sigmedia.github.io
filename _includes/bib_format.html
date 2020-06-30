@@ -1,0 +1,95 @@
+
+<!-- Define the bibtex sources -->
+<bibtex src="{{ site.url }}/publis/2010.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2011.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2012.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2013.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2014.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2015.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2016.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2017.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2018.bib"></bibtex>
+<bibtex src="{{ site.url }}/publis/2019.bib"></bibtex>
+<div class="bibtex_structure">
+  <div class="group year" extra="DESC number">
+    <h4 class="publi_section collapsible_section title" id="journal"></h4>
+    <div class="section_content">
+      <div class="templates"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Define template for one item -->
+<div class="bibtex_template">
+  <!-- Author -->
+  <div class="if author" style="font-weight: bold;">
+    <span class="author" max="5"></span>
+  </div>
+
+  <div>
+
+    <!-- Title -->
+    <span class="title"></span>
+
+    <!-- Link -->
+    <span class="if url">
+      <a class="url bibtex_url">
+        <span class="iconify" data-icon="ion:url" data-inline="false"></span>
+      </a>
+    </span>
+
+    <!-- DOI -->
+    <div class="if doi">
+      <a class="bibtex_url" href="http://dx.doi.org/+DOI+" extra="doi">
+        <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
+      </a>
+    </div>
+
+    <!-- Bibtex code toggle -->
+    <a class="bibtex_link" role="button">
+      <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
+    </a>
+
+    <div class="bibtexVar content" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+      <!--<div class="org-src-container"> -->
+      <pre class="src src-bibtex"><span class="bibtexraw noread"></span></pre>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <!-- Display bibliography -->
+  <div id="bibtex_display" callback="apply_collapsible(bibtex_display)"></div>
+</div>
+
+
+<script>
+ function apply_collapsible() {
+   var coll = document.getElementsByClassName("collapsible_section");
+   for (var i = 0; i < coll.length; i++) {
+     coll[i].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var content = this.nextElementSibling;
+       if (content.style.maxHeight){
+         content.style.maxHeight = null;
+       } else {
+         content.style.maxHeight = content.scrollHeight + "px";
+       }
+     });
+   }
+
+   coll = document.getElementsByClassName("bibtex_link");
+   for (var i = 0; i < coll.length; i++) {
+     coll[i].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var content = this.nextElementSibling;
+       if (content.style.maxHeight){
+         content.height = null;
+       } else {
+         content.style.maxHeight = content.scrollHeight + "px";
+       }
+     });
+   }
+ }
+</script>

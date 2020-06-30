@@ -1,0 +1,54 @@
+{% comment %}
+Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+
+1. Head over to https://realfavicongenerator.net/ to add your own favicons.
+2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
+{% endcomment %}
+
+<style>
+ .bibtexentry {
+   margin-top: 0.2em;
+   margin-bottom: 02em;
+ }
+
+ .collapsible_section {
+   color: #527d9a;
+   width: 100%;
+   text-align: left;
+ }
+
+ .active, .collapsible_section:hover {
+   background-color: #bb;
+   box-shadow: 0 0 10px gray;
+ }
+
+ .collapsible_section:after {
+   content: '\002B';
+   color: #527d9a;
+   font-weight: bold;
+   float: right;
+   margin-left: 5px;
+ }
+
+
+ .active:after {
+   content: "\2212";
+ }
+
+ h4 {
+   padding: 0px 5px 0px 5px;
+ }
+
+ .section_content {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.2s ease-out;
+   background-color: #ffffff;
+ }
+
+ .url {
+   background: url('https://api.iconify.design/il:url.svg') no-repeat center center / contain;
+ }
+</style>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/src/bibtex_js.js"></script>
