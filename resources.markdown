@@ -64,7 +64,7 @@ This database is being made free for research use. Please reference the followin
 
 Harte, N.; Gillen, E., "TCD-TIMIT: An Audio-Visual Corpus of Continuous Speech," Multimedia, IEEE Transactions on , vol.17, no.5, pp.603,615, May 2015 doi: 10.1109/TMM.2015.2407694
 
-The database can be accessed at http://sigmedia.tcd.ie/TCDTIMIT
+The database can be accessed at <http://sigmedia.tcd.ie/TCDTIMIT>
 
 ### TCD-VoIP (Sigmedia-VoIP) Listener Test Database
 
@@ -73,8 +73,46 @@ There are many types of degradation which can occur in Voice over IP calls. Degr
 #### Using the database
 
 ### Political Speech Database
+
+The Irish Political Speech Database in an English language database which contains recordings of politicians in a range of settings.
+The database spans 7 years (2006-2012) and contains speech from a single speaker.
+
+Four speech settings are included in the database: parliamentary discussions; election rallies; interviews; and inter-party conferences.
+Recordings are primarily collected from online sources such as [YouTube](https://www.youtube.com/user/FineGaelMedia) and the [digital archives of the Irish Parliament](http://oireachtas.heanet.ie/archive/?Channel=Dail).
+This introduces a large variability, both in the format and resolution of recordings, and in the range of noise and reverberation conditions encountered.
+However, it also ensures that all expressions are authentic.
+
+Annotations have been crowd-sourced for six attributes:
+
+  - Boredom
+  - Charisma
+  - Enthusiasm
+  - Inspiration
+  - Likeability
+  - Persuasion
+
+Thus the database may be used to explore the evolution of speaking style over time, and to automatically predict these six attributes from the speech.
+
+#### Using the database
+
+The database is still under construction, but will be made available in the near future. For more information, please contact Ailbhe Cullen at cullena3[a]tcd.ie.
+
+
 ### Synth Birds Database Synthesized Birds Database with Ground Truth Pitch
 
+The synthesized birds database contains the following:
+
+  1. Recordings of bird song taken from xeno-canto.org (converted to .wav).
+  2. Synthesized versions of these recordings using SMS tools (<http://mtg.upf.edu/technologies/sms>), a python implementation music synthesis toolkit, in .wav format. These audio files were synthesized using a sinusoid plus residual (SpR) system.
+  3. A ground truth pitch vector, used by the synthesis system, in .mat format (loadable to matlab).
+  4. Sine model and residual .wav files are also included.
+  5. Matlab file "a1_plot_all.m" that plots the original recording's spectrogram, the synthesized recording's spectrogram and the ground truth pitch.
+
+The bird song recordings were grouped into whistles (107 examples, 40m 09s), trills (65 examples, 13m 02s) and nasal (63 examples, 12m 32s) sounds. This data set was used in experiments for work currently submitted to Interspeech 2016.
+
+#### Using the database
+  - [Download it here!](http://www.mee.tcd.ie/~sigmedia/pmwiki/uploads/Resources.SynthBirdsData/Synth_birds_database.zip)
+  - Contact: Colm O'Reilly at oreilc16[at]tcd.ie.
 
 ## Tools
 ### Colour Transfer Algorithm
