@@ -4,6 +4,22 @@ title: Alumni
 permalink: /people/alumni
 ---
 
+## Wissam A. Jassim
+
+Wissam A. Jassim is a Research Fellow in the School of Engineering, Trinity College Dublin. He received his PhD degree in signals and systems from University of Malaya, Malaysia, in 2012. Before joining Trinity College Dublin in 2016, he was a postdoc fellow at University of Malaya from 2013 to 2016. His research interests focus on employing the neural responses of the human auditory periphery for speech processing applications such as speech quality/intelligibility assessment, emotion speech, speech/speaker identification, and speech enhancement.
+
+## Christian Saam
+
+Christian Saam is a Research Fellow based in Trinity working on speech recognition and processing in the context of multimodal interaction and translation technology. Before joining ADAPT he worked as a research assistant at Interactive Systems Lab at KIT, Germany, and on an SFI TIDA to bring Trinity translation efficiency research to industry.
+
+## Ilaria Torre
+
+Ilaria Torre is a postdoctoral research fellow funded by EDGE, a Marie Skłodowska-Curie COFUND programme. She received her PhD from the School of Psychology at Plymouth University, for her research on trust attributions to artificial agents speaking with different voices. She is interested in affective speech processing, using gamified behavioural measures to assess people's interactions with speaking machines.
+
+## Jabez Sam
+
+Jabez Sam is a Programmer at ADAPT. He develops web and mobile applications to increase visibility for the applications developed under the research. He is a Full-stack developer who has delivered software development projects in fast-paced agile environments. He is a graduate from Trinity College Dublin. He is passionate about technology. He enjoys developing robust applications that connect to the cutting edge research applications.
+
 ## Colm O'Reilly
 
 Colm O'Reilly graduated from University College Dublin in 2011 with a degree in Electronic Engineering. He worked as a Test Engineer with Analog Devices for two years before coming to Trinity College Dublin. He is did a PhD in bird species classification under the supervision of Dr. Naomi Harte.
