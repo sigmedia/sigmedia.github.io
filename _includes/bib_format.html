@@ -27,34 +27,26 @@
   </div>
 
   <div>
-
     <!-- Title -->
     <span class="title"></span>
-
-    <!-- Link -->
+  </div>
+  <div>
     <span class="if url">
       <a class="url bibtex_url">
         <span class="iconify" data-icon="ion:url" data-inline="false"></span>
       </a>
     </span>
-
-    <!-- DOI -->
-    <div class="if doi">
-      <a class="bibtex_url" href="http://dx.doi.org/+DOI+" extra="doi">
+    <span class="if doi">
+      <a class="bibtexVar"  href="http://dx.doi.org/+DOI+" extra="doi">
         <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
       </a>
-    </div>
-
-    <!-- Bibtex code toggle -->
-    <a class="bibtex_link" role="button">
+    </span>
+    <a class="bibtexVar btn" href="#+BIBTEXKEY+" extra="BIBTEXKEY" rel="modal:open">
       <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
     </a>
-
-    <div class="bibtexVar content" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
-      <!--<div class="org-src-container"> -->
-      <pre class="src src-bibtex"><span class="bibtexraw noread"></span></pre>
-      <!-- </div> -->
-    </div>
+  </div>
+  <div class="bibtexVar modal" id="+BIBTEXKEY+" extra="BIBTEXKEY">
+    <pre class="src src-bibtex"><span class="bibtexraw noread"></span></pre>
   </div>
 </div>
 
@@ -73,19 +65,6 @@
        var content = this.nextElementSibling;
        if (content.style.maxHeight){
          content.style.maxHeight = null;
-       } else {
-         content.style.maxHeight = content.scrollHeight + "px";
-       }
-     });
-   }
-
-   coll = document.getElementsByClassName("bibtex_link");
-   for (var i = 0; i < coll.length; i++) {
-     coll[i].addEventListener("click", function() {
-       this.classList.toggle("active");
-       var content = this.nextElementSibling;
-       if (content.style.maxHeight){
-         content.height = null;
        } else {
          content.style.maxHeight = content.scrollHeight + "px";
        }
