@@ -7,8 +7,6 @@ layout: home
 
 # Welcome to the Sigmedia Group website
 
-Prof Frank Boland's ThriveAudio team brings spatial audio to Google Cardboard
-
 The Signal Processing Media Applications Group (Sigmedia) is a research group in the Department of Electrical and Electronic Engineering at Trinity College Dublin. The group was started in 1998 when Prof. Anil Kokaram joined the EEE Department as a lecturer. The group has subsequently expanded and Dr. Naomi Harte joined the group as an SFI Lecturer in 2008, bringing an expertise in speech processing.
 
 
