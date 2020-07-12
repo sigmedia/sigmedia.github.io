@@ -26,6 +26,9 @@ sass:
 collections:
   posts:
     output          : true
+  staff_members:
+    output          : true
+
 
 # Handling Reading
 safe                : false
