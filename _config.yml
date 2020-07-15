@@ -26,6 +26,11 @@ sass:
 collections:
   posts:
     output          : true
+  staff_members:
+    output          : true
+  open_positions:
+    output          : true
+
 
 # Handling Reading
 safe                : false

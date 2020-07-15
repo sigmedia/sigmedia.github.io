@@ -22,11 +22,23 @@
       <div class="trigger">
         {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title and my_page.layout == "page" -%}
+        {%- if my_page.title and (my_page.layout == "page" or my_page.layout == "people_page") -%}
         <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
         <!-- {{ page }} -->
         {%- endif -%}
         {%- endfor -%}
+
+        {%- if site.open_positions.size > 0-%}
+        {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title and (my_page.layout == "open_positions_page") -%}
+        <a class="page-link" href="{{ my_page.url | relative_url }}">
+          <b>{{ my_page.title | escape }}</b>
+        </a>
+        <!-- {{ page }} -->
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endif -%}
       </div>
     </nav>
     {%- endif -%}

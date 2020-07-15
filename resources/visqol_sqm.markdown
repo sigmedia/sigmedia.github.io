@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ViSQOL: an objective speech quality model
+title: ViSQOL - an objective speech quality model
 permalink: /resources/visqol_sqm
 ---
 

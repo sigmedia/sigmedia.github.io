@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+
+    <h2>Academics</h2>
+
+    {% for staff_member in site.staff_members %}
+    {% if staff_member.position == "Academic" %}
+    <div class="profile">
+      <h3>{{ staff_member.name }}</h3>
+      <div class="profile-picture" style="float: left; width: 200px;">
+        <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+      </div>
+      <div class="profile-content">
+        <p>{{ staff_member.content | markdownify }}</p>
+        <b>More information</b>
+        <ul>
+          <li>email: <a href="mailto:{{staff_member.email}}">{{staff_member.email}}</a></li>
+          {% if staff_member.website %}
+          <li>website: <a href="{{staff_member.website}}">{{staff_member.website}}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+    <h2>Postdoc./Research fellows</h2>
+
+    {% for staff_member in site.staff_members %}
+    {% if staff_member.position == "Postdoc" %}
+    <div class="profile">
+      <h3>{{ staff_member.name }}</h3>
+      <div class="profile-picture" style="float: left; width: 200px;">
+        <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+      </div>
+      <div class="profile-content">
+        <p>{{ staff_member.content | markdownify }}</p>
+        <b>More information</b>
+        <ul>
+          <li>email: <a href="mailto:{{staff_member.email}}">{{staff_member.email}}</a></li>
+          {% if staff_member.website %}
+          <li>website: <a href="{{staff_member.website}}">{{staff_member.website}}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+    <h2>PhD Students</h2>
+
+    {% for staff_member in site.staff_members %}
+    {% if staff_member.position == "PhD" %}
+    <div class="profile">
+      <h3>{{ staff_member.name }}</h3>
+      <div class="profile-picture" style="float: left; width: 200px;">
+        <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+      </div>
+      <div class="profile-content">
+        <p>{{ staff_member.content | markdownify }}</p>
+        <b>More information</b>
+        <ul>
+          <li>email: <a href="mailto:{{staff_member.email}}">{{staff_member.email}}</a></li>
+          {% if staff_member.website %}
+          <li>website: <a href="{{staff_member.website}}">{{staff_member.website}}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</article>
