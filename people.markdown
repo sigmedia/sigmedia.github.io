@@ -134,7 +134,6 @@ Clément is is currently pursuing a PhD in Image Processing  under the supervisi
 </li>
 </ul>
 
-
 ## Alumni
 
 See [here](alumni/)
