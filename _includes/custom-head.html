@@ -61,3 +61,26 @@ Placeholder to allow defining custom head, in principle, you can add anything he
 <!-- jQuery Modal -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+<script type="text/javascript">
+    function toggle(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+
+ function togglebio(x) {
+	 var e = x.nextSibling;
+	 console.log(e)
+     if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+
+	 }
+</script>
+
+
+

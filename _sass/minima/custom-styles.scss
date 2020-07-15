@@ -1,5 +1,33 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
-h1.site-title {
-	color: #EE0;	
+
+
+.site-header  {
 }
+
+a.site-title {
+	margin-left: -2.2em;
+	padding: 0.75em;
+}
+
+.bio {
+	padding: 1em 0em;
+	display: none;
+}
+
+.name {
+	display: inline;
+	  font-weight: bold;
+}
+
+a.email {
+	display: inline;
+}
+
+a.www {
+	display: inline;
+}
+
+
+.name { min-width: 40em; }
+
