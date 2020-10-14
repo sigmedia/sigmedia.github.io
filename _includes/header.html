@@ -1,14 +1,14 @@
 <header class="site-header">
 
   <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}"> <img src="/assets/images/sigmedia_logo_white_bg.png" width="400px"/> 
+    {% assign default_paths = site.pages | map: "path" %}
+    {% assign page_paths = site.header_pages | default: default_paths %}
+    {% assign titles_size = site.pages | map: 'title' | join: '' | size %}
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}"> <img src="/assets/images/sigmedia_logo_white_bg.png" width="400px"/>
 </a>
     <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
 
-    {%- if titles_size > 0 -%}
+    {% if titles_size > 0 %}
     <nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
@@ -20,27 +20,44 @@
       </label>
 
       <div class="trigger">
-        {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title and (my_page.layout == "page" or my_page.layout == "people_page") -%}
+        <!-- =============================================== -->
+        <!-- ===== List core pages                     ===== -->
+        <!-- =============================================== -->
+        {% for path in page_paths %}
+        {% assign my_page = site.pages | where: "path", path | first %}
+        {% if my_page.title and (my_page.layout == "page" or my_page.layout == "people_page") %}
         <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
         <!-- {{ page }} -->
-        {%- endif -%}
-        {%- endfor -%}
+        {% endif %}
+        {% endfor %}
 
-        {%- if site.open_positions.size > 0-%}
-        {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title and (my_page.layout == "open_positions_page") -%}
+
+        <!-- =============================================== -->
+        <!-- ===== Dedicated toggle for position page  ===== -->
+        <!-- =============================================== -->
+        {% if site.open_positions.size > 0 %}
+           {% for path in page_paths %}
+              {% assign my_page = site.pages | where: "path", path | first %}
+              {% if my_page.title and (my_page.layout == "open_positions_page") %}
         <a class="page-link" href="{{ my_page.url | relative_url }}">
           <b>{{ my_page.title | escape }}</b>
         </a>
         <!-- {{ page }} -->
-        {%- endif -%}
-        {%- endfor -%}
-        {%- endif -%}
+              {% endif %}
+           {% endfor %}
+        {% else %}
+           {% for path in page_paths %}
+              {% assign my_page = site.pages | where: "path", path | first %}
+              {% if my_page.title and (my_page.layout == "open_positions_page") %}
+        <a class="page-link" href="{{ my_page.url | relative_url }}">
+          {{ my_page.title | escape }}
+        </a>
+        <!-- {{ page }} -->
+              {% endif %}
+           {% endfor %}
+        {% endif %}
       </div>
     </nav>
-    {%- endif -%}
+    {% endif %}
   </div>
 </header>
