@@ -1,0 +1,21 @@
+---
+layout: post
+title: UK Speech Conference 2018, 25-26 June 2018, Trinity College Dublin
+categories: speech
+tags: conference
+---
+
+# Introduction
+
+The 2018 UK Speech Conference will take place in Dublin, Ireland on the 25th and 26th of June 2018. This event aims to bring together researchers in the UK and Ireland Speech Science and Technology community, both in academia and industry, to share information about ongoing research activities, to meet old friends and make new ones.
+
+The conference is organised by the [Sigmedia Research Group](http://www.mee.tcd.ie/~sigmedia/) at Trinity College Dublin, with collaboration from the [UK Speech Community](http://www.ukspeech.org.uk/). We look forward to welcoming you all to Dublin
+
+# Important Dates
+
+  - Abstract submission: 15 May, 2018
+  - Notification of acceptance: 22 May, 2018
+  - Registration: 26 February to 15 June, 2018
+  - Conference: 25-26 June, 2018
+
+More details are available on the conference website: [http://kalman.mee.tcd.ie/ukspeech2018/](http://kalman.mee.tcd.ie/ukspeech2018/)

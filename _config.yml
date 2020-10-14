@@ -16,7 +16,7 @@ plugins             :
 # Where things are
 source              : .
 destination         : ./_site
-collections_dir     : .
+# collections_dir     : .  # NOTE: disabled as it crashes the post management! (_posts is considered empty!)
 plugins_dir         : _plugins
 layouts_dir         : _layouts
 data_dir            : _data
@@ -24,8 +24,6 @@ includes_dir        : _includes
 sass:
   sass_dir: _sass
 collections:
-  posts:
-    output          : true
   staff_members:
     output          : true
   open_positions:
