@@ -14,20 +14,33 @@ layout: default
 
     {% for staff_member in site.staff_members %}
     {% if staff_member.position == "Academic" %}
-    <div class="profile">
-      <h3>{{ staff_member.name }}</h3>
-      <div class="profile-picture" style="float: left; width: 200px;">
-        <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+    <div class="staff_member">
+      <div>
+        <span class="name"  style="font-weight: bold;">{{ staff_member.name }}</span>
+        <a href="mailto:{{staff_member.email}}">
+          <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
+        </a>
+        {% if staff_member.website %}
+        <a href="{{staff_member.website}}">
+          <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
+        </a>
+        {% endif %}
+        {% if staff_member.github %}
+        <a href="{{staff_member.github}}">
+          <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+        </a>
+        {% endif %}
+        <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+          <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
+        </a>
       </div>
-      <div class="profile-content">
-        <p>{{ staff_member.content | markdownify }}</p>
-        <b>More information</b>
-        <ul>
-          <li>email: <a href="mailto:{{staff_member.email}}">{{staff_member.email}}</a></li>
-          {% if staff_member.website %}
-          <li>website: <a href="{{staff_member.website}}">{{staff_member.website}}</a></li>
-          {% endif %}
-        </ul>
+      <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
+        <div class="profile-picture" style="float: left; width: 200px;">
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+        </div>
+        <div class="profile-content">
+          <p>{{ staff_member.content | markdownify }}</p>
+        </div>
       </div>
     </div>
     {% endif %}
@@ -38,20 +51,33 @@ layout: default
 
     {% for staff_member in site.staff_members %}
     {% if staff_member.position == "Postdoc" %}
-    <div class="profile">
-      <h3>{{ staff_member.name }}</h3>
-      <div class="profile-picture" style="float: left; width: 200px;">
-        <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+    <div class="staff_member">
+      <div>
+        <span class="name"  style="font-weight: bold;">{{ staff_member.name }}</span>
+        <a href="mailto:{{staff_member.email}}">
+          <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
+        </a>
+        {% if staff_member.website %}
+        <a href="{{staff_member.website}}">
+          <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
+        </a>
+        {% endif %}
+        {% if staff_member.github %}
+        <a href="{{staff_member.github}}">
+          <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+        </a>
+        {% endif %}
+        <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+          <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
+        </a>
       </div>
-      <div class="profile-content">
-        <p>{{ staff_member.content | markdownify }}</p>
-        <b>More information</b>
-        <ul>
-          <li>email: <a href="mailto:{{staff_member.email}}">{{staff_member.email}}</a></li>
-          {% if staff_member.website %}
-          <li>website: <a href="{{staff_member.website}}">{{staff_member.website}}</a></li>
-          {% endif %}
-        </ul>
+      <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
+        <div class="profile-picture" style="float: left; width: 200px;">
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+        </div>
+        <div class="profile-content">
+          <p>{{ staff_member.content | markdownify }}</p>
+        </div>
       </div>
     </div>
     {% endif %}
@@ -62,20 +88,34 @@ layout: default
 
     {% for staff_member in site.staff_members %}
     {% if staff_member.position == "PhD" %}
-    <div class="profile">
-      <h3>{{ staff_member.name }}</h3>
-      <div class="profile-picture" style="float: left; width: 200px;">
-        <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+
+    <div class="staff_member">
+      <div>
+        <span class="name"  style="font-weight: bold;">{{ staff_member.name }}</span>
+        <a href="mailto:{{staff_member.email}}">
+          <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
+        </a>
+        {% if staff_member.website %}
+        <a href="{{staff_member.website}}">
+          <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
+        </a>
+        {% endif %}
+        {% if staff_member.github %}
+        <a href="{{staff_member.github}}">
+          <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+        </a>
+        {% endif %}
+        <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+          <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
+        </a>
       </div>
-      <div class="profile-content">
-        <p>{{ staff_member.content | markdownify }}</p>
-        <b>More information</b>
-        <ul>
-          <li>email: <a href="mailto:{{staff_member.email}}">{{staff_member.email}}</a></li>
-          {% if staff_member.website %}
-          <li>website: <a href="{{staff_member.website}}">{{staff_member.website}}</a></li>
-          {% endif %}
-        </ul>
+      <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
+        <div class="profile-picture" style="float: left; width: 200px;">
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+        </div>
+        <div class="profile-content">
+          <p>{{ staff_member.content | markdownify }}</p>
+        </div>
       </div>
     </div>
     {% endif %}

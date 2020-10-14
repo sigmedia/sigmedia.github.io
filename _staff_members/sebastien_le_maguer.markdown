@@ -3,6 +3,7 @@ name: Sébastien Le Maguer
 position: Postdoc
 email: lemagues[at]tcd[dot]ie
 website: https://seblemaguer.github.io
+github: https://github.com/seblemaguer/
 profile_picture: Sebastien_Le_Maguer.jpg
 ---
 

@@ -3,6 +3,7 @@ name: François Pitié
 position: Academic
 email: fpitie[a]mee.tcd.ie
 website: https://francois.pitie.net/
+github: https://github.com/frcs/
 profile_picture: francois_pitie.jpg
 ---
 
