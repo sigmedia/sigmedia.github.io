@@ -10,13 +10,24 @@ layout: default
   <div class="post-content">
     {{ content }}
 
-    {% for position in site.open_positions %}
-    <div class="position">
-      <h2>{{ position.title }}</h2>
-      <p>{{ position.content | markdownify }}</p>
-      <p
+
+    {% if site.open_positions.size > 0 %}
+    <div id="open_positions">
+      <h2>Current open positions</h2>
+      <ul>
+        {% for position in site.open_positions %}
+        <li><a href="#{{ position.anchor }}"  rel="modal:open">{{ position.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+      {% for position in site.open_positions %}
+      <div id="{{ position.anchor }}" class="modal">
+        <h2>{{ position.title }} </h2>
+        <p>{{ position.content | markdownify }}</p>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    {% endif %}
   </div>
 
 </article>
