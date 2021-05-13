@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Colour Transfer Algorithm
-permalink: /resources/software/colour-transfer/
+permalink: /resources/software/colour_transfer/
 ---
 
 ## Global information
