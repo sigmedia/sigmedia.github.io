@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Softwares
-permalink: /resources/softwares
+title: Software
+permalink: /resources/software
 ---
 
-- [Colour Transfer Algorithm](software/cda)
+- [Colour Transfer Algorithm](software/colour_transfer)
 - [ViSQOL Speech Quality Metric](software/visqol_sqm)
 - [ViSQOLAudio Audio Quality Metric](software/visqol_aqm)
 - [TCD-MUSHRA Test Web UI](software/tcd_mushra)
