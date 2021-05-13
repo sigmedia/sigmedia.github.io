@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stereo Video Database
-permalink: /resources/stereo_video_database/
+permalink: /resources/dataset/stereo_video_database/
 ---
 
 ## Global information

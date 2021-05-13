@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Colour Transfer Algorithm
-permalink: /resources/cda/
+permalink: /resources/software/cda/
 ---
 
 ## Global information

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Political Speech Database
-permalink: /resources/poli_sd/
+permalink: /resources/dataset/poli_sd/
 ---
 
 ## Global information

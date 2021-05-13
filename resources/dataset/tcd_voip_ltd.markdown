@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TCD-VoIP (Sigmedia-VoIP) Listener Test Database
-permalink: /resources/tcd_voip_ltd/
+permalink: /resources/dataset/tcd_voip_ltd/
 ---
 
 ## Global information

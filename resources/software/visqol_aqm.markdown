@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ViSQOLAudio Audio Quality Metric
-permalink: /resources/visqol_aqm
+permalink: /resources/software/visqol_aqm
 ---
 
 ## Global information
