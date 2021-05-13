@@ -10,7 +10,8 @@ permalink: /resources/software/colour_transfer/
   - Contact: <pitief@tcd.ie>
   - License:
 
-![Original image, target palette and colour-tranfer.](https://francois.pitie.net/images/colourtransfer.jpg)
+<img alt="Original image, target palette and colour-tranfer.]" src="https://francois.pitie.net/images/colourtransfer.jpg" width=600 style="max-width:100%">
+
 
 ## Description
 
@@ -46,7 +47,7 @@ The techniques proposed here are example-based re-colouring methods which can be
 }
 
 @article{Pitie2007cviu,
-  title     =	{Automated colour grading using colour distribution transfer},
+  title     = {Automated colour grading using colour distribution transfer},
   journal   = {Computer Vision and Image Understanding},
   volume    = {107},
   number    = {1–2},
@@ -54,33 +55,33 @@ The techniques proposed here are example-based re-colouring methods which can be
   year      = 2007,
   note      = {Special issue on color image processing},
   issn      = {1077-3142},
-  doi       =	{http://dx.doi.org/10.1016/j.cviu.2006.11.011},
+  doi       = {http://dx.doi.org/10.1016/j.cviu.2006.11.011},
   url       = {http://www.sciencedirect.com/science/article/pii/S1077314206002189},
   author    = {François Pitié and Anil C. Kokaram and Rozenn Dahyot},
 }
 
 @INPROCEEDINGS{Pitie2007cvmp,
   author    = {Pitié, F. and Kokaram, A.},
-  booktitle =	{Visual Media Production, 2007. CVMP 2007. 4th European Conference on},
-  title     =	{The linear Monge-Kantorovitch linear colour mapping for example-based colour transfer},
+  booktitle = {Visual Media Production, 2007. CVMP 2007. 4th European Conference on},
+  title     = {The linear Monge-Kantorovitch linear colour mapping for example-based colour transfer},
   year      = 2007,
-  pages     =	{1-9},
-  month     =	{Nov},
+  pages     = {1-9},
+  month     = {Nov},
 }
 
 @Inbook{Pitie2008bookchapter,
-  author    =	{Pitie, Francois and Kokaram, Anil and Dahyot, Rozenn},
-  chapter   =	{Enhancement of Digital Photographs Using Color Transfer Techniques},
+  author    = {Pitie, Francois and Kokaram, Anil and Dahyot, Rozenn},
+  chapter   = {Enhancement of Digital Photographs Using Color Transfer Techniques},
   series    = {Image Processing Series},
-  year      =	2008,
-  month     =	{Sep},
-  day       =	09,
-  publisher =	{CRC Press},
-  pages     =	{295-321},
-  note      =	0,
+  year      = 2008,
+  month     = {Sep},
+  day       = 09,
+  publisher = {CRC Press},
+  pages     = {295-321},
+  note      = 0,
   isbn      = {978-1-4200-5452-1},
-  doi       =	{10.1201/9781420054538.ch11},
-  url       =	{http://dx.doi.org/10.1201/9781420054538.ch11}
+  doi       = {10.1201/9781420054538.ch11},
+  url       = {http://dx.doi.org/10.1201/9781420054538.ch11}
 }
 ```
 
