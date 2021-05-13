@@ -11,16 +11,16 @@ layout: default
     {{ content }}
 
 
-    {% if site.open_positions.size > 0 %}
-    <div id="open_positions">
+    {% if site.jobs.size > 0 %}
+    <div id="jobs">
       <h2>Current open positions</h2>
       <ul>
-        {% for position in site.open_positions %}
+        {% for position in site.jobs %}
         <li><a href="#{{ position.anchor }}"  rel="modal:open">{{ position.title }}</a></li>
         {% endfor %}
       </ul>
 
-      {% for position in site.open_positions %}
+      {% for position in site.jobs %}
       <div id="{{ position.anchor }}" class="modal">
         <h2>{{ position.title }} </h2>
         <p>{{ position.content | markdownify }}</p>

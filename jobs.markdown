@@ -1,7 +1,7 @@
 ---
-layout: open_positions_page
-title: Open Positions
-permalink: /open_positions/
+layout: jobs_page
+title: Jobs
+permalink: /jobs/
 ---
 
 Current positions are always listed on the main TCD webpage at [http://www.tcd.ie/vacancies](http://www.tcd.ie/vacancies).
