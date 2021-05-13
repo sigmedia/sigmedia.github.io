@@ -16,7 +16,11 @@ layout: default
     {% if staff_member.position == "Academic" %}
     <div class="staff_member">
       <div>
-        <span class="name"  style="font-weight: bold;">{{ staff_member.name }}</span>
+        <span class="name"  style="font-weight: bold;">
+          <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+            {{ staff_member.name }}
+          </a>
+        </span>
         <a href="mailto:{{staff_member.email}}">
           <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
         </a>
@@ -30,9 +34,6 @@ layout: default
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
-        <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
-          <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
-        </a>
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
@@ -53,7 +54,11 @@ layout: default
     {% if staff_member.position == "Postdoc" %}
     <div class="staff_member">
       <div>
-        <span class="name"  style="font-weight: bold;">{{ staff_member.name }}</span>
+        <span class="name"  style="font-weight: bold;">
+          <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+            {{ staff_member.name }}
+          </a>
+        </span>
         <a href="mailto:{{staff_member.email}}">
           <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
         </a>
@@ -67,9 +72,6 @@ layout: default
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
-        <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
-          <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
-        </a>
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
@@ -91,7 +93,11 @@ layout: default
 
     <div class="staff_member">
       <div>
-        <span class="name"  style="font-weight: bold;">{{ staff_member.name }}</span>
+        <span class="name"  style="font-weight: bold;">
+          <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+            {{ staff_member.name }}
+          </a>
+        </span>
         <a href="mailto:{{staff_member.email}}">
           <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
         </a>
@@ -105,9 +111,6 @@ layout: default
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
-        <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
-          <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
-        </a>
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
