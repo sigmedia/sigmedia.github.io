@@ -1,5 +1,6 @@
 
 <!-- Define the bibtex sources -->
+<bibtex src="{{ site.url }}/publis/2008.bib"></bibtex>
 <bibtex src="{{ site.url }}/publis/2010.bib"></bibtex>
 <bibtex src="{{ site.url }}/publis/2011.bib"></bibtex>
 <bibtex src="{{ site.url }}/publis/2012.bib"></bibtex>
@@ -31,6 +32,9 @@
     <span class="title"></span>
   </div>
   <div>
+    <a class="bibtexVar btn" href="#+BIBTEXKEY+" extra="BIBTEXKEY" rel="modal:open">
+      <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
+    </a>
     <span class="if url">
       <a class="url bibtex_url">
         <span class="iconify" data-icon="ion:url" data-inline="false"></span>
@@ -41,9 +45,11 @@
         <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
       </a>
     </span>
-    <a class="bibtexVar btn" href="#+BIBTEXKEY+" extra="BIBTEXKEY" rel="modal:open">
-      <span class="iconify" data-icon="zondicons:book-reference" data-inline="false"></span>
-    </a>
+    <span class="if demo">
+      <a class="bibtexVar"  href="+DEMO+" extra="demo">
+        <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+      </a>
+    </span>
   </div>
   <div class="bibtexVar modal" id="+BIBTEXKEY+" extra="BIBTEXKEY">
     <pre class="src src-bibtex"><span class="bibtexraw noread"></span></pre>
