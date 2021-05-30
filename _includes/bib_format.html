@@ -11,22 +11,28 @@
 <bibtex src="{{ site.url }}/publis/2018.bib"></bibtex>
 <bibtex src="{{ site.url }}/publis/2019.bib"></bibtex>
 
-<div class="bib_navigation_bar">
-  <ul>
-    <li><a href="#2019">2019</a></li>
-    <li><a href="#2018">2018</a></li>
-    <li><a href="#2017">2017</a></li>
-    <li><a href="#2016">2016</a></li>
-    <li><a href="#2015">2015</a></li>
-    <li><a href="#2014">2014</a></li>
-    <li><a href="#2013">2013</a></li>
-    <li><a href="#2012">2012</a></li>
-    <li><a href="#2011">2011</a></li>
-    <li><a href="#2010">2010</a></li>
-    <li><a href="#2008">2008</a></li>
-  </ul>
+<!-- Search bar -->
+<div class="bibtex_search_bar">
+  <div>
+    <select class="bibtex_search bibtex_generate_author" extra="first" search="author">
+      <option value="">Search First Author</option>
+    </select>
+    <select class="bibtex_search bibtex_generate_author" search="author">
+      <option value="">Search author</option>
+    </select>
+    <select class="bibtex_search bibtex_generate_year" search="year">
+      <option value="">Search year</option>
+    </select>
+  </div>
+  <br />
+  <div>
+    <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
+    <input type="text" class="bibtex_search form-control" id="searchbar" placeholder="Search publications">
+  </div>
 </div>
 
+
+<!-- Main structure -->
 <div class="bibtex_structure">
   <div class="group year" extra="DESC number">
     <h2 class="publi_section title" id="journal"></h2>

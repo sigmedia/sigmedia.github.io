@@ -8,6 +8,16 @@ Placeholder to allow defining custom head, in principle, you can add anything he
 <!-- Scripts mainly for the publication part -->
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/src/bibtex_js.js"></script>
+<script type="text/javascript">
+  function reset() {
+      $("select").each(function () {
+	  localStorage.setItem($(this).attr("id"),"");
+	  $(this).val("");
+      });
+      $("#searchbar").val("");
+      $("#searchbar").trigger('change');
+  }
+</script>
 
 <!-- Remember to include jQuery :) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -19,28 +29,8 @@ Placeholder to allow defining custom head, in principle, you can add anything he
 <!-- additional CSS information -->
 <style>
   /* Bibtex navigation bar */
-  .bib_navigation_bar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #AAA;
-  }
-
-  .bib_navigation_bar ul li {
-      float: left;
-  }
-
-  .bib_navigation_bar ul li a {
-      display: block;
-      color: white;
+  .bibtex_search_bar {
       text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-  }
-
-  .bib_navigation_bar ul li a:hover {
-      background-color: #111;
   }
 
   /* Bibtex item */
