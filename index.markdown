@@ -7,7 +7,7 @@ title: Signal Processing and Media Application group
 ---
 
 The Signal Processing Media Applications Group (Sigmedia) is a
-research group in the [Department of Electrical and Electronic
+research group in the [Department of Electronic and Electrical
 Engineering](https://tcd.ie/eleceng) at [Trinity College
 Dublin](https://tcd.ie/).
 
