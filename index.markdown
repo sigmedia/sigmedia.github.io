@@ -20,15 +20,15 @@ understanding in order to solve very unique problems in a range of
 domains. There are three main research themes for the group:
 
   - Digital Cinema and Restoration
-  - Video Compression
+  - Video Compression and Streaming Pipelines
   - Human Speech Communication
 
 We are well known for our work on cinema post-production and our
 motion estimation technology (in collaboration with
-[Foundry](https://foundry.com)) is used around the world for film
+[Foundry](https://foundry.com)) was used around the world for film
 special effects in movies like Matrix, Lord of the Rings, X-Men,
 Spider Man, Harry Potter and so on. This work was recognised by the
-[Academy of Motion Picture Arts and Sciences in 2007]().
+[Academy of Motion Picture Arts and Sciences in 2007](https://www.oscars.org/sci-tech/ceremonies/2007).
 
 
 ## Collaboration
