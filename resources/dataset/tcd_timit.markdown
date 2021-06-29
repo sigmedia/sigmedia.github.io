@@ -6,7 +6,7 @@ permalink: /resources/dataset/tcd_timit/
 
 ## Global information
 
-  - Download link: <http://sigmedia.tcd.ie/TCDTIMIT>
+  - Download link: <https://sigmedia.tcd.ie/>
   - Contact: nharte[at]tcd.ie
   - License:
   - Reference:
