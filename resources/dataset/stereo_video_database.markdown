@@ -6,10 +6,22 @@ permalink: /resources/dataset/stereo_video_database/
 
 ## Global information
 
-  - Download link:
   - Contact: sigmedia_database[at]mee.tcd.ie
   - License:
   - Reference:
+
+  ```bibtex
+@inproceedings{Corrigan_2010,
+    title        = {A Video Database for the Development of Stereo-3D Post-Production Algorithms},
+    author       = {David Corrigan and François Pitié and Valerie Morris and Andrew Rankin and M. Linnane and Gavin Kearney and Marcin Gorzel and M. O'Dea and C. Lee and Anil Kokaram},
+    year         = 2010,
+    month        = nov,
+    booktitle    = {2010 Conference on Visual Media Production},
+    publisher    = {{IEEE}},
+    doi          = {10.1109/cvmp.2010.16},
+    url          = {https://doi.org/10.1109/cvmp.2010.16},
+}
+  ```
 
 ## Description
 
@@ -23,8 +35,10 @@ The camera rig consists of two iconix HD-RH1 cameras mounted on an Inition 'bolt
 
 Here are a couple of examples of some stereo stills taken from the database. They are at full resolution.
 
-[FIXME: add images]
+:-------------------------:|:-------------------------:
+![](/assets/images/dataset/svdb/bubbles_left.jpg)  |  ![](/assets/images/dataset/svdb/bubbles_right.jpg)
 
 Here are some low resolution sequences that are also in the database.
 
-[FIXME: add images]
+:-------------------------:|:-------------------------:
+![](/assets/images/dataset/svdb/traffic_left.jpg)  |  ![](/assets/images/dataset/svdb/traffic_right.jpg)
