@@ -6,7 +6,7 @@ permalink: /resources/dataset/stereo_video_database/
 
 ## Global information
 
-  - Contact: sigmedia_database[at]mee.tcd.ie
+  - Contact: [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [SVD Request] (If the tag is not provided or invalid, your email will be ignored)
   - License:
   - Reference:
 

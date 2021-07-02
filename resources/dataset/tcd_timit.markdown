@@ -7,7 +7,7 @@ permalink: /resources/dataset/tcd_timit/
 ## Global information
 
   - Download link: <https://sigmedia.tcd.ie/>
-  - Contact: nharte[at]tcd.ie
+  - Contact: [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDTimit Question] (If the tag is not provided or invalid, your email will be ignored)
   - License:
   - Reference:
 

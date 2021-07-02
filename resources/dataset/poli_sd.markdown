@@ -6,12 +6,24 @@ permalink: /resources/dataset/poli_sd/
 
 ## Global information
 
-  - Download link:
-  - Contact: sigmedia_database[at]mee.tcd.ie
+  - Contact: [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [PSD Request] (If the tag is not provided or invalid, your email will be ignored)
   - License:
   - Reference:
 
 ```bibtex
+@article{Cullen2018Jun,
+    title        = {A longitudinal database of Irish political speech with annotations of speaker ability},
+    author       = {Cullen, Ailbhe and Harte, Naomi},
+    year         = 2018,
+    month        = jun,
+    journal      = {Lang. Resources {\&}. Evaluation},
+    publisher    = {Springer Netherlands},
+    volume       = 52,
+    number       = 2,
+    pages        = {401--432},
+    doi          = {10.1007/s10579-017-9401-z},
+    issn         = {1574-0218},
+}
 ```
 
 ## Description

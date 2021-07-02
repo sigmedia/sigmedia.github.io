@@ -6,12 +6,24 @@ permalink: /resources/dataset/tcdsa/
 
 ## Global information
 
-  - Download link:
-  - Contact: nharte[at]tcd.ie
+  - Contact: [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDSA Request] (If the tag is not provided or invalid, your email will be ignored)
   - Sponsor: IRCSET
   - License: The TCDSA database is made available free of charge for academic use only.
   - Reference:
 
+```bibtex
+@inproceedings{Kelly2012,
+    title        = {Speaker verification with long-term ageing data},
+    author       = {Kelly, Finnian and Drygajlo, Andrzej and Harte, Naomi},
+    year         = 2012,
+    month        = mar,
+    booktitle    = {5th IAPR International Conference on Biometrics (ICB)}},
+    publisher    = {IEEE},
+    pages        = {478--483},
+    doi          = {10.1109/ICB.2012.6199796},
+    issn         = {2376-4201},
+}
+```
 
 ## Description
 
