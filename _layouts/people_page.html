@@ -12,8 +12,10 @@ layout: default
 
     <h2>Academics</h2>
 
-    {% for staff_member in site.staff_members %}
-    {% if staff_member.position == "Academic" %}
+    {% assign _staff_members = site.staff_members | sort: "join_date" %}
+
+    {% for staff_member in _staff_members %}
+    {% if staff_member.position == "Academic" %} {% unless staff_member.leave_date %}
     <div class="staff_member">
       <div>
         <span class="name"  style="font-weight: bold;">
@@ -30,28 +32,30 @@ layout: default
         </a>
         {% endif %}
         {% if staff_member.github %}
-        <a href="{{staff_member.github}}">
+        <a href="https://www.github.com/{{staff_member.github}}">
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
-          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/>
         </div>
         <div class="profile-content">
           <p>{{ staff_member.content | markdownify }}</p>
         </div>
       </div>
     </div>
-    {% endif %}
+
+    {% endunless %} {% endif %}
     {% endfor %}
 
 
     <h2>Postdoc./Research fellows</h2>
 
-    {% for staff_member in site.staff_members %}
-    {% if staff_member.position == "Postdoc" %}
+    {% for staff_member in _staff_members %}
+    {% if staff_member.position == "Postdoc" %} {% unless staff_member.leave_date %}
+
     <div class="staff_member">
       <div>
         <span class="name"  style="font-weight: bold;">
@@ -68,28 +72,70 @@ layout: default
         </a>
         {% endif %}
         {% if staff_member.github %}
-        <a href="{{staff_member.github}}">
+        <a href="https://www.github.com/{{staff_member.github}}">
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
-          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/>
         </div>
         <div class="profile-content">
           <p>{{ staff_member.content | markdownify }}</p>
         </div>
       </div>
     </div>
-    {% endif %}
+
+    {% endunless %} {% endif %}
     {% endfor %}
 
 
     <h2>PhD Students</h2>
 
-    {% for staff_member in site.staff_members %}
-    {% if staff_member.position == "PhD" %}
+    {% for staff_member in _staff_members %}
+    {% if staff_member.position == "PhD" %} {% unless staff_member.leave_date %}
+    <div class="staff_member">
+      <div>
+        <span class="name"  style="font-weight: bold;">
+          <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+            {{ staff_member.name }}
+          </a>
+        </span>
+        <a href="mailto:{{staff_member.email}}">
+          <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
+        </a>
+        {% if staff_member.website %}
+        <a href="{{staff_member.website}}">
+          <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
+        </a>
+        {% endif %}
+        {% if staff_member.github %}
+        <a href="https://www.github.com/{{staff_member.github}}">
+          <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+        </a>
+        {% endif %}
+      </div>
+      <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
+        <div class="profile-picture" style="float: left; width: 200px;">
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/>
+        </div>
+        <div class="profile-content">
+          <p>{{ staff_member.content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+
+    {% endunless %} {% endif %}
+    {% endfor %}
+
+
+
+    <h2>Research Assistants</h2>
+
+
+    {% for staff_member in _staff_members %}
+    {% if staff_member.position == "Research Assistant" %} {% unless staff_member.leave_date %}
 
     <div class="staff_member">
       <div>
@@ -107,22 +153,61 @@ layout: default
         </a>
         {% endif %}
         {% if staff_member.github %}
-        <a href="{{staff_member.github}}">
+        <a href="https://www.github.com/{{staff_member.github}}">
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
-          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/></td>
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/>
         </div>
         <div class="profile-content">
           <p>{{ staff_member.content | markdownify }}</p>
         </div>
       </div>
     </div>
+    {% endunless %} {% endif %}
+    {% endfor %}
+
+    <h2>Alumni</h2>
+
+    {% for staff_member in _staff_members %}
+    {% if staff_member.leave_date %}
+    <div class="staff_member">
+      <div>
+        <span class="name"  style="font-weight: bold;">
+          <a href="#{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio" rel="modal:open">
+            {{ staff_member.name }}
+          </a>
+        </span>
+        <a href="mailto:{{staff_member.email}}">
+          <span class="iconify" data-icon="ion:mail" data-inline="false"></span>
+        </a>
+        {% if staff_member.website %}
+        <a href="{{staff_member.website}}">
+          <span class="iconify" data-icon="ion:earth" data-inline="false"></span>
+        </a>
+        {% endif %}
+        {% if staff_member.github %}
+        <a href="https://www.github.com/{{staff_member.github}}">
+          <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
+        </a>
+        {% endif %}
+        [{{staff_member.position}}]
+      </div>
+      <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
+        <div class="profile-picture" style="float: left; width: 200px;">
+          <img src="/staff_members/profile_pictures/{{ staff_member.profile_picture }}" width="180px"/>
+        </div>
+        <div class="profile-content">
+            <p>{{ staff_member.content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
     {% endif %}
     {% endfor %}
+
   </div>
 
 </article>
