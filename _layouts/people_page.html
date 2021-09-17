@@ -51,10 +51,10 @@ layout: default
     {% endfor %}
 
 
-    <h2>Postdoc./Research fellows</h2>
+    <h2>Research fellows</h2>
 
     {% for staff_member in _staff_members %}
-    {% if staff_member.position == "Postdoc" %} {% unless staff_member.leave_date %}
+    {% if staff_member.position == "Research Fellow" %} {% unless staff_member.leave_date %}
 
     <div class="staff_member">
       <div>
@@ -194,7 +194,7 @@ layout: default
           <span class="iconify" data-icon="ion:logo-github" data-inline="false"></span>
         </a>
         {% endif %}
-        [{{staff_member.position}}]
+        [{{staff_member.position}}, {{staff_member.leave_date}}]
       </div>
       <div class="modal" id="{{ staff_member.name | replace: ' ', '_' }}_bio" extra="bio">
         <div class="profile-picture" style="float: left; width: 200px;">
