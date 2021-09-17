@@ -1,6 +1,6 @@
 ---
 name: Ali Karaali
-position: Postdoc
+position: Research Fellow
 email:
 website: https://sites.google.com/site/axkaraali/
 profile_picture: Ali_Karaali.jpg

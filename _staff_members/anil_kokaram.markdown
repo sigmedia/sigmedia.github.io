@@ -1,7 +1,7 @@
 ---
 name: Anil Kokaram
 position: Academic
-email: anil.kokaram[a]tcd.ie
+email: anil.kokaram[a]tcd[dot]ie
 profile_picture: Anil_Kokaram.jpg
 join_date: 01/01/1998
 ---

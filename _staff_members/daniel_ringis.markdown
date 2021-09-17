@@ -1,7 +1,7 @@
 ---
 name: Daniel J Ringis
 position: PhD
-email: ringisd[a]tcd.ie
+email: ringisd[at]tcd[dot]ie
 profile_picture: Daniel_Ringis.jpg
 join_date: 01/03/2018
 ---

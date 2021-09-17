@@ -1,7 +1,7 @@
 ---
 name: Joao Cabral
-position: Postdoc
-email: cabralj[a]scss.tcd.ie
+position: Research Fellow
+email: cabralj[at]scss[dot]tcd[dot]ie
 profile_picture: Joao_Cabral.jpg
 join_date: XX/XX/XXXX
 leave_date: 31/12/2020

@@ -1,7 +1,7 @@
 ---
 name: Vibhoothi
 position: Research Assistant
-email: vibhoothi[a]tcd.ie
+email: vibhoothi[at]tcd[dot]ie
 website: https://mindfreeze.videolan.me
 profile_picture: vibhoothi.jpg
 join_date: 01/10/2020

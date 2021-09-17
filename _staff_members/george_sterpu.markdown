@@ -1,7 +1,7 @@
 ---
 name: George Sterpu
 position: PhD
-email: sterpug[a]tcd.ie
+email: sterpug[at]tcd[at]ie
 website: https://georgesterpu.github.io/
 profile_picture: George_Sterpu.jpg
 join_date: XX/XX/XXXX

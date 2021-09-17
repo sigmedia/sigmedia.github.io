@@ -1,7 +1,7 @@
 ---
 name: Naomi Harte
 position: Academic
-email: nharte[a]tcd.ie
+email: nharte[at]tcd[dot]ie
 profile_picture: Naomi_Harte.jpg
 join_date: 01/08/2005
 ---

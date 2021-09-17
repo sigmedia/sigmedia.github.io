@@ -1,6 +1,6 @@
 ---
 name: Sébastien Le Maguer
-position: Postdoc
+position: Research Fellow
 email: lemagues[at]tcd[dot]ie
 website: https://seblemaguer.github.io
 github: seblemaguer
