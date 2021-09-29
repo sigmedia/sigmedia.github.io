@@ -1,6 +1,6 @@
 ---
 name: Hugh Denman
-position: Academic
+position: Adjunct Assistant Professor (part-time)
 email: hdenman[at]tcd[dot]ie
 website: https://hughdenman.com/
 profile_picture: Hugh_Denman.jpg

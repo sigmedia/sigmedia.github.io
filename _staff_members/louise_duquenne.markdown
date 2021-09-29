@@ -1,6 +1,6 @@
 ---
 name: Louise Duquenne
-position: Research Assistant
+position: Intern Student
 emai: lduquenn[at]tcd[dot]ie
 profile_picture: Louise_Duquenne.jpg
 join_date: 2021.05.17
