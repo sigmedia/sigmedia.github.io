@@ -135,7 +135,8 @@ layout: default
 
 
     {% for staff_member in _staff_members %}
-    {% if staff_member.position == "Research Assistant" %} {% unless staff_member.leave_date %}
+    {% if (staff_member.position != "Academic") and (staff_member.position != "Research Fellow") and (staff_member.position != "PhD") %}
+    {% unless staff_member.leave_date %}
 
     <div class="staff_member">
       <div>
