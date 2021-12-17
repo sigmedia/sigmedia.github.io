@@ -96,7 +96,7 @@ This file should respect the following template:
     [leave_date: <date>]
     ---
 
-    <bibliography>
+    <biography>
 
 Here is the description of each items:
 
