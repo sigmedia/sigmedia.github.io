@@ -1,6 +1,6 @@
 ---
 name: Vibhoothi
-position: Research Assistant
+position: PhD
 email: vibhoothi[at]tcd[dot]ie
 website: https://mindfreeze.videolan.me
 profile_picture: vibhoothi.jpg
