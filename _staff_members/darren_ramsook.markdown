@@ -1,6 +1,6 @@
 ---
 name: Darren Ramsook
-position: Research Assistant
+position: PhD
 email: ramsookd[at]tcd[dot]ie
 website: http://www.darrenr.co.tt/
 profile_picture: Darren_Ramsook.png

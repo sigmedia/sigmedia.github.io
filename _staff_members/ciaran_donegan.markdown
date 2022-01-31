@@ -4,7 +4,7 @@ position: Research Assistant
 email: cidonega[at]tcd[dot]ie
 website:
 github: donegaci
-profile_picture: Ciaran_Donegan.png
+profile_picture: Ciaran_Donegan.jpg
 join_date: 2021.07.01
 ---
 
