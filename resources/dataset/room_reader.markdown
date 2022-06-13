@@ -15,7 +15,7 @@ permalink: /resources/dataset/room_reader/
 @inproceedings{reverdy2021,
     title = "{R}oomReader: A Multimodal Corpus of Online Multiparty Conversational Interactions",
     author = "Reverdy, Justine  and
-      Russell, Sam O'Connor  and
+      O'Connor Russell, Sam  and
       Duquenne, Louise  and
       Garaialde, Diego  and
       Cowan, Benjamin  and
