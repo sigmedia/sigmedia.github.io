@@ -6,7 +6,7 @@ permalink: /resources/dataset/room_reader/
 
 ## Global information
 
-  - Download link: Coming soon
+  - Download link: <https://sigmedia.tcd.ie/>
   - Contact: [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [RoomReader Corpus Question] (If the tag is not provided or invalid, your email will be ignored)
   - License:
   - Reference:
