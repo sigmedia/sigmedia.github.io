@@ -6,3 +6,7 @@ gem "nokogiri", ">= 1.11.0"
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
+
+gem "ffi", "~> 1.15"
+
+gem "webrick", "~> 1.7"
