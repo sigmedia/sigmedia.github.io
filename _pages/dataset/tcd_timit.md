@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TCD Timit Audio-Visual Speech Database.
-permalink: /resources/dataset/tcd_timit/
+permalink: /datasets/tcd_timit/
 ---
 
 ## Global information

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stereo Video Database
-permalink: /resources/dataset/stereo_video_database/
+permalink: /datasets/stereo_video_database/
 ---
 
 ## Global information
@@ -36,9 +36,9 @@ The camera rig consists of two iconix HD-RH1 cameras mounted on an Inition 'bolt
 Here are a couple of examples of some stereo stills taken from the database. They are at full resolution.
 
 :-------------------------:|:-------------------------:
-![](/assets/images/dataset/svdb/bubbles_left.jpg)  |  ![](/assets/images/dataset/svdb/bubbles_right.jpg)
+![](/assets/images/dataset/svdb/bubbles_left.jpg){: width="350"}  |  ![](/assets/images/dataset/svdb/bubbles_right.jpg){: width="350"}
 
 Here are some low resolution sequences that are also in the database.
 
 :-------------------------:|:-------------------------:
-![](/assets/images/dataset/svdb/traffic_left.jpg)  |  ![](/assets/images/dataset/svdb/traffic_right.jpg)
+![](/assets/images/dataset/svdb/traffic_left.jpg){: width="350"}  |  ![](/assets/images/dataset/svdb/traffic_right.jpg){: width="350"}

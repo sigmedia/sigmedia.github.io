@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trinity College Dublin Speaker Ageing (TCDSA) Database
-permalink: /resources/dataset/tcdsa/
+permalink: /datasets/tcdsa/
 ---
 
 ## Global information

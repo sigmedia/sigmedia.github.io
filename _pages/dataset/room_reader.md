@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RoomReader Corpus.
-permalink: /resources/dataset/room_reader/
+permalink: /datasets/room_reader/
 ---
 
 ## Global information

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Synth Birds Database - Synthesized Birds Database with Ground Truth Pitch
-permalink: /resources/dataset/syn_bird/
+permalink: /datasets/syn_bird/
 ---
 
 ## Global information
