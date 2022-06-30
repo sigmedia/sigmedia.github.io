@@ -1,95 +1,69 @@
-title               : SIGMEDIA - Signal Processing and Media Application
-email               : ""
-# description         : >- # this means to ignore newlines until "baseurl:"
-#   A description
-baseurl             : "" # the subpath of your site, e.g. /blog
-url                 : "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username    : jekyllrb
-github_username     :  sigmedia
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Build settings
-theme               : minima
-plugins             :
-  - jekyll-feed
+# Site settings
+title:  Sigmedia - Signal Processing and Media Application
+author: Sigmedia
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: ""
 
+google_analytics: ""
 
-# Where things are
-source              : .
-destination         : ./_site
-# collections_dir     : .  # NOTE: disabled as it crashes the post management! (_posts is considered empty!)
-plugins_dir         : _plugins
-layouts_dir         : _layouts
-data_dir            : _data
-includes_dir        : _includes
-sass:
-  sass_dir: _sass
-collections:
-  staff_members:
-    output          : true
-  jobs:
-    output          : true
+include:
+  - _pages
 
+sass_dir: ./_sass
 
-# Handling Reading
-safe                : false
-include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
-keep_files          : [".git", ".svn"]
-encoding            : "utf-8"
-markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
-strict_front_matter : false
-
-# Filtering Content
-show_drafts         : null
-limit_posts         : 0
-future              : false
-unpublished         : false
-
-# Plugins
-whitelist           : []
-plugins             : []
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Conversion
-markdown            : kramdown
-highlighter         : rouge
-lsi                 : false
-excerpt_separator   : "\n\n"
-incremental         : false
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-# Serving
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
+
+# Where things are 
+source              : .
+destination         : ./_site
+
 detach              : false
-port                : 4000
-host                : 127.0.0.1
-baseurl             : "" # does not include hostname
 show_dir_listing    : false
-
-# Outputting
 permalink           : date
 paginate_path       : /page:num
 timezone            : null
+port                : 4000
+host                : 127.0.0.1
 
-quiet               : false
-verbose             : false
-defaults            : []
-
-liquid:
-  error_mode        : warn
-  strict_filters    : false
-  strict_variables  : false
-
-# Markdown Processors
-rdiscount:
-  extensions        : []
-
-redcarpet:
-  extensions        : []
-
-kramdown:
-  auto_ids          : true
-  entity_output     : as_char
-  toc_levels        : [1, 2, 3, 4, 5, 6]
-  smart_quotes      : lsquo,rsquo,ldquo,rdquo
-  input             : GFM
-  hard_wrap         : false
-  footnote_nr       : 1
-  show_warnings     : false
+collections:
+  members:
+    output          : true
+    sort_by         : date
+  # TODO: Fix the Layout before enabling.
+  #blog:
+  #  output          : true
+  #  sort_by         : date
+  # permalink       : /:collection/:date/:name
