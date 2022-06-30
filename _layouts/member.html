@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white px-0">
+        <li class="breadcrumb-item"><a href="/team">Team</a></li>
+        <li class="breadcrumb-item text-capitalize"><a href="/team#{{ page.category }}">{{ page.category }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    </ol>
+</nav>
+
+<div class="text-center mt-5">
+    <!-- Avatar -->
+    <img src="/assets/images/team/{{ page.image }}"
+         style="max-width: 200px; border-radius: 50%;" />
+
+    <!-- Name & Role -->
+    <h1>{{ page.title }}</h1>
+    <h3>{{ page.role }}</h3>
+
+    <!-- Social -->
+    {% assign member = page %}
+    {%- include team_member_social.html -%}
+</div>
+
+<!-- Education -->
+{% if page.education %}
+<div>
+    <h3>Education</h3>
+    <ul>
+        {% for education in page.education %}
+        <li>{{ education }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<!-- Bio -->
+<div>
+    <h3>Bio</h3>
+    {{ content }}
+</div>
