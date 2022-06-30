@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AVSR-tf1 - Audio-Visual Speech Recognition using Sequence to Sequence Models
-permalink: /resources/software/avsr_tf1
+permalink: /software/avsr_tf1
 ---
 
 ## Global information

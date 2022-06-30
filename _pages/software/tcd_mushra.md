@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TCD-MUSHRA Web App
-permalink: /resources/software/tcd_mushra
+permalink: /software/tcd_mushra
 ---
 
 ## Global information

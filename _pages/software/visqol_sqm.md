@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ViSQOL - an objective speech quality model
-permalink: /resources/software/visqol_sqm
+permalink: /software/visqol_sqm
 ---
 
 ## Global information

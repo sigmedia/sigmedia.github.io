@@ -1,7 +1,7 @@
 ---
 layout: post
 title: pyVSR - Python toolkit for Visual Speech Recognition
-permalink: /resources/software/pyvsr
+permalink: /software/pyvsr
 ---
 
 ## Global information
