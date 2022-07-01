@@ -6,13 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title:  Sigmedia - Signal Processing and Media Application
+title:  Sigmedia - Signal Processing and Media Applications
 author: Sigmedia
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Sigmedia Signal Processing and Media Applications, is a research group in
+  Trinity College Dublin started in early 2000s by Anil Kokaram. Current focus
+  of the research group is on signal processing applications for both video and
+  audio related applications.
 baseurl: ""
 url: ""
 
