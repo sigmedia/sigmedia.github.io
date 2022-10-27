@@ -11,4 +11,4 @@ SIGMEDIA Members D.J. Ringis and Varoun Hanooman alongside teamates Pheobe Sun a
 
 The Future of Vision challenge invites all high level coders and programmers of Trinity and beyond to sink their teeth into machine learning & computer vision in order to tackle Huawei’s challenge.
 
-![award photo](/assets/images/posts/FOV/award.jpeg)
+![award photo](/assets/images/posts/FOV/award.jpeg){: width="450"}

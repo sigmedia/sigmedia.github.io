@@ -1,39 +1,37 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+<div id="footer" class="site-footer mt-5">
+	<div class="mt-3">
+		<div class="row d-flex">
 
-  <div class="wrapper">
+			<div class="col-sm-6">
+				<p class="font-weight-bold">{{ site.author }}</p>
 
-      <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
+				<ul class="list-unstyled list-inline">
+					<li class="list-inline-item">
+						<a href="https://u-paris.fr/en/498-2/">
+							<img class="img-fluid" src="/assets/images/tcd_logo.png" style="max-height: 80px;">
+						</a>
+					</li>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-<a href="https://tcd.ie"><img src='/assets/images/tcd-logo.png'></a>
-          </li>
-			<!-- <li class="p-name">
-				 {%- if site.author -%}
-				 {{ site.author | escape }}
-				 {%- else -%}
-				 {{ site.title | escape }}
-				 {%- endif -%}
-				 </li>
-			-->
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
+			</div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
+			<div class="col-sm-3">
+				<p class="font-weight-bold">Links</p>
+				<ul class="list-unstyled">
+					<li><a href="https://github.com/sigmedia">Github</a></li>
+				</ul>
+			</div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
+			<div class="col-sm-3">
+				<p class="font-weight-bold">Contact</p>
+				Electronic & Electrical Engineering, <br>
+				Aras an Phiarsaigh, <br>
+				Trinity College Dublin, <br>
+				Dublin 2, Ireland, <br>
+			</div>
+		</div>
 
-  </div>
-
-</footer>
+		<div class="footer-copyright text-center py-3">
+			© 2022 {{ site.title }}
+		</div>
+	</div>
+</div>
