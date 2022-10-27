@@ -19,4 +19,6 @@ social:
 Hao Wu is a PhD researcher at the SFI ADAPT research centre ([personal page on
 the ADAPT website](https://www.adaptcentre.ie/experts/hao-wu/)) and based in the
 Electronic Engineering department at Trinity College Dublin, Sigmedia group. Hao
-works on the topic of automatic generation of intra-video comments. 
+works on the topic of automatic generation of intra-video comments.
+
+Hao have recently submitted and sucessfully defeneded his thesis.

@@ -1,6 +1,6 @@
 ---
 layout: member
-category: Research-Assistant
+category: alumni
 title: Sophia Rosney
 date: 2020-10-01
 image: rosneys.jpg

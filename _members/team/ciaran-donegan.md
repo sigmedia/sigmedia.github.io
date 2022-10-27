@@ -1,6 +1,6 @@
 ---
 layout: member
-category: Research-Assistant
+category: alumni
 title: Ciaran Donegan
 date: 2021-07-01
 image: cidonega.jpg

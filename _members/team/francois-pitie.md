@@ -7,7 +7,7 @@ image: 'pitief.jpg'
 role: Ussher Assistant Professor
 permalink: 'team/pitief'
 social:
-    twitter: 
+    twitter:
     linkedin: https://www.linkedin.com/in/fran%C3%A7ois-piti%C3%A9-6182718b/
     google-scholar: https://scholar.google.com/citations?user=lOaoO74AAAAJ&hl=en
     github: https://github.com/frcs
