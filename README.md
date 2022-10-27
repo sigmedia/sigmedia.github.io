@@ -152,6 +152,10 @@ have it inside.
 To add a new reference, you need to update the file `publis/<year>.bib` where `<year>` corresponds to year the of the publication to add.
 If the file doesn't exist, you can create it.
 
+If the bibtex source for the desiginated `<year>` is not found, then you should
+create an entry of `<bibtex src="{{ site.url }}/publis/<year>.bib"></bibtex>` in
+`bib_format.html` inside `_includes`.
+
 #### Global formatting
 
 In order to have the most homogeneous format, please use `bibtex-tidy`.
@@ -180,4 +184,5 @@ To update or remove information, simply update or delete the markdown file assoc
 
 ## Template Information
 
-This website is based on [RT2Lab tempalte](https://github.com/rt2lab/rt2lab.github.io) which uses [Bootstrap](https://getbootstrap.com/).
+This website is using [Bootstrap](https://getbootstrap.com/) adapted from
+[RT2Lab template](https://github.com/rt2lab/rt2lab.github.io).
