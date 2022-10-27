@@ -4,7 +4,7 @@ position: PhD
 email: gowerm[at]tcd[dot]ie
 website:
 github: https://github.com/MeeganG
-profile_picture: Samantha_Kotey.jpg
+profile_picture: Meegan_Gower.jpg
 join_date: 2022.03.01
 ---
 
