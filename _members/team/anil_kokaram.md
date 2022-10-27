@@ -3,14 +3,14 @@ layout: member
 category: staff
 title: Anil Kokaram
 image: akokaram.jpg
-role: Professor/Head of Department
+role: Professor
 date: 1998-01-01
 permalink: 'team/anil-kokaram'
 social:
   twitter:
   linkedin: https://www.linkedin.com/in/anil-kokaram-8661417/
   google-scholar: https://scholar.google.co.in/citations?user=uuacDrAAAAAJ&hl=en
-  github: 
+  github:
   website:
   orcid:
   wikipedia: https://en.wikipedia.org/wiki/Anil_Kokaram

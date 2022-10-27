@@ -4,16 +4,16 @@ category: staff
 title: 'Naomi Harte'
 image: 'nharte.jpg'
 date: 2005-08-01
-role: Assosiate Professor
+role: Professor
 permalink: 'team/nharte'
 social:
-    twitter: 
+    twitter:
     linkedin: https://www.linkedin.com/in/prof-naomi-harte/
     google-scholar: https://scholar.google.com/citations?user=0GswUfcAAAAJ&hl=en
-    github: 
+    github:
     website: https://people.tcd.ie/Profile?Username=nharte
     orcid:
-    research-gate: 
+    research-gate:
     email: nharte@tcd.ie
 ---
 
@@ -39,4 +39,3 @@ machine learning, but also requires an understanding of how humans interact. Her
 current research projects include audio-visual speech recognition, speech
 synthesis evaluation, multimodal speech analysis, and birdsong. Her industrial
 background brings a real-world approach to her research.
-
