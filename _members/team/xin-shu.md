@@ -9,6 +9,7 @@ social:
     linkedin: https://www.linkedin.com/in/xin-shu-482320196/
     github: https://github.com/Xin-Shu
     website:
+    orcid: https://orcid.org/0009-0000-8337-331X
     email: shuxi@tcd.ie
 ---
 
