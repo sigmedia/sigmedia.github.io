@@ -1,6 +1,6 @@
 ---
 layout: member
-category: Alumni
+category: alumni
 title: Varoun Hanooman
 date: 2020-08-01
 image: hanoomav.jpg
