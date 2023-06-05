@@ -1,6 +1,6 @@
 ---
-layout: member 
-category: Postdoc
+layout: member
+category: alumni
 title: Justine Reverdy
 date: 2020-12-01
 image: reverdyj.png
@@ -25,4 +25,4 @@ particular linguistic alignment phenomena. She holds a Master’s Degree in
 Natural Language Processing, Text and Speech, from the University Grenoble Alps.
 Her interests encompass multimodal, human and computer-mediated interactions,
 spontaneous dialogue analysis, along with the quantification of behaviours,
-social signals, and communication patterns. 
+social signals, and communication patterns.

@@ -1,6 +1,6 @@
 ---
-layout: member 
-category: PhD-Student
+layout: member
+category: alumni
 title: Hao Wu
 date: 2019-08-01
 image: haow.jpg
