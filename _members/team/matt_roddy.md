@@ -8,10 +8,10 @@ role: PhD Student
 permalink: 'team/matt-roddy'
 social:
     twitter:
-    linkedin:
-    google-scholar:
-    github:
-    website:
+    linkedin: https://ie.linkedin.com/in/matthew-roddy-45966267
+    google-scholar: https://scholar.google.com/citations?user=dol_RJ8AAAAJ&hl=en
+    github: https://github.com/mattroddy
+    website: https://mattroddy.github.io/
     email: roddym@tcd.ie
     orcid:
 ---
