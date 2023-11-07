@@ -10,6 +10,7 @@ social:
     linkedin: https://www.linkedin.com/in/cl%C3%A9ment-bled-2041b4171/
     github: https://github.com/MrBled
     email: bledc@tcd.ie
+    google-scholar: https://scholar.google.co.in/citations?user=pZDaM0QAAAAJ&hl=en&oi=ao
 
 ---
 
