@@ -1,15 +1,15 @@
 ---
 layout: member 
-category: Research-Assistant
+category: PhD-Student
 title: Vibhoothi
 date: 2020-10-01
 image: vibhoothi.jpg
-role: Research Assistant
+role: PhD Student/Research Assistant
 permalink: 'team/vibhothi'
 social:
     twitter: https://twitter.com/vibhoothi
     linkedin: https://linkedin.com/in/vibhoothi
-    google-scholar:
+    google-scholar: https://scholar.google.co.in/citations?user=NrStLHAAAAAJ&hl=en
     github: https://github.com/vibhoothi
     website: https://mindfreeze.videolan.me
     email: vibhoothi@tcd.ie
