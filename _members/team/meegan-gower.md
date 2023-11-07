@@ -4,7 +4,7 @@ category: PhD-Student
 title: Meegan Desiree Gower
 date: 2021-12-01
 image: gowerm.jpg
-role: PhD Student
+role: PhD Student/Research Assistant
 permalink: 'team/gowerm'
 social:
     linkedin: https://linkedin.com/in/meegan-gower
@@ -24,11 +24,3 @@ addition to the health sector developing predictive machine learning
 applications for business deployment. She is now a PhD student investigating the
 development of 360 audiovisual technology for monitoring biodiversity as part
 of the Kinsella E3 – Balanced Solutions for a Better World programm.
-Darren received his BSc. in Electrical and Computer Engineering and MSc. in Data
-Science from the University of the West Indies. His current research area is
-perceptually motivated video restoration using Deep Neural Networks (DNNs),
-which involves the use of non-traditional perceptual measures and approximations
-as part of the loss function. His work shows that there are potential gains to
-be made using these perceptual losses. These improvements are targeted towards
-User-Generated Video content is the common type of Video found in
-YouTube and Facebook.
