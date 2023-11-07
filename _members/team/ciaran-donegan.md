@@ -12,7 +12,7 @@ social:
     email: cidonega@tcd.ie
 ---
 
-Ciarán Donegan is a research assistant in the Sigmedia group where he is working
+Ciarán Donegan was a research assistant in the Sigmedia group where he is working
 on an Enterprise Ireland funded project. The project aims to create a
 semi-automated solution to the live broadcasting of soccer matches through deep
 learning and image/video processing. He completed his Bachelor's (BAI) and

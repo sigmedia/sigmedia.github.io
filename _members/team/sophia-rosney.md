@@ -12,7 +12,7 @@ social:
     email: rosneys@tcd.ie
 ---
 
-Sophia Rosney is a research assistant under the supervision of Anil Kokaram at
+Sophia Rosney was a research assistant under the supervision of Anil Kokaram at
 Trinity College Dublin. She is currently working on Footballarama, an Enterprise
 Ireland-funded video processing project which aims to develop a semi-automated
 method of filming and broadcasting live soccer games. She graduated with a BAI
