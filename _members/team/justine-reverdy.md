@@ -17,7 +17,7 @@ social:
     orcid:
 ---
 
-Justine Reverdy is a postdoctoral research fellow at Trinity College Dublin,
+Justine Reverdy was a postdoctoral research fellow at Trinity College Dublin,
 working on RoomReader, a research project in association with UCD, within the
 ADAPT Centre. She recently completed her PhD in the domain of Computational
 Linguistics that focused on the analysis of task-based Interactions, in
