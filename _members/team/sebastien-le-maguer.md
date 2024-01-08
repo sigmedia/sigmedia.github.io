@@ -1,6 +1,6 @@
 ---
 layout: member
-category: Postdoc
+category: alumni
 title: Sébastien Le Maguer
 date: 2018-10-01
 image: lemagues.jpg
@@ -13,7 +13,7 @@ social:
     google-scholar: https://scholar.google.com/citations?user=AbG-KJwAAAAJ&hl=en
     website: https://seblemaguer.github.io
     orcid: https://orcid.org/0000-0003-0407-8318
-    email: lemagues@tcd.ie
+    email: sebastien.lemaguer@helsinki.fi
 ---
 
 
