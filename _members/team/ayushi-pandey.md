@@ -1,6 +1,6 @@
 ---
 layout: member
-category: PhD-Student
+category: alumni
 title: Ayushi Pandey
 date: 2019-09-24
 image: pandeya.jpg

@@ -1,6 +1,6 @@
 ---
-layout: member 
-category: PhD-Student
+layout: member
+category: alumni
 title: Mark Anderson
 date: 2019-10-01
 image: andersm3.jpg

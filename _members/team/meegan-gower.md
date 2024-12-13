@@ -4,7 +4,7 @@ category: PhD-Student
 title: Meegan Desiree Gower
 date: 2021-12-01
 image: gowerm.jpg
-role: PhD Student/Research Assistant
+role: PhD Student
 permalink: 'team/gowerm'
 social:
     linkedin: https://linkedin.com/in/meegan-gower
