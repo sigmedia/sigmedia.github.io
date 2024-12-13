@@ -11,7 +11,7 @@ social:
   linkedin: https://www.linkedin.com/in/petersnils/
   google-scholar: https://scholar.google.com/citations?user=Si8P2FoAAAAJ
   github: https://github.com/Nilson
-  website:
+  website: https://peoplefinder.tcd.ie/Profile?Username=petersn
   orcid:
   wikipedia:
   email: Nils.Peters@tcd.ie
