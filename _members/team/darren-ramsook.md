@@ -1,10 +1,10 @@
 ---
 layout: member
-category: PhD-Student
+category: Postdoc
 title: Darren Ramsook
 date: 2020-08-01
 image: ramsookd.jpg
-role: PhD Student
+role: Research Fellow
 permalink: 'team/ramsookd'
 social:
     linkedin: https://ie.linkedin.com/in/darren-ramsook

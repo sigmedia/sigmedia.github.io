@@ -4,7 +4,7 @@ category: PhD-Student
 title: Xin Shu
 date: 2022-09-01
 image: xin-shu.jpg
-role: PhD Student/Research Assistant
+role: PhD Student
 social:
     linkedin: https://www.linkedin.com/in/xin-shu-482320196/
     github: https://github.com/Xin-Shu
