@@ -38,3 +38,93 @@ p {
   object-fit: cover;
   border-radius: 8px;
 }
+
+/* General Section Styling */
+.research-themes {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.research-themes h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Flex Container for Themes */
+.themes-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Theme Box */
+.theme-box {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.theme-box h3 {
+  font-size: 1.3rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.theme-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-box li {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Highlight Overlapping Theme */
+.theme-overlap {
+  background: #fef6e0;
+  border-color: #f2d085;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+}
+
+.collaboration-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.collaboration-category {
+  margin-bottom: 30px;
+}
+
+.collaboration-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.collaboration-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-item img {
+  max-width: 100px;
+  max-height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-item img:hover {
+  transform: scale(1.1);
+}

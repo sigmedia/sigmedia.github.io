@@ -1,0 +1,30 @@
+<div class="collaboration-section">
+
+    <!-- Research Bodies -->
+    <div class="collaboration-category">
+        <h3>Research Bodies</h3>
+        <div class="collaboration-logos">
+            {% for body in site.data.collaborations.research_bodies %}
+            <div class="logo-item">
+                <a href="{{ body.url }}" target="_blank" rel="noopener noreferrer" title="{{ body.name }}">
+                    <img src="{{ body.logo }}" alt="{{ body.name }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Industrial Collaboration -->
+    <div class="collaboration-category">
+        <h3>Industrial Collaboration</h3>
+        <div class="collaboration-logos">
+            {% for industry in site.data.collaborations.industrial_collaborations %}
+            <div class="logo-item">
+                <a href="{{ industry.url }}" target="_blank" rel="noopener noreferrer" title="{{ industry.name }}">
+                    <img src="{{ industry.logo }}" alt="{{ industry.name }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

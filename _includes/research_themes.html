@@ -1,0 +1,35 @@
+<div class="research-themes">
+    <h2>Research Themes</h2>
+
+    <div class="themes-container">
+        <!-- Audio/Speech -->
+        <div class="theme-box theme-audio">
+            <h3>Audio/Speech Research</h3>
+            <ul>
+                {% for item in site.data.research_areas.audio %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Audio/Visual Overlap -->
+        <div class="theme-box theme-overlap">
+            <h3>Audio-Visual Research</h3>
+            <ul>
+                {% for item in site.data.research_areas.overlap %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Image/Video -->
+        <div class="theme-box theme-video">
+            <h3>Image/Video Research</h3>
+            <ul>
+                {% for item in site.data.research_areas.video %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
