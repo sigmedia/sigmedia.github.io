@@ -16,7 +16,7 @@ During the meeting, each partner presented their plans, outlining key contributi
 The meeting not only served as a platform for strategic planning but also laid the groundwork for seamless cooperation and synergy among the consortium members. As the EMERALD Project takes its first steps, the shared commitment and enthusiasm of the partners promise an exciting journey ahead.
 
 
-![Emerald Kickoff](/assets/images/posts/emerald_kickoff.png){: width="100%" }
+![Emerald Kickoff](/assets/images/posts/emerald_kickoff.jpg){: width="100%" }
 
 
 Stay tuned for regular updates as the EMERALD Project progresses towards its goals.
