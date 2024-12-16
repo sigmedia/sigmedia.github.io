@@ -15,16 +15,30 @@ social:
 ---
 
 
-Rishabh Jain is originally from Delhi, India and he did his Bachelors from
-2015-2019 at the Vellore Institute of Technology (VIT) in ‘Computer Science and
-Engineering with specialization in Bioinformatics’. His thesis work included
-‘Patient Health Monitoring System and Detection of Atrial Fibrillation, Fall,
-and Air Pollutants Using IoT Technologies’.  After graduating from VIT, he did
-his Masters at the University of Galway (NUIG) from 2019-2020. His research
-thesis included working with Face Recognition and Deep learning technologies.
-Specifically, he worked to create a methodology for ‘Extracting Frontal facial
-region in videos based on face recognition and pose estimation in videos’.
-Rishabh is currently working on DTIF DAVID Project as a Research Assistant, and
-is also a first year PhD student at NUIG. His research interests include working
-with Text-to-Speech (TTS) and Automatic Speech Recognition (ASR) technologies
-specifically in the domain of Child Speech. 
+RISHABH JAIN received the B.Tech. degree in computer science and engineering
+from the Vellore Institute of Technology (VIT) in 2019, and the M.S. degree in
+data analytics from the University of Galway, Ireland in 2020. He received his
+Ph.D. degree in Sound Processing and Artificial Intelligence from the University
+of Galway under the guidance of Dr. Peter Corcoran in 2024. He is currently
+working as a Postdoctoral Research Fellow at Trinity College Dublin with Dr.
+Naomi Harte. His research interests include machine learning and artificial
+intelligence, specifically in the domains of speech understanding,
+text-to-speech, speaker recognition, automatic speech recognition, and
+audio-visual speech recognition.
+
+
+Rishabh has extensive experience as a Research Assistant at the University of
+Galway, where he worked on the DTIF-DAVID Project, a collaboration between
+XPERI, SoapBox Labs, and University of Galway funded by Enterprise Ireland (EI).
+He also served as a Research Scientist at Oxford Wave Research Ltd, conducting
+research on training models in Automatic Speech Recognition (ASR) and Large
+Languae Models (LLMs) for low-resource languages.
+
+
+His Ph.D. research focused on enhancing child speech technologies in
+Text-to-Speech (TTS) and Speech-To-Text (STT), optimizing models for realistic
+synthetic child speech, improving child ASR performance, applying data
+augmentation techniques, integrating TTS and ASR technologies into interactive
+smart toys, and developing facial animation pipelines for synthetic-speaking
+children, with a strong emphasis on creating nuanced, ethical applications in
+speech technology for children.
