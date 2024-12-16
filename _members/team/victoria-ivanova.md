@@ -3,7 +3,7 @@ layout: member
 category: PhD-Student
 title: Victoria Ivanova
 date: 2024-09-01
-image: victoria-ivanova.jpeg
+image: victoria-ivanova.jpg
 role: PhD Student
 permalink: 'team/victoria-ivanova'
 social:

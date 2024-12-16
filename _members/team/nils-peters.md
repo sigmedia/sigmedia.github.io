@@ -2,7 +2,7 @@
 layout: member
 category: staff
 title: Nils Peters
-image: petersn.jpeg
+image: petersn.jpg
 role: Assistant Professor
 date: 2024-09-01
 permalink: 'team/nils-peters'

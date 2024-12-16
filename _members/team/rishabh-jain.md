@@ -3,7 +3,7 @@ layout: member
 category: Postdoc
 title: Rishabh Jain
 date: 2024-11-01
-image: rishabhjain.jpeg
+image: rishabhjain.jpg
 role: Research Fellow
 permalink: 'team/rishabh-jain'
 social:

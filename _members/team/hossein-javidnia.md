@@ -2,7 +2,7 @@
 layout: member
 category: staff
 title: Hossein Javidnia
-image: javidnih.jpeg
+image: javidnih.jpg
 role: Assistant Professor
 date: 2024-04-01
 permalink: 'team/hossein-javidnia'

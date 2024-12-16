@@ -2,7 +2,7 @@
 layout: member
 category: staff
 title: Anil Kokaram
-image: akokaram.jpeg
+image: akokaram.jpg
 role: Professor
 date: 1998-01-01
 permalink: 'team/anil-kokaram'
