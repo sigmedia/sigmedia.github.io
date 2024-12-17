@@ -10,3 +10,44 @@ layout: default
     <!-- Render Main Content -->
     {{ content }}
 </div>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent-banner" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  z-index: 1000;">
+  <p style="margin: 0;">
+    This website uses cookies to ensure you get the best experience. 
+    <a href="/privacy-policy" style="color: #f1d600; text-decoration: underline;">Learn more</a>
+    <button id="cookie-consent-accept" style="
+      background-color: #f1d600;
+      color: #000;
+      border: none;
+      padding: 5px 8px;
+      margin-left: 8px;
+      cursor: pointer;">Got it!</button>
+  </p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const consentBanner = document.getElementById("cookie-consent-banner");
+    const acceptButton = document.getElementById("cookie-consent-accept");
+    
+    // Check if consent already given
+    if (localStorage.getItem("cookieConsent") === "true") {
+      consentBanner.style.display = "none";
+    }
+
+    acceptButton.addEventListener("click", function() {
+      localStorage.setItem("cookieConsent", "true");
+      consentBanner.style.display = "none";
+    });
+  });
+</script>
