@@ -1,9 +1,26 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
+  // Initialize Google Analytics 4 Consent Mode
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+  });
   gtag('js', new Date());
+  
+  // GA4 config - Will only track after consent
+  gtag('config', '{{ site.google_analytics }}', {
+    'anonymize_ip': true, // GDPR compliance
+    'allow_google_signals': false,
+    'allow_ad_personalization_signals': false
+  });
 
-  gtag('config', '{{site.google_analytics}}');
+  // Function to update consent
+  function updateGtagConsent(adStorage, analyticsStorage) {
+    gtag('consent', 'update', {
+      'ad_storage': adStorage,
+      'analytics_storage': analyticsStorage
+    });
+  }
 </script>
