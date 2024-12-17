@@ -5,7 +5,7 @@ title: Vibhoothi
 date: 2020-10-01
 image: vibhoothi.jpg
 role: PhD Student/Research Assistant
-permalink: 'team/vibhothi'
+permalink: 'team/vibhoothi'
 social:
     twitter: 
     linkedin: https://linkedin.com/in/vibhoothi
