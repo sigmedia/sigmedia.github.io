@@ -7,7 +7,7 @@ image: vibhoothi.jpg
 role: PhD Student/Research Assistant
 permalink: 'team/vibhothi'
 social:
-    twitter: https://twitter.com/vibhoothi
+    twitter: 
     linkedin: https://linkedin.com/in/vibhoothi
     google-scholar: https://scholar.google.co.in/citations?user=NrStLHAAAAAJ&hl=en
     github: https://github.com/vibhoothi
