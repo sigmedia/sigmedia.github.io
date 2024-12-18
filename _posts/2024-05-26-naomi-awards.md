@@ -11,7 +11,7 @@ a framework for understanding and modelling multimodal interactions".
 
 
 Minister for Further and Higher Education, Research, Innovation and Science
-Patrick O’Donovan, TD, who made the announcement, said the awards will support
+Patrick O’Donovan, TD, who made the [announcement](https://www.gov.ie/en/press-release/a5aa0-minister-odonovan-announces-34m-for-healthcare-climate-and-tech-research/), said the awards will support
 the development of “world-class research” in areas of science, technology,
 engineering and mathematics. The award is part of the 28 awards. They are of 4-5
 years’ duration and will support 124 research positions including 58
@@ -41,3 +41,7 @@ environments
 
 Over the coming months, Sigmedia will be actively recruiting new Researchers for
 working on this.
+
+Relevant Links: 
++ [Press Release 1](https://www.siliconrepublic.com/innovation/sfi-frontiers-for-the-future-programme-ireland-science-research-funding?utm_source=Silicon+Republic+Daily+Brief&utm_campaign=9ccb50808f-DailyBrief_Monday_2024_05_27_07_21&utm_medium=email&utm_term=0_-9ccb50808f-%5BLIST_EMAIL_ID%5D&mc_cid=9ccb50808f)
++ [Press Release 2](https://www.siliconrepublic.com/innovation/sfi-frontiers-programme-grants-research-ireland)
