@@ -1,6 +1,6 @@
 ---
 layout: member
-category: PhD-Student
+category: alumni
 title: Meegan Desiree Gower
 date: 2021-12-01
 image: gowerm.jpg
