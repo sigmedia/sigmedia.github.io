@@ -1,6 +1,6 @@
 ---
 layout: member
-category: staff
+category: alumni
 title: Hossein Javidnia
 image: javidnih.jpg
 role: Assistant Professor
