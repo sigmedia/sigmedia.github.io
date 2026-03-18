@@ -1,10 +1,10 @@
 ---
 layout: member
-category: PhD-Student
+category: alumni
 title: Samantha Kotey
 date: 2019-09-01
 image: koteys.jpg
-role: alumni
+role: PhD Student
 permalink: 'team/koteys'
 social:
     linkedin: https://www.linkedin.com/in/samanthakotey/
