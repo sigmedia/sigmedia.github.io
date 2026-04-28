@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -38,7 +39,7 @@ const socialIcons: Record<string, string> = {
       <div class="inline-block relative">
         <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl">
           {image ? (
-            <img src={`/assets/images/team/${image}`} alt={title} class="w-full h-full object-cover" />
+            <Image src={image} alt={title} width={400} height={400} class="w-full h-full object-cover" />
           ) : (
             <div class="w-full h-full bg-gray-100 flex items-center justify-center text-gray-300">
                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">

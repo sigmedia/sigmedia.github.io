@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title: Ed Storey
 date: 2020-08-01
-image: storeyed.jpg
-role: PhD Student
+image: '../../assets/images/team/storeyed.jpg'
+role: PhD Student'
 permalink: 'team/storeyed'
 social:
     github: https://github.com/edStorey

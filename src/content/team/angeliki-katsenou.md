@@ -2,7 +2,7 @@
 layout: member
 category: alumni
 title: 'Angeliki Katsenou'
-image: 'angkats.jpg'
+image: '../../assets/images/team/angkats.jpg'
 date: 2022-03-01
 role: Assistant Professor
 permalink: 'team/angkats'

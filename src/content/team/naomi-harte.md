@@ -2,7 +2,7 @@
 layout: member
 category: staff
 title: 'Naomi Harte'
-image: 'nharte.jpg'
+image: '../../assets/images/team/nharte.jpg'
 date: 2005-08-01
 role: Professor
 permalink: 'team/nharte'

@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title: Zhaofeng Lin
 date: 2023-10-16
-image: linzh.jpg
-role: PhD Student
+image: '../../assets/images/team/linzh.jpg'
+role: PhD Student'
 permalink: 'team/zhaofeng-lin'
 social:
     linkedin: https://www.linkedin.com/in/chaufang-lin/

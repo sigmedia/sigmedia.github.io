@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title: Sam O’Connor Russell
 date: 2021-07-01
-image: russelsa.jpg
-role: PhD Student
+image: '../../assets/images/team/russelsa.jpg'
+role: PhD Student'
 permalink: 'team/russelsa'
 social:
     linkedin: https://www.linkedin.com/in/sam-oc-rll/

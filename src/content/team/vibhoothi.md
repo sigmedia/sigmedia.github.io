@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title: Vibhoothi
 date: 2020-10-01
-image: vibhoothi.jpg
-role: PhD Student/Research Assistant
+image: '../../assets/images/team/vibhoothi.jpg'
+role: PhD Student/Research Assistant'
 permalink: 'team/vibhoothi'
 social:
     twitter: 
