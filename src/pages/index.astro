@@ -4,14 +4,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchThemes from '../components/ResearchThemes.astro';
 import ResearchAreas from '../components/ResearchAreas.astro';
 import Collaborations from '../components/Collaborations.astro';
-import logo from '../assets/images/sigmedia_logo_white_bg.svg';
+import logoLight from '../assets/images/sigmedia_logo_white_bg.svg';
+import logoDark from '../assets/images/sigmedia_logo_dark_bg.svg';
 ---
 
 <BaseLayout>
   <div class="max-w-4xl mx-auto">
     <section class="py-12 md:py-20 flex flex-col items-start">
       <div class="relative">
-        <Image src={logo} alt="Sigmedia Logo" class="h-24 w-auto mb-12 dark:invert dark:brightness-200" />
+        <Image src={logoLight} alt="Sigmedia Logo" class="h-24 w-auto mb-12 dark:hidden" />
+        <Image src={logoDark} alt="Sigmedia Logo" class="h-24 w-auto mb-12 hidden dark:block" />
       </div>
       <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
         The Signal Processing for Media Applications (Sigmedia) Group is a research group in the 
