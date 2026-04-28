@@ -8,8 +8,10 @@ permalink: /datasets/room_reader/
 
   - <span class="field-label">Download link</span> <https://sigmedia.tcd.ie/>
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [RoomReader Corpus Question] (If the tag is not provided or invalid, your email will be ignored)
-  - <span class="field-label">License</span>
-  - <span class="field-label">Reference</span>
+  - <span class="field-label">License</span> Non-commercial only
+  - <span class="field-label">Reference</span> [reverdy2021](#reference)
+
+<div id="reference">
 
 ```bibtex
 @inproceedings{reverdy2021,
@@ -28,6 +30,8 @@ permalink: /datasets/room_reader/
     url = "https://lrec2022.lrec-conf.org/en/conference-programme/accepted-papers/",
 }
 ```
+
+</div>
 
 ## Description
 

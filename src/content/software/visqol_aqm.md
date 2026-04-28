@@ -8,8 +8,10 @@ permalink: /software/visqol_aqm
 
   - <span class="field-label">Repository</span> <https://github.com/google/visqol>
   - <span class="field-label">Contact</span>
-  - <span class="field-label">License</span>
-  - <span class="field-label">Reference</span>
+  - <span class="field-label">License</span> Non-commercial only
+  - <span class="field-label">Reference</span> [hines2015visqolaudio](#reference)
+
+<div id="reference">
 
 ```bibtex
 @article{hines2015visqolaudio,
@@ -25,6 +27,8 @@ permalink: /software/visqol_aqm
   doi          = {10.1121/1.4921674}
 }
 ```
+
+</div>
 
 ## Description
 
