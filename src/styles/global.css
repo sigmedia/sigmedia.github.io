@@ -26,20 +26,20 @@ code {
 }
 
 /* Custom fixes for research output pages (datasets/software) */
-.prose h2 {
+.prose-research h2 {
   @apply flex items-center gap-3 border-b border-gray-100 pb-2 mt-16 mb-8 text-2xl uppercase tracking-wider text-gray-400 font-bold!;
 }
 
 /* Style the "Global Information" lists as cards */
-.prose h2 + ul {
+.prose-research h2 + ul {
   @apply grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 my-8;
 }
 
-.prose h2 + ul li {
+.prose-research h2 + ul li {
   @apply bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1 text-sm m-0!;
 }
 
-.prose h2 + ul li .field-label {
+.prose-research h2 + ul li .field-label {
   @apply text-gray-400 uppercase text-[10px] tracking-widest font-bold;
 }
 
