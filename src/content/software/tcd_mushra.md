@@ -8,7 +8,7 @@ permalink: /software/tcd_mushra
 
   - <span class="field-label">Repository</span>
   - <span class="field-label">Contact</span>
-  - <span class="field-label">License</span>
+  - <span class="field-label">License</span> Non-commercial only
   - <span class="field-label">Reference</span>
 
 ## Description

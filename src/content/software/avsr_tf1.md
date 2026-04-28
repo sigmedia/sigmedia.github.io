@@ -8,10 +8,12 @@ permalink: /software/avsr_tf1
 
   - <span class="field-label">Repository</span> <https://github.com/georgesterpu/AVSR-tf1>
   - <span class="field-label">Contact</span>
-  - <span class="field-label">License</span>
-  - <span class="field-label">Reference</span>
+  - <span class="field-label">License</span> Non-commercial only
+  - <span class="field-label">Reference</span> [Sterpu2020Mar](#reference)
 
 {% raw %}
+<div id="reference">
+
 ```bibtex
 @article{Sterpu2020Mar,
   author       = {Sterpu, George and Saam, Christian and Harte, Naomi},
@@ -26,6 +28,8 @@ permalink: /software/avsr_tf1
   doi          = {10.1109/TASLP.2020.2980436}
 }
 ```
+
+</div>
 {% endraw %}
 
 ## Description
