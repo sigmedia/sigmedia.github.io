@@ -3,8 +3,8 @@ layout: member
 category: Postdoc
 title: Delphine Charuau
 date: 2024-08-01
-image: delphinecharuau.jpg
-role: Research Fellow
+image: '../../assets/images/team/delphinecharuau.jpg'
+role: Research Fellow'
 permalink: 'team/delphine-charuau'
 social:
     linkedin: https://www.linkedin.com/in/delphinecharuau1/

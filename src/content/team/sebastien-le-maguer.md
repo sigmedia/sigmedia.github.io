@@ -3,8 +3,8 @@ layout: member
 category: alumni
 title: Sébastien Le Maguer
 date: 2018-10-01
-image: lemagues.jpg
-role: Research Fellow
+image: '../../assets/images/team/lemagues.jpg'
+role: Research Fellow'
 permalink: 'team/lemagues'
 social:
     linkedin: https://www.linkedin.com/in/sébastien-le-maguer-004b095

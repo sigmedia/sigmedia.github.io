@@ -1,15 +1,17 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchThemes from '../components/ResearchThemes.astro';
 import ResearchAreas from '../components/ResearchAreas.astro';
 import Collaborations from '../components/Collaborations.astro';
+import logo from '../assets/images/sigmedia_logo_white_bg.png';
 ---
 
 <BaseLayout>
   <div class="max-w-4xl mx-auto">
     <section class="py-12 md:py-20 flex flex-col items-start">
-      <img src="/assets/images/sigmedia_logo_white_bg.png" alt="Sigmedia Logo" class="h-24 w-auto mb-12" />
-      
+      <Image src={logo} alt="Sigmedia Logo" class="h-24 w-auto mb-12" />
+...
       <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 tracking-tight">
         Signal Processing for <span class="text-brand-dark">Media Applications</span>
       </h1>

@@ -6,7 +6,7 @@ categories: video
 
 On the 17th of April, the second Quarterly Meeting of the EMERALD project took place in Porto, organised by MOG.
 
-![Emerald Q2 Meeting](/assets/images/posts/emerald_porto_q2.jpg){: width="100%" }
+![Emerald Q2 Meeting](../../assets/images/posts/emerald_porto_q2.jpg){: width="100%" }
 
 
 

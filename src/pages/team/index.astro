@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const members = await getCollection('team');
@@ -36,9 +37,11 @@ const groupedMembers = categories.reduce((acc, cat) => {
             <a href={`/team/${member.id}`} class="group">
               <div class="aspect-square overflow-hidden rounded-2xl mb-4 bg-gray-100 border border-gray-100">
                 {member.data.image ? (
-                  <img 
-                    src={`/assets/images/team/${member.data.image}`} 
+                  <Image 
+                    src={member.data.image} 
                     alt={member.data.title}
+                    width={400}
+                    height={400}
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (

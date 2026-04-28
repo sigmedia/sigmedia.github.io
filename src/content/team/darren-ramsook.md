@@ -3,8 +3,8 @@ layout: member
 category: Postdoc
 title: Darren Ramsook
 date: 2020-08-01
-image: ramsookd.jpg
-role: Research Fellow
+image: '../../assets/images/team/ramsookd.jpg'
+role: Research Fellow'
 permalink: 'team/ramsookd'
 social:
     linkedin: https://ie.linkedin.com/in/darren-ramsook

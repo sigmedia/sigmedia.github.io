@@ -3,8 +3,8 @@ layout: member
 category: Postdoc
 title: Rishabh Jain
 date: 2024-11-01
-image: rishabhjain.jpg
-role: Research Fellow
+image: '../../assets/images/team/rishabhjain.jpg'
+role: Research Fellow'
 permalink: 'team/rishabh-jain'
 social:
     linkedin: https://www.linkedin.com/in/rishabhjain16/

@@ -2,9 +2,9 @@
 layout: member
 category: alumni
 title: Hossein Javidnia
-image: javidnih.jpg
+image: '../../assets/images/team/javidnih.jpg'
 role: Assistant Professor
-date: 2024-04-01
+date: 2024-04-01'
 permalink: 'team/hossein-javidnia'
 social:
   twitter:

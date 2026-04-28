@@ -3,8 +3,8 @@ layout: member
 category: alumni
 title: Meegan Desiree Gower
 date: 2021-12-01
-image: gowerm.jpg
-role: PhD Student
+image: '../../assets/images/team/gowerm.jpg'
+role: PhD Student'
 permalink: 'team/gowerm'
 social:
     linkedin: https://linkedin.com/in/meegan-gower
