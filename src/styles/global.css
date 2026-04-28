@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #ffd200;
+  --color-brand-dark: #ccaa00;
+}
+
+/* Custom styling for Markdown code blocks to match BibTeX theme */
+pre.astro-code {
+  @apply !bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-inner text-[13px] leading-relaxed my-8 overflow-x-auto;
+  color: #1a1a1a !important; /* Force near-black base color */
+}
+
+pre.astro-code span {
+  /* This ensures that even if syntax highlighting is used, it stays in a readable range */
+  filter: contrast(1.2) brightness(0.8);
+}
+
+code {
+  @apply font-mono;
+}
+
+/* Inline code */
+:not(pre) > code {
+  @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded-md text-[0.9em] border border-gray-200;
+}
+
+/* Custom fixes for research output pages (datasets/software) */
+.prose h2 {
+  @apply flex items-center gap-3 border-b border-gray-100 pb-2 mt-16 mb-8 text-2xl uppercase tracking-wider text-gray-400 font-bold!;
+}
+
+/* Style the "Global Information" lists as cards */
+.prose h2 + ul {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 my-8;
+}
+
+.prose h2 + ul li {
+  @apply bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1 text-sm m-0!;
+}
+
+.prose h2 + ul li strong {
+  @apply text-gray-400 uppercase text-[10px] tracking-widest;
+}
+
+/* Fix for tables with images (often used for side-by-side comparison) */
+.prose table {
+  @apply border-collapse w-full my-8;
+}
+
+.prose td {
+  @apply p-2 border-0!;
+}
+
+.prose img {
+  @apply max-w-full h-auto;
+}

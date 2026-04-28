@@ -1,0 +1,57 @@
+---
+const themes = [
+  {
+    id: "audio",
+    title: "Human Speech Communication",
+    description: "Modeling multimodal interactions, speech recognition, and synthesis using deep learning and human perception.",
+    icon: "M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+  },
+  {
+    id: "audio",
+    title: "Computational Acoustics & Spatial Audio",
+    description: "Advanced audio signal processing for room acoustics, spatial audio rendering, and immersive soundscapes.",
+    icon: "M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+  },
+  {
+    id: "overlap",
+    title: "Media Compression & Streaming",
+    description: "Optimizing video and audio pipelines for ultra-low latency streaming and efficient cloud processing.",
+    icon: "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+  },
+  {
+    id: "video",
+    title: "Digital Cinema & Restoration",
+    description: "Award-winning research in motion picture enhancement, archival restoration, and high-end visual effects.",
+    icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+  }
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+  {themes.map(theme => (
+    <a href={`#section-${theme.id}`} class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/50 transition-all duration-300 flex flex-col items-start group relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+      
+      <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center mb-6 text-gray-900 shadow-sm relative z-10 group-hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={theme.icon} />
+        </svg>
+      </div>
+      
+      <h3 class="text-xl font-bold text-gray-900 mb-3 relative z-10">
+        {theme.title}
+      </h3>
+      
+      <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow relative z-10">
+        {theme.description}
+      </p>
+      
+      <div class="flex items-center text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-brand-dark transition-colors relative z-10">
+        View Research Topics
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </div>
+    </a>
+  ))}
+</div>

@@ -1,0 +1,15 @@
+audio:
+  - "Multi-modal Turn-taking Prediction"
+  - "Low-Resource Speech Recognition"
+  - "Speech Model Distillation"
+  - "Linguistics & Speech AI"
+
+video:
+  - "Efficient Image Denoising"
+  - "Video Compression Pipelines"
+  - "Motion Picture Enhancement"
+  - "Frame Interpolation"
+
+overlap:
+  - "Audio/Visual Speech Recognition"
+  - "Wildlife Monitoring"
