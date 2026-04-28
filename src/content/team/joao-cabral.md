@@ -3,8 +3,8 @@ layout: member
 category: alumni
 title:  Joao Cabral
 date: 2020-12-31
-image: cabralj.jpg
-role: Research Fellow
+image: '../../assets/images/team/cabralj.jpg'
+role: Research Fellow'
 permalink: 'team/cabralj'
 social:
     twitter: 

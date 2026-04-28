@@ -3,8 +3,8 @@ layout: member
 category: alumni
 title: Justine Reverdy
 date: 2020-12-01
-image: reverdyj.jpg
-role: Research Fellow
+image: '../../assets/images/team/reverdyj.jpg'
+role: Research Fellow'
 permalink: 'team/justine-reverdy'
 social:
     twitter:

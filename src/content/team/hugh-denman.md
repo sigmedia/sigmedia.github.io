@@ -3,7 +3,7 @@ layout: member
 category: others
 title: 'Hugh Denman'
 date: 2000-07-01
-image: 'hdenman.jpg'
+image: '../../assets/images/team/hdenman.jpg'
 role: Adjunct Assistant Professor (Part-Time)
 permalink: 'team/hdenman'
 social:

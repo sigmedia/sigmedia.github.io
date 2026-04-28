@@ -11,7 +11,7 @@ Compression in Virtual Production". The work was done in collobartion with
 [Disguise](https://disguise.one/), London.
 
 
-![VP Backdrop](/assets/images/posts/vp_backdrop.png)
+![VP Backdrop](../../assets/images/posts/vp_backdrop.png)
 
 The talk was featured as Top 3 Spotlight session of the whole conference, it was
 in the "Tech Insights in Virtual Production and Workflow Integration".

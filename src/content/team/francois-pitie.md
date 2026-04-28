@@ -3,7 +3,7 @@ layout: member
 category: staff
 title: 'François Pitié'
 date: 2007-04-01
-image: 'pitief.jpg'
+image: '../../assets/images/team/pitief.jpg'
 role: Ussher Assistant Professor
 permalink: 'team/pitief'
 social:

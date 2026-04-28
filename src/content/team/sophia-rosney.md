@@ -3,8 +3,8 @@ layout: member
 category: alumni
 title: Sophia Rosney
 date: 2020-10-01
-image: rosneys.jpg
-role: Research Assistant
+image: '../../assets/images/team/rosneys.jpg'
+role: Research Assistant'
 permalink: 'team/rosneys'
 social:
     linkedin: https://www.linkedin.com/in/sophia-rosney-603a6518a/

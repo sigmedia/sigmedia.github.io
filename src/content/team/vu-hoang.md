@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title:  Long Vu Hoang
 date: 2025-09-01
-image: vu-hoang.jpg
-role: PhD Student
+image: '../../assets/images/team/vu-hoang.jpg'
+role: PhD Student'
 permalink: 'team/vu-hoang'
 social:
     github: https://github.com/lggvu

@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title:  Conall Daly
 date: 2023-09-01
-image: dalyc.jpg
-role: PhD Student
+image: '../../assets/images/team/dalyc.jpg'
+role: PhD Student'
 permalink: 'team/dalyc'
 social:
     github: https://github.com/conalld

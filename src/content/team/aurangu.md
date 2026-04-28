@@ -3,8 +3,8 @@ layout: member
 category: PhD-Student
 title:  Uditangshu Aurangabadkar
 date: 2023-09-01
-image: aurangau.jpg
-role: PhD Student
+image: '../../assets/images/team/aurangau.jpg'
+role: PhD Student'
 permalink: 'team/aurangau'
 social:
     github: https://github.com/radiobenzene
