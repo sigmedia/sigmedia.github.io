@@ -29,6 +29,18 @@ code {
   @apply mb-6;
 }
 
+.prose ul {
+  @apply list-disc ml-6 mb-6;
+}
+
+.prose ol {
+  @apply list-decimal ml-6 mb-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
 /* Custom fixes for research output pages (datasets/software) */
 .prose-research h2 {
   @apply flex items-center gap-3 border-b border-gray-100 pb-2 mt-16 mb-8 text-2xl uppercase tracking-wider text-gray-400 font-bold!;
