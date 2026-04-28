@@ -9,9 +9,7 @@ permalink: /software/visqol_sqm
   - <span class="field-label">Repository</span> <https://github.com/google/visqol>
   - <span class="field-label">Contact</span>
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span> [hines2015visqol](#reference)
-
-<div id="reference">
+  - <span class="field-label">Reference</span>
 
 ```bibtex
 @article{hines2015visqol,
@@ -26,8 +24,6 @@ permalink: /software/visqol_sqm
   doi          = {10.1186/s13636-015-0054-9}
 }
 ```
-
-</div>
 
 ## Description
 

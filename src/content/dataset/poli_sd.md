@@ -8,9 +8,7 @@ permalink: /datasets/poli_sd/
 
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [PSD Request] (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span> [Cullen2018Jun](#reference)
-
-<div id="reference">
+  - <span class="field-label">Reference</span>
 
 ```bibtex
 @article{Cullen2018Jun,
@@ -28,10 +26,7 @@ permalink: /datasets/poli_sd/
 }
 ```
 
-</div>
-
 ## Description
-
 
 The Irish Political Speech Database in an English language database which contains recordings of politicians in a range of settings.
 The database spans 7 years (2006-2012) and contains speech from a single speaker.

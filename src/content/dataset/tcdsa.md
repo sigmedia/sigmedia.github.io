@@ -9,9 +9,7 @@ permalink: /datasets/tcdsa/
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDSA Request] (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">Sponsor</span> IRCSET
   - <span class="field-label">License</span> The TCDSA database is made available free of charge for academic use only.
-  - <span class="field-label">Reference</span> [Kelly2012](#reference)
-
-<div id="reference">
+  - <span class="field-label">Reference</span>
 
 ```bibtex
 @inproceedings{Kelly2012,
@@ -27,8 +25,6 @@ permalink: /datasets/tcdsa/
 }
 ```
 
-</div>
-
 ## Description
 
 The Trinity College Dublin Speaker Ageing (TCDSA) Database was designed primarily to investigate the effect of ageing-related vocal change on speaker verification
@@ -36,7 +32,6 @@ The Trinity College Dublin Speaker Ageing (TCDSA) Database was designed primaril
 The main portion of this database contains speech recordings of 26 adults (15 males and 11 females) across a time span of between 25-58 years per speaker.
 
 Also included is a set of 120 development speakers, balanced across age group, gender and accent.
-
 
 ### Robust Speaker Verification for Biometric Applications
 
