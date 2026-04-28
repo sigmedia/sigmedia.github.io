@@ -6,10 +6,10 @@ permalink: /software/avsr_tf1
 
 ## Global Information
 
-  - Repository: <https://github.com/georgesterpu/AVSR-tf1>
-  - Contact:
-  - License:
-  - Reference:
+  - <span class="field-label">Repository</span> <https://github.com/georgesterpu/AVSR-tf1>
+  - <span class="field-label">Contact</span>
+  - <span class="field-label">License</span>
+  - <span class="field-label">Reference</span>
 
 {% raw %}
 ```bibtex

@@ -6,10 +6,10 @@ permalink: /software/visqol_aqm
 
 ## Global Information
 
-  - Repository: <https://github.com/google/visqol>
-  - Contact:
-  - License:
-  - Reference:
+  - <span class="field-label">Repository</span> <https://github.com/google/visqol>
+  - <span class="field-label">Contact</span>
+  - <span class="field-label">License</span>
+  - <span class="field-label">Reference</span>
 
 ```bibtex
 @article{hines2015visqolaudio,

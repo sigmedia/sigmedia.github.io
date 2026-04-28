@@ -6,9 +6,9 @@ permalink: /datasets/poli_sd/
 
 ## Global Information
 
-  - **Contact**: [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [PSD Request] (If the tag is not provided or invalid, your email will be ignored)
-  - **License**:
-  - **Reference**:
+  - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [PSD Request] (If the tag is not provided or invalid, your email will be ignored)
+  - <span class="field-label">License</span>
+  - <span class="field-label">Reference</span>
 
 ```bibtex
 @article{Cullen2018Jun,

@@ -6,9 +6,9 @@ permalink: /software/colour_transfer/
 
 ## Global Information
 
-  - Repository: <https://github.com/frcs/colour-transfer>
-  - Contact: <pitief@tcd.ie>
-  - License:
+  - <span class="field-label">Repository</span> <https://github.com/frcs/colour-transfer>
+  - <span class="field-label">Contact</span> <pitief@tcd.ie>
+  - <span class="field-label">License</span>
 
 <img alt="Original image, target palette and colour-tranfer.]" src="https://francois.pitie.net/images/colourtransfer.jpg" width=600 style="max-width:100%">
 
