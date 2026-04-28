@@ -7,16 +7,16 @@ const datasets = await getCollection('dataset');
 
 <BaseLayout title="Datasets | Sigmedia">
   <div class="max-w-4xl mx-auto py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-8 tracking-tight">Datasets</h1>
-    <p class="text-lg text-gray-600 mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight">Datasets</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">
       Sigmedia research group provides several datasets for the community.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {datasets.map(dataset => (
-        <a href={`/datasets/${dataset.id}`} class="block p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-100 transition-all group">
-          <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-3">{dataset.data.title}</h2>
-          <div class="text-sm text-gray-500 line-clamp-2">
+        <a href={`/datasets/${dataset.id}`} class="block p-8 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-100 dark:hover:border-blue-900 transition-all group">
+          <h2 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mb-3">{dataset.data.title}</h2>
+          <div class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
             View dataset details and download links.
           </div>
         </a>

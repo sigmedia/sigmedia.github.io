@@ -11,37 +11,37 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/co
 ---
 
 <div class="my-16">
-  <h2 class="text-3xl font-bold text-gray-900 mb-8">Research Bodies</h2>
+  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Research Bodies</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-16">
     {collaborations.research_bodies.map((body: any) => {
       const imagePath = body.logo.replace('../assets/images/collaborations/', '');
       const imageKey = `../assets/images/collaborations/${imagePath}`;
       return (
-        <a href={body.url} class="group flex flex-col items-center justify-center p-6 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-blue-100 transition-all">
+        <a href={body.url} class="group flex flex-col items-center justify-center p-6 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-md hover:border-blue-100 dark:hover:border-blue-900 transition-all">
           {images[imageKey] ? (
-            <Image src={images[imageKey]()} alt={body.name} class="h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300" />
+            <Image src={images[imageKey]()} alt={body.name} class="h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300 dark:invert dark:brightness-200 dark:group-hover:invert-0 dark:group-hover:brightness-100" />
           ) : (
-            <img src={body.logo} alt={body.name} class="h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300" />
+            <img src={body.logo} alt={body.name} class="h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300 dark:invert dark:brightness-200 dark:group-hover:invert-0 dark:group-hover:brightness-100" />
           )}
-          <span class="mt-4 text-sm font-medium text-gray-500 group-hover:text-blue-600 transition-colors text-center">{body.name}</span>
+          <span class="mt-4 text-sm font-medium text-gray-500 dark:text-gray-400 group-hover:text-blue-600 transition-colors text-center">{body.name}</span>
         </a>
       );
     })}
   </div>
 
-  <h2 class="text-3xl font-bold text-gray-900 mb-8">Industrial Collaborations</h2>
+  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Industrial Collaborations</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6">
     {collaborations.industrial_collaborations.map((corp: any) => {
       const imagePath = corp.logo.replace('../assets/images/collaborations/', '');
       const imageKey = `../assets/images/collaborations/${imagePath}`;
       return (
-        <a href={corp.url} class="group flex flex-col items-center justify-center p-4 bg-white border border-gray-100 rounded-lg hover:shadow-sm hover:border-blue-50 transition-all">
+        <a href={corp.url} class="group flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-lg hover:shadow-sm hover:border-blue-50 dark:hover:border-blue-950 transition-all">
           {images[imageKey] ? (
-            <Image src={images[imageKey]()} alt={corp.name} class="h-10 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity" />
+            <Image src={images[imageKey]()} alt={corp.name} class="h-10 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity dark:invert dark:brightness-200" />
           ) : (
-            <img src={corp.logo} alt={corp.name} class="h-10 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity" />
+            <img src={corp.logo} alt={corp.name} class="h-10 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity dark:invert dark:brightness-200" />
           )}
-          <span class="mt-2 text-[10px] uppercase tracking-wider font-semibold text-gray-400 group-hover:text-gray-700 transition-colors">{corp.name}</span>
+          <span class="mt-2 text-[10px] uppercase tracking-wider font-semibold text-gray-400 dark:text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">{corp.name}</span>
         </a>
       );
     })}

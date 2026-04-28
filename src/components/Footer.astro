@@ -3,21 +3,21 @@ import { Image } from 'astro:assets';
 import tcdLogo from '../assets/images/tcd_logo.png';
 const year = new Date().getFullYear();
 ---
-<footer class="bg-gray-50 border-t-4 border-brand pt-16 pb-8">
+<footer class="bg-gray-50 dark:bg-gray-900 border-t-4 border-brand pt-16 pb-8 transition-colors duration-300">
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
       <div>
-        <h3 class="text-lg font-bold text-gray-900 mb-6">Sigmedia</h3>
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Sigmedia</h3>
         <a href="https://www.tcd.ie/" class="block max-w-[200px]">
-          <Image src={tcdLogo} alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity" />
+          <Image src={tcdLogo} alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity dark:invert dark:brightness-200" />
         </a>
       </div>
       
       <div>
-        <h3 class="text-lg font-bold text-gray-900 mb-6">Links</h3>
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Links</h3>
         <ul class="space-y-3">
           <li>
-            <a href="https://github.com/sigmedia" class="text-gray-600 hover:text-blue-600 transition-colors">
+            <a href="https://github.com/sigmedia" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               Github
             </a>
           </li>
@@ -25,8 +25,8 @@ const year = new Date().getFullYear();
       </div>
 
       <div>
-        <h3 class="text-lg font-bold text-gray-900 mb-6">Contact</h3>
-        <address class="text-gray-600 not-italic leading-relaxed">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Contact</h3>
+        <address class="text-gray-600 dark:text-gray-400 not-italic leading-relaxed">
           Electronic & Electrical Engineering,<br />
           Aras an Phiarsaigh,<br />
           Trinity College Dublin,<br />
@@ -35,7 +35,7 @@ const year = new Date().getFullYear();
       </div>
     </div>
     
-    <div class="border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
+    <div class="border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
       <p>© {year} Sigmedia - Signal Processing and Media Applications</p>
     </div>
   </div>
