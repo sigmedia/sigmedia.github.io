@@ -11,12 +11,10 @@ the [Emerald Project](https://www.upf.edu/web/emerald). The paper was titled as 
 Compression in Virtual Production". The work was done in collobartion with
 [Disguise](https://disguise.one/), London.
 
-
 ![VP Backdrop](../../assets/images/posts/vp_backdrop.png)
 
 The talk was featured as Top 3 Spotlight session of the whole conference, it was
 in the "Tech Insights in Virtual Production and Workflow Integration".
-
 
 Details of the paper is below,
 
