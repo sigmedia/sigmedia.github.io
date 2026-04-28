@@ -8,9 +8,7 @@ permalink: /datasets/stereo_video_database/
 
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [SVD Request] (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span> [Corrigan_2010](#reference)
-
-<div id="reference">
+  - <span class="field-label">Reference</span>
 
   ```bibtex
 @inproceedings{Corrigan_2010,
@@ -24,8 +22,6 @@ permalink: /datasets/stereo_video_database/
     url          = {https://doi.org/10.1109/cvmp.2010.16},
 }
   ```
-
-</div>
 
 ## Description
 
