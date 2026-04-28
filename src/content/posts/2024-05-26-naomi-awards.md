@@ -1,4 +1,5 @@
 ---
+date: 2024-05-26
 layout: post
 title: Naomi Harte wins a  SFI Frontiers Awards for SpeeechSpace Framework
 categories: speech

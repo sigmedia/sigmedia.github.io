@@ -1,4 +1,5 @@
 ---
+date: 2024-07-30
 layout: post
 title: Sigmedia team presents AI Colour Matching Tool at Filmlight Enhancing efficiency in Colour Grading
 categories: video

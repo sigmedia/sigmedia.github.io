@@ -10,33 +10,26 @@ const posts = (await getCollection('posts')).sort((a, b) => {
 ---
 
 <BaseLayout title="Blog | Sigmedia">
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-4xl mx-auto py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-12 tracking-tight">Blog & News</h1>
 
-    <div class="space-y-12">
+    <div class="space-y-4">
       {posts.map(post => (
-        <article class="group relative flex flex-col items-start border-b border-gray-100 pb-12 last:border-0">
-          <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
-            <a href={`/blog/${post.id}`}>
-              {post.data.title}
-            </a>
-          </h2>
-          <time class="text-sm text-gray-500 mb-4 block">
-            {post.data.date ? new Date(post.data.date).toLocaleDateString('en-US', {
+        <article class="group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-4 border-b border-gray-50 last:border-0 hover:bg-gray-50/50 px-4 rounded-xl transition-colors">
+          <time class="text-sm font-mono text-gray-400 w-32 shrink-0">
+            {post.data.date ? new Date(post.data.date).toLocaleDateString('en-GB', {
               year: 'numeric',
-              month: 'long',
-              day: 'numeric'
+              month: 'short',
+              day: '2-digit'
             }) : 'No Date'}
           </time>
-          <div class="prose prose-sm text-gray-600 line-clamp-3">
-             {/* Excerpt can be handled here if needed */}
+          <div class="flex-grow">
+            <h2 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <a href={`/blog/${post.id}`}>
+                {post.data.title}
+              </a>
+            </h2>
           </div>
-          <a href={`/blog/${post.id}`} class="mt-4 text-blue-600 font-semibold text-sm hover:underline flex items-center">
-            Read more
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
         </article>
       ))}
     </div>

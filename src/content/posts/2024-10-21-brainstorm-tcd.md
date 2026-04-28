@@ -1,4 +1,5 @@
 ---
+date: 2024-10-21
 layout: post
 title: Brainstorm and TCD Collaborate on Cutting-Edge Color Matching and Balancing
 categories: video
