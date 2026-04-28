@@ -39,8 +39,8 @@ code {
   @apply bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1 text-sm m-0!;
 }
 
-.prose h2 + ul li strong {
-  @apply text-gray-400 uppercase text-[10px] tracking-widest;
+.prose h2 + ul li .field-label {
+  @apply text-gray-400 uppercase text-[10px] tracking-widest font-bold;
 }
 
 /* Fix for tables with images (often used for side-by-side comparison) */
