@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -9,17 +10,46 @@
 
 /* Custom styling for Markdown code blocks to match BibTeX theme */
 pre.astro-code {
-  @apply !bg-gray-50 dark:!bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-inner text-[13px] leading-relaxed my-8 overflow-x-auto;
-  color: #1a1a1a !important; /* Force near-black base color */
+  @apply p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-inner text-[13px] leading-relaxed my-8 overflow-x-auto;
+}
+
+/* Shiki dual theme support */
+pre.astro-code,
+pre.astro-code span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+.dark pre.astro-code,
+.dark pre.astro-code span {
+  color: var(--shiki-dark) !important;
 }
 
 .dark pre.astro-code {
-  color: #e5e7eb !important;
+  background-color: var(--shiki-dark-bg) !important;
 }
 
+/* Ensure syntax highlighting works by not overriding font styles globally on spans if not needed, 
+   but Shiki variables include them so it's safer to keep them tied to the variables. */
 pre.astro-code span {
-  /* This ensures that even if syntax highlighting is used, it stays in a readable range */
-  filter: contrast(1.2) brightness(0.8);
+  font-style: var(--shiki-light-font-style);
+  font-weight: var(--shiki-light-font-weight);
+  text-decoration: var(--shiki-light-text-decoration);
+}
+
+.dark pre.astro-code span {
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+/* Ensure the background of the pre element matches the theme */
+pre.astro-code {
+  background-color: var(--shiki-light-bg) !important;
+}
+
+.dark pre.astro-code {
+  background-color: var(--shiki-dark-bg) !important;
 }
 
 code {
