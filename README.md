@@ -1,43 +1,32 @@
-# Astro Starter Kit: Minimal
+# SIGMEDIA Astro Website
 
-```sh
-bun create astro@latest -- --template minimal
-```
+This is the main Astro project for the SIGMEDIA website.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Quick Start
 
-## 🚀 Project Structure
+1. **Install dependencies**:
+   ```sh
+   bun install
+   ```
 
-Inside of your Astro project, you'll see the following folders and files:
+2. **Start development server**:
+   ```sh
+   bun dev
+   ```
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+3. **Build for production**:
+   ```sh
+   bun build
+   ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📂 Project Structure
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `src/content/`: Markdown content for Team, Blog, Datasets, and Software.
+- `src/pages/`: Page components and dynamic routing logic.
+- `src/components/`: Reusable Astro components.
+- `src/data/`: Static data including BibTeX publications and YAML configs.
+- `public/`: Static assets (images, logos, etc.).
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 📖 Documentation
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+For detailed project information, architecture, and migration guides, please refer to the [Root README](../README.md) and [GEMINI.md](../GEMINI.md).
