@@ -8,8 +8,10 @@ permalink: /datasets/tcd_voip_ltd/
 
 - <span class="field-label">Download link</span> [Google Drive](https://drive.google.com/file/d/1rHJN34vP-W8SJtjpNUnx5RIks3o5L5he/view?usp=sharing)
 - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDVoIP Question] (If the tag is not provided or invalid, your email will be ignored)
-- <span class="field-label">License</span>
-- <span class="field-label">Reference</span>
+- <span class="field-label">License</span> Non-commercial only
+- <span class="field-label">Reference</span> [harte2015tcd](#reference)
+
+<div id="reference">
 
 ```bibtex
 @inproceedings{harte2015tcd,
@@ -22,6 +24,8 @@ permalink: /datasets/tcd_voip_ltd/
   organization = {IEEE}
 }
 ```
+
+</div>
 
 
 

@@ -8,8 +8,10 @@ permalink: /datasets/syn_bird/
 
   - <span class="field-label">Download link</span> [Google Drive](https://drive.google.com/file/d/14kQmAWQvFDxYuTRQ--jxV9GSEwETmptH/view?usp=sharing)
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [SynthBirdsDB Question] (If the tag is not provided or invalid, your email will be ignored)
-  - <span class="field-label">License</span>
-  - <span class="field-label">Reference</span>
+  - <span class="field-label">License</span> Non-commercial only
+  - <span class="field-label">Reference</span> [OReilly2017](#reference)
+
+<div id="reference">
 
 ```bibtex
 @article{OReilly2017,
@@ -25,6 +27,8 @@ permalink: /datasets/syn_bird/
     doi          = {10.1080/23312025.2017.1322025},
 }
 ```
+
+</div>
 
 ## Description
 

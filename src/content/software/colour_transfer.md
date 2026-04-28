@@ -8,7 +8,7 @@ permalink: /software/colour_transfer/
 
   - <span class="field-label">Repository</span> <https://github.com/frcs/colour-transfer>
   - <span class="field-label">Contact</span> <pitief@tcd.ie>
-  - <span class="field-label">License</span>
+  - <span class="field-label">License</span> Non-commercial only
 
 <img alt="Original image, target palette and colour-tranfer.]" src="https://francois.pitie.net/images/colourtransfer.jpg" width=600 style="max-width:100%">
 
@@ -22,6 +22,8 @@ Currently in the industry, colour balancing (as it is called) is achieved by exp
 The techniques proposed here are example-based re-colouring methods which can be illustrated by the picture above. The original picture is required to be transformed so that its colours match the palette of the image in the middle, regardless of the content of the pictures.
 
 ## References
+
+<div id="reference">
 
 ```bibtex
 @INPROCEEDINGS{Pitie2005iccv,

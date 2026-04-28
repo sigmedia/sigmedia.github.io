@@ -9,7 +9,9 @@ permalink: /datasets/tcdsa/
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDSA Request] (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">Sponsor</span> IRCSET
   - <span class="field-label">License</span> The TCDSA database is made available free of charge for academic use only.
-  - <span class="field-label">Reference</span>
+  - <span class="field-label">Reference</span> [Kelly2012](#reference)
+
+<div id="reference">
 
 ```bibtex
 @inproceedings{Kelly2012,
@@ -24,6 +26,8 @@ permalink: /datasets/tcdsa/
     issn         = {2376-4201},
 }
 ```
+
+</div>
 
 ## Description
 
