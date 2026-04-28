@@ -26,7 +26,7 @@ code {
 }
 
 .prose p {
-  @apply mb-4;
+  @apply mb-6;
 }
 
 /* Custom fixes for research output pages (datasets/software) */
@@ -45,6 +45,11 @@ code {
 
 .prose-research h2 + ul li .field-label {
   @apply text-gray-400 uppercase text-[10px] tracking-widest font-bold;
+}
+
+/* Ensure bibtex in reference field has top margin */
+.prose-research .field-label + pre {
+  @apply mt-4;
 }
 
 /* Fix for tables with images (often used for side-by-side comparison) */
