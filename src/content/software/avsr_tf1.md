@@ -26,10 +26,6 @@ permalink: /software/avsr_tf1
 }
 ```
 
-{% raw %}
-
-{% endraw %}
-
 ## Description
 
 AVSR-tf1 is an open-source research system for Speech Recognition.
