@@ -5,11 +5,9 @@ title: Naomi Harte wins a  SFI Frontiers Awards for SpeeechSpace Framework
 categories: speech
 ---
 
-
 Recently Naomi Harte, professor in the Electrical Engineering of Trinity College
 Dublin, recieved a SFI Frontiers Award. The project is ttiled as "SpeechSpace -
 a framework for understanding and modelling multimodal interactions".
-
 
 Minister for Further and Higher Education, Research, Innovation and Science
 Patrick O’Donovan, TD, who made the [announcement](https://www.gov.ie/en/press-release/a5aa0-minister-odonovan-announces-34m-for-healthcare-climate-and-tech-research/), said the awards will support
@@ -19,9 +17,7 @@ years’ duration and will support 124 research positions including 58
 postdoctoral positions, 53 PhD students and 13 research assistants and other
 positions. This programme has been funded in collaboration with SEAI.
 
-
 The Project details of Naomi is below,
-
 
 > Speech is multimodal in nature. When humans have a conversation, we use much more than just words.
 We seamlessly signal and monitor a multitude of visual cues including eye gaze, facial expression, hand
@@ -37,8 +33,6 @@ human conversations are vital to unlock next generation speech technology improv
 inclusive and do not rely on massive datasets. By exploiting the multimodality of speech in new ways,
 speech technology will become agile in deployment and reactive to dynamic conversations in changing
 environments
-
-
 
 Over the coming months, Sigmedia will be actively recruiting new Researchers for
 working on this.
