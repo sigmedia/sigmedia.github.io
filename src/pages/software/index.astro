@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const software = await getCollection('software');
+---
+
+<BaseLayout title="Software | Sigmedia">
+  <div class="max-w-4xl mx-auto py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8 tracking-tight">Software</h1>
+    <p class="text-lg text-gray-600 mb-12">
+      Open source software and tools developed by the Sigmedia research group.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {software.map(item => (
+        <a href={`/software/${item.id}`} class="block p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-100 transition-all group">
+          <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-3">{item.data.title}</h2>
+          <div class="text-sm text-gray-500 line-clamp-2">
+            View software details, documentation, and source code.
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

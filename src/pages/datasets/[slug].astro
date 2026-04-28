@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const datasets = await getCollection('dataset');
+  return datasets.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title } = entry.data;
+---
+
+<BaseLayout title={`${title} | Datasets`}>
+  <div class="max-w-4xl mx-auto py-12">
+    <nav class="mb-8">
+      <a href="/datasets" class="text-sm text-gray-500 hover:text-brand-dark flex items-center transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Datasets
+      </a>
+    </nav>
+
+    <header class="mb-12">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">{title}</h1>
+      <div class="h-2 w-24 bg-brand rounded-full"></div>
+    </header>
+    
+    <article class="prose prose-slate prose-lg max-w-none 
+      prose-headings:text-gray-900 prose-headings:font-bold
+      prose-a:text-brand-dark prose-a:font-semibold hover:prose-a:underline
+      prose-img:rounded-3xl prose-img:shadow-xl prose-img:mx-auto
+      prose-pre:shadow-inner prose-pre:bg-gray-50
+      prose-blockquote:border-l-brand prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>

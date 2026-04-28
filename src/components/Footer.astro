@@ -1,0 +1,40 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="bg-gray-50 border-t-4 border-brand pt-16 pb-8">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <h3 class="text-lg font-bold text-gray-900 mb-6">Sigmedia</h3>
+        <a href="https://www.tcd.ie/" class="block max-w-[200px]">
+          <img src="/assets/images/tcd_logo.png" alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity" />
+        </a>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-bold text-gray-900 mb-6">Links</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://github.com/sigmedia" class="text-gray-600 hover:text-blue-600 transition-colors">
+              Github
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-gray-900 mb-6">Contact</h3>
+        <address class="text-gray-600 not-italic leading-relaxed">
+          Electronic & Electrical Engineering,<br />
+          Aras an Phiarsaigh,<br />
+          Trinity College Dublin,<br />
+          Dublin 2, Ireland
+        </address>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
+      <p>© {year} Sigmedia - Signal Processing and Media Applications</p>
+    </div>
+  </div>
+</footer>
