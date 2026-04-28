@@ -172,7 +172,7 @@ function formatAuthors(authorStr: string) {
                 {/* BibTeX Expandable */}
                 <div id={`bib-${entry.citationKey}`} class="hidden mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
                   <div class="relative group/bib">
-                    <pre class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 p-6 rounded-2xl text-[11px] overflow-x-auto font-mono leading-relaxed border border-gray-100 dark:border-gray-800 shadow-inner whitespace-pre-wrap">{`@${entry.entryType}{${entry.citationKey},
+                    <pre class="bg-[var(--shiki-light-bg)] dark:bg-[var(--shiki-dark-bg)] text-gray-900 dark:text-gray-100 p-6 rounded-2xl text-[11px] overflow-x-auto font-mono leading-relaxed border border-gray-100 dark:border-gray-800 shadow-inner whitespace-pre-wrap">{`@${entry.entryType}{${entry.citationKey},
 ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}
 }`}</pre>
                     <button 
