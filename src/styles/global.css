@@ -25,6 +25,10 @@ code {
   @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded-md text-[0.9em] border border-gray-200;
 }
 
+.prose p {
+  @apply mb-4;
+}
+
 /* Custom fixes for research output pages (datasets/software) */
 .prose-research h2 {
   @apply flex items-center gap-3 border-b border-gray-100 pb-2 mt-16 mb-8 text-2xl uppercase tracking-wider text-gray-400 font-bold!;
