@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+import bibtexParse from 'bibtex-parse-js';
+import katex from 'katex';
+
+const bibDir = path.resolve('./src/data/publis/');
+const bibFiles = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib'));
+
+let allEntries: any[] = [];
+
+bibFiles.forEach(file => {
+  const content = fs.readFileSync(path.join(bibDir, file), 'utf8');
+  try {
+    const entries = bibtexParse.toJSON(content);
+    allEntries = allEntries.concat(entries);
+  } catch (e) {
+    console.error(`Error parsing ${file}:`, e);
+  }
+});
+
+// Group by year
+const groupedByYear = allEntries.reduce((acc, entry) => {
+  const year = entry.entryTags.year || 'Unknown';
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(entry);
+  return acc;
+}, {} as Record<string, any[]>);
+
+const years = Object.keys(groupedByYear)
+  .filter(year => year !== 'Unknown')
+  .sort((a, b) => b.localeCompare(a));
+
+function latexToUnicode(str: string) {
+  if (!str) return '';
+  return str
+    .replace(/\\'([aeiouyAEIOUY])/g, '$1\u0301') // acute
+    .replace(/\\`([aeiouyAEIOUY])/g, '$1\u0300') // grave
+    .replace(/\\\^([aeiouyAEIOUY])/g, '$1\u0302') // circumflex
+    .replace(/\\"([aeiouyAEIOUY])/g, '$1\u0308') // umlaut
+    .replace(/\\~([anouANOU])/g, '$1\u0303') // tilde
+    .replace(/\\c\s*{?c}?/g, 'ç') // cedilla
+    .replace(/\\c\s*{?C}?/g, 'Ç')
+    .replace(/\\v\s*{?([aeiouyAEIOUY])}?/g, '$1\u030c') // caron
+    .normalize('NFC');
+}
+
+function cleanValue(str: string) {
+  if (!str) return '';
+  let cleaned = str.replace(/{/g, '').replace(/}/g, '').trim();
+  return latexToUnicode(cleaned);
+}
+
+function renderMath(str: string) {
+  if (!str) return '';
+  // 1. Remove outer curly braces used for BibTeX escaping
+  let text = str.replace(/{/g, '').replace(/}/g, '').trim();
+  
+  // 2. Identify and render Math segments first
+  const segments = text.split(/(\$[^$]+\$)/g);
+  return segments.map(seg => {
+    if (seg.startsWith('$') && seg.endsWith('$')) {
+      const math = seg.slice(1, -1);
+      try {
+        return katex.renderToString(math, { 
+          throwOnError: false, 
+          displayMode: false,
+          output: 'html' 
+        });
+      } catch (e) {
+        return seg;
+      }
+    } else {
+      // 3. Apply LaTeX accent conversion ONLY to non-math segments
+      return latexToUnicode(seg);
+    }
+  }).join('');
+}
+
+function normalizeSearch(str: string) {
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
+function formatAuthors(authorStr: string) {
+  if (!authorStr) return '';
+  const cleanedStr = cleanValue(authorStr);
+  const authors = cleanedStr.split(' and ').map(a => {
+    const parts = a.split(',');
+    if (parts.length === 2) return `${parts[1].trim()} ${parts[0].trim()}`;
+    return a.trim();
+  });
+  if (authors.length <= 5) return authors.join(', ');
+  return authors.slice(0, 5).join(', ') + ' et al.';
+}
+---
+
+<BaseLayout title="Publications | Sigmedia">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8 tracking-tight text-center">Publications</h1>
+
+    {/* Search Bar */}
+    <div class="mb-12 sticky top-24 z-20">
+      <div class="relative max-w-2xl mx-auto">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+          <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          id="pub-search" 
+          placeholder="Search by title, author, or venue..." 
+          class="block w-full pl-11 pr-4 py-4 bg-white border-2 border-gray-100 rounded-2xl shadow-lg focus:ring-4 focus:ring-brand/20 focus:border-brand transition-all outline-none text-lg"
+        />
+      </div>
+    </div>
+
+    <div class="space-y-16" id="publications-list">
+      {years.map(year => (
+        <section id={`year-${year}`} class="year-section">
+          <h2 class="text-3xl font-extrabold text-gray-900 mb-8 border-b-4 border-brand pb-2 inline-block">
+            {year}
+          </h2>
+          <div class="space-y-8">
+            {groupedByYear[year].map((entry: any) => (
+              <div 
+                class="pub-card bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                data-search={normalizeSearch(
+                  (entry.entryTags.title || '') + ' ' + 
+                  (entry.entryTags.author || '') + ' ' + 
+                  (entry.entryTags.journal || entry.entryTags.booktitle || '')
+                )}
+              >
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                  <div class="flex-grow">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug" set:html={renderMath(entry.entryTags.title)} />
+                    <p class="text-sm text-gray-700 mb-2">
+                      <span class="font-semibold">{formatAuthors(entry.entryTags.author)}</span>
+                    </p>
+                    <p class="text-sm text-gray-500 italic">
+                      {cleanValue(entry.entryTags.journal || entry.entryTags.booktitle || entry.entryTags.publisher)}
+                      {entry.entryTags.volume && `, vol. ${entry.entryTags.volume}`}
+                      {entry.entryTags.number && `, no. ${entry.entryTags.number}`}
+                      {entry.entryTags.pages && `, pp. ${entry.entryTags.pages}`}
+                    </p>
+                  </div>
+                  
+                  <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                    <button 
+                      class="bib-toggle px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-xs font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider"
+                      data-target={`bib-${entry.citationKey}`}
+                    >
+                      BIB
+                    </button>
+                    {entry.entryTags.doi && (
+                      <a href={`https://doi.org/${entry.entryTags.doi}`} target="_blank" class="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-xs font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
+                        DOI
+                      </a>
+                    )}
+                    {entry.entryTags.url && (
+                      <a href={entry.entryTags.url} target="_blank" class="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-xs font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
+                        URL
+                      </a>
+                    )}
+                  </div>
+                </div>
+                
+                {/* BibTeX Expandable */}
+                <div id={`bib-${entry.citationKey}`} class="hidden mt-4 pt-4 border-t border-gray-100">
+                  <div class="relative group/bib">
+                    <pre class="bg-gray-50 text-gray-900 p-6 rounded-2xl text-[11px] overflow-x-auto font-mono leading-relaxed border border-gray-100 shadow-inner whitespace-pre-wrap">{`@${entry.entryType}{${entry.citationKey},
+${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}
+}`}</pre>
+                    <button 
+                      class="copy-bib absolute top-4 right-4 p-2 bg-white border border-gray-200 shadow-sm hover:border-brand hover:text-brand-dark rounded-xl text-gray-400 transition-all opacity-0 group-hover/bib:opacity-100"
+                      data-bib={`@${entry.entryType}{${entry.citationKey},\n${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}\n}`}
+                      title="Copy BibTeX"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    {/* Empty State */}
+    <div id="no-results" class="hidden py-20 text-center">
+      <p class="text-xl text-gray-400">No publications found matching your search.</p>
+      <button 
+        onclick="document.getElementById('pub-search').value = ''; document.getElementById('pub-search').dispatchEvent(new Event('input'));"
+        class="mt-4 text-brand-dark font-bold hover:underline"
+      >
+        Clear search
+      </button>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('pub-search') as HTMLInputElement;
+  const pubCards = document.querySelectorAll('.pub-card');
+  const yearSections = document.querySelectorAll('.year-section');
+  const noResults = document.getElementById('no-results');
+
+  function normalizeSearch(str: string) {
+    return str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+  }
+
+  searchInput?.addEventListener('input', (e) => {
+    const query = normalizeSearch((e.target as HTMLInputElement).value);
+    let totalVisible = 0;
+
+    yearSections.forEach(section => {
+      const cards = section.querySelectorAll('.pub-card');
+      let visibleInYear = 0;
+
+      cards.forEach(card => {
+        const searchText = (card as HTMLElement).dataset.search || '';
+        if (searchText.includes(query)) {
+          (card as HTMLElement).style.display = 'block';
+          visibleInYear++;
+          totalVisible++;
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+
+      // Hide year section if no cards match
+      (section as HTMLElement).style.display = visibleInYear > 0 ? 'block' : 'none';
+    });
+
+    // Show/hide empty state
+    if (noResults) {
+      noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+    }
+  });
+  // Toggle BibTeX
+  document.querySelectorAll('.bib-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = (button as HTMLElement).dataset.target;
+      if (targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.classList.toggle('hidden');
+          button.classList.toggle('bg-brand');
+        }
+      }
+    });
+  });
+
+  // Copy BibTeX
+  document.querySelectorAll('.copy-bib').forEach(button => {
+    button.addEventListener('click', () => {
+      const bib = (button as HTMLElement).dataset.bib || '';
+      navigator.clipboard.writeText(bib).then(() => {
+        const originalInner = button.innerHTML;
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>';
+        setTimeout(() => {
+          button.innerHTML = originalInner;
+        }, 2000);
+      });
+    });
+  });
+</script>

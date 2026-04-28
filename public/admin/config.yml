@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: sigmedia/sigmedia.github.io # UPDATE THIS to your repository
+  branch: main
+
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "team"
+    label: "Team"
+    folder: "src/content/team"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["staff", "Postdoc", "Research-Assistant", "PhD-Student", "others", "alumni"]}
+      - {label: "Role", name: "role", widget: "string"}
+      - {label: "Join Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Social"
+        name: "social"
+        widget: "object"
+        fields:
+          - {label: "Twitter", name: "twitter", widget: "string", required: false}
+          - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+          - {label: "GitHub", name: "github", widget: "string", required: false}
+          - {label: "Google Scholar", name: "google-scholar", widget: "string", required: false}
+          - {label: "Website", name: "website", widget: "string", required: false}
+          - {label: "Email", name: "email", widget: "string", required: false}
+
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
