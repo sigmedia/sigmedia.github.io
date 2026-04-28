@@ -9,9 +9,7 @@ permalink: /datasets/tcd_timit/
   - <span class="field-label">Download link</span> <https://sigmedia.tcd.ie/>
   - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDTimit Question] (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span> [harte2015tcd](#reference)
-
-<div id="reference">
+  - <span class="field-label">Reference</span>
 
 ```bibtex
 @article{harte2015tcd,
@@ -25,8 +23,6 @@ permalink: /datasets/tcd_timit/
   publisher    = {IEEE}
 }
 ```
-
-</div>
 
 ## Description
 
