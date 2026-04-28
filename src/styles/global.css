@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-brand: #ffd200;
   --color-brand-dark: #ccaa00;
@@ -7,8 +9,12 @@
 
 /* Custom styling for Markdown code blocks to match BibTeX theme */
 pre.astro-code {
-  @apply !bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-inner text-[13px] leading-relaxed my-8 overflow-x-auto;
+  @apply !bg-gray-50 dark:!bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-inner text-[13px] leading-relaxed my-8 overflow-x-auto;
   color: #1a1a1a !important; /* Force near-black base color */
+}
+
+.dark pre.astro-code {
+  color: #e5e7eb !important;
 }
 
 pre.astro-code span {
@@ -22,7 +28,7 @@ code {
 
 /* Inline code */
 :not(pre) > code {
-  @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded-md text-[0.9em] border border-gray-200;
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-1.5 py-0.5 rounded-md text-[0.9em] border border-gray-200 dark:border-gray-700;
 }
 
 .prose p {
@@ -43,7 +49,7 @@ code {
 
 /* Custom fixes for research output pages (datasets/software) */
 .prose-research h2 {
-  @apply flex items-center gap-3 border-b border-gray-100 pb-2 mt-16 mb-8 text-2xl uppercase tracking-wider text-gray-400 font-bold!;
+  @apply flex items-center gap-3 border-b border-gray-100 dark:border-gray-800 pb-2 mt-16 mb-8 text-2xl uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold!;
 }
 
 /* Style the "Global Information" lists as cards */
@@ -52,11 +58,11 @@ code {
 }
 
 .prose-research h2 + ul li {
-  @apply bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1 text-sm m-0!;
+  @apply bg-gray-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex flex-col gap-1 text-sm m-0!;
 }
 
 .prose-research h2 + ul li .field-label {
-  @apply text-gray-400 uppercase text-[10px] tracking-widest font-bold;
+  @apply text-gray-400 dark:text-gray-500 uppercase text-[10px] tracking-widest font-bold;
 }
 
 /* Ensure bibtex in reference field has top margin */

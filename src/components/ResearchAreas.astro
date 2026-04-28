@@ -8,17 +8,17 @@ const research = yaml.load(fs.readFileSync(dataPath, 'utf8')) as any;
 ---
 
 <div class="mt-16">
-  <h3 class="text-xl font-bold text-gray-900 mb-8 flex items-center">
+  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
     <span class="w-8 h-1 bg-brand mr-3"></span>
     Current Research Projects & Topics
   </h3>
   
   <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
     <div id="section-audio">
-      <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Audio</h4>
+      <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Audio</h4>
       <ul class="space-y-3">
         {research.audio.map((item: string) => (
-          <li class="text-gray-600 text-sm flex items-start">
+          <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start">
             <span class="text-brand mr-2">•</span>
             {item}
           </li>
@@ -27,10 +27,10 @@ const research = yaml.load(fs.readFileSync(dataPath, 'utf8')) as any;
     </div>
 
     <div id="section-video">
-      <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Video</h4>
+      <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Video</h4>
       <ul class="space-y-3">
         {research.video.map((item: string) => (
-          <li class="text-gray-600 text-sm flex items-start">
+          <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start">
             <span class="text-brand mr-2">•</span>
             {item}
           </li>
@@ -39,10 +39,10 @@ const research = yaml.load(fs.readFileSync(dataPath, 'utf8')) as any;
     </div>
 
     <div id="section-overlap">
-      <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">A/V Overlap</h4>
+      <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">A/V Overlap</h4>
       <ul class="space-y-3">
         {research.overlap.map((item: string) => (
-          <li class="text-gray-600 text-sm flex items-start">
+          <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start">
             <span class="text-brand mr-2">•</span>
             {item}
           </li>

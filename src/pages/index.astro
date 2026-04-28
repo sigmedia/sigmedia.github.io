@@ -10,17 +10,19 @@ import logo from '../assets/images/sigmedia_logo_white_bg.svg';
 <BaseLayout>
   <div class="max-w-4xl mx-auto">
     <section class="py-12 md:py-20 flex flex-col items-start">
-      <Image src={logo} alt="Sigmedia Logo" class="h-24 w-auto mb-12" />
-      <p class="text-xl text-gray-600 leading-relaxed mb-8">
+      <div class="relative">
+        <Image src={logo} alt="Sigmedia Logo" class="h-24 w-auto mb-12 dark:invert dark:brightness-200" />
+      </div>
+      <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
         The Signal Processing for Media Applications (Sigmedia) Group is a research group in the 
-        <a href="https://tcd.ie/eleceng" class="text-gray-900 font-semibold hover:text-brand-dark underline decoration-brand transition-colors">Department of Electronic and Electrical Engineering</a> 
-        at <a href="https://tcd.ie/" class="text-gray-900 font-semibold hover:text-brand-dark underline decoration-brand transition-colors">Trinity College Dublin</a>.
+        <a href="https://tcd.ie/eleceng" class="text-gray-900 dark:text-white font-semibold hover:text-brand-dark underline decoration-brand transition-colors">Department of Electronic and Electrical Engineering</a> 
+        at <a href="https://tcd.ie/" class="text-gray-900 dark:text-white font-semibold hover:text-brand-dark underline decoration-brand transition-colors">Trinity College Dublin</a>.
       </p>
     </section>
 
-    <section class="py-12 border-t border-gray-100">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">Research</h2>
-      <p class="text-lg text-gray-600 leading-relaxed mb-8">
+    <section class="py-12 border-t border-gray-100 dark:border-gray-800">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Research</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
         We explore problems that involve visual or audio digital media. Evolving from expertise in digital signal processing,
         we create solutions based on a healthy mix of statistics, probabilistic inference, applied mathematics, and human perception.
         The team operates in well-recognised domains: computer vision, audio/video processing, and speech and
@@ -31,19 +33,19 @@ import logo from '../assets/images/sigmedia_logo_white_bg.svg';
 
       <ResearchAreas />
 
-      <p class="text-lg text-gray-600 leading-relaxed mt-12 bg-gray-50 p-6 rounded-xl border-l-4 border-brand">
+      <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mt-12 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl border-l-4 border-brand">
         We are well known for our work on cinema post-production. Our motion and visual enhancement technologies
-        (in collaboration with <a href="https://foundry.com" class="font-bold text-gray-900 hover:text-brand-dark">Foundry</a>) were used around the world for film
+        (in collaboration with <a href="https://foundry.com" class="font-bold text-gray-900 dark:text-white hover:text-brand-dark">Foundry</a>) were used around the world for film
         post production in movies like <em>The Matrix</em>, <em>Lord of the Rings</em>, <em>X-Men</em>,
         <em>Spider-Man</em>, and <em>Harry Potter</em>. This work was recognised by the
-        <a href="https://www.oscars.org/sci-tech/ceremonies/2007" class="font-bold text-gray-900 underline decoration-brand decoration-2 underline-offset-4">Academy of Motion Picture Arts and Sciences in 2007</a>
+        <a href="https://www.oscars.org/sci-tech/ceremonies/2007" class="font-bold text-gray-900 dark:text-white underline decoration-brand decoration-2 underline-offset-4">Academy of Motion Picture Arts and Sciences in 2007</a>
         with a Scientific and Engineering Oscar award.
       </p>
     </section>
 
-    <section class="py-12 border-t border-gray-100">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Collaboration</h2>
-      <p class="text-lg text-gray-600 leading-relaxed text-center max-w-2xl mx-auto mb-12">
+    <section class="py-12 border-t border-gray-100 dark:border-gray-800">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">Collaboration</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-center max-w-2xl mx-auto mb-12">
         We have collaborated closely with Industry and many EU projects involving archives and broadcasters around Europe.
         Our current projects are funded by the European Union, Science Foundation Ireland, IRCSET, and Enterprise Ireland.
       </p>

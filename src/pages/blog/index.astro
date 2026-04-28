@@ -11,12 +11,12 @@ const posts = (await getCollection('posts')).sort((a, b) => {
 
 <BaseLayout title="Blog | Sigmedia">
   <div class="max-w-4xl mx-auto py-12">
-    <h1 class="text-3xl font-bold text-gray-900 mb-8 tracking-tight">Blog & News</h1>
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight">Blog & News</h1>
 
     <div class="space-y-1">
       {posts.map(post => (
-        <article class="group flex flex-col md:flex-row md:items-baseline gap-1 md:gap-6 py-2 hover:bg-gray-50/80 px-4 rounded-lg transition-colors">
-          <time class="text-sm font-mono text-gray-400 w-32 shrink-0">
+        <article class="group flex flex-col md:flex-row md:items-baseline gap-1 md:gap-6 py-2 hover:bg-gray-50/80 dark:hover:bg-gray-900/50 px-4 rounded-lg transition-colors">
+          <time class="text-sm font-mono text-gray-400 dark:text-gray-500 w-32 shrink-0">
             {post.data.date ? new Date(post.data.date).toLocaleDateString('en-GB', {
               year: 'numeric',
               month: 'short',
@@ -24,7 +24,7 @@ const posts = (await getCollection('posts')).sort((a, b) => {
             }) : 'No Date'}
           </time>
           <div class="flex-grow">
-            <h2 class="text-base font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
+            <h2 class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               <a href={`/blog/${post.id}`}>
                 {post.data.title}
               </a>

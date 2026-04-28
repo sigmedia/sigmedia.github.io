@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from './ThemeToggle.astro';
+
 const navItems = [
   { href: '/team', label: 'Team' },
   { href: '/publications', label: 'Publications' },
@@ -8,30 +10,36 @@ const navItems = [
   { href: '/blog', label: 'Blog' },
 ];
 ---
-<header class="bg-white border-b border-gray-200">
+<header class="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
   <div class="container mx-auto px-6">
     <nav class="flex items-center justify-between h-20">
-      <a href="/" class="text-2xl font-bold text-gray-900 tracking-tight hover:text-brand-dark transition-colors">
+      <a href="/" class="text-2xl font-bold text-gray-900 dark:text-white tracking-tight hover:text-brand-dark transition-colors">
         Sigmedia
       </a>
       
       {/* Desktop Menu */}
-      <ul class="hidden md:flex space-x-8">
-        {navItems.map(item => (
-          <li>
-            <a href={item.href} class="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors uppercase tracking-wider">
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div class="hidden md:flex items-center space-x-8">
+        <ul class="flex space-x-8">
+          {navItems.map(item => (
+            <li>
+              <a href={item.href} class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-dark dark:hover:text-brand transition-colors uppercase tracking-wider">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <ThemeToggle />
+      </div>
 
       {/* Mobile Menu Button - simplified for now */}
-      <button class="md:hidden p-2 text-gray-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
+      <div class="flex items-center space-x-4 md:hidden">
+        <ThemeToggle />
+        <button class="p-2 text-gray-600 dark:text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
     </nav>
   </div>
 </header>
