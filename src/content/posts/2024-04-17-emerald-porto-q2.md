@@ -1,4 +1,5 @@
 ---
+date: 2024-04-17
 layout: post
 title: Sigmedia Team attends EMERALD Consortium Meeting in Porto
 categories: video

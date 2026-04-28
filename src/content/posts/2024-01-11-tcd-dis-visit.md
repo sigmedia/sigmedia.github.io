@@ -1,4 +1,5 @@
 ---
+date: 2024-01-11
 layout: post
 title: TCD visits Disguise to start their workpackage collaboration
 categories: video
