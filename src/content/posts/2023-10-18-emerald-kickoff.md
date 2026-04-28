@@ -1,4 +1,5 @@
 ---
+date: 2023-10-18
 layout: post
 title: Sigmedia Team attends EMERALD Project Kick-off Meeting in Barcelona
 categories: video

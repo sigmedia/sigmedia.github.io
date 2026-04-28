@@ -1,4 +1,5 @@
 ---
+date: 2024-11-01
 layout: post
 title: Anil Kokaram presented "Demystifying the Use of Compression in Virtual Production" in SMPTE MTS 2024
 categories: video
