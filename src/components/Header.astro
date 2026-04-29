@@ -41,15 +41,64 @@ const isLandingPage = Astro.url.pathname === import.meta.env.BASE_URL || Astro.u
         <ThemeToggle />
       </div>
 
-      {/* Mobile Menu Button - simplified for now */}
+      {/* Mobile Menu Button */}
       <div class="flex items-center space-x-4 md:hidden">
         <ThemeToggle />
-        <button class="p-2 text-gray-600 dark:text-gray-400">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button id="mobile-menu-button" class="p-2 text-gray-600 dark:text-gray-400 hover:text-brand-dark dark:hover:text-brand transition-colors focus:outline-none" aria-label="Toggle Menu">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </nav>
   </div>
+
+  {/* Mobile Menu Overlay */}
+  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-bg border-t border-gray-100 dark:border-gray-800 transition-all duration-300 overflow-hidden">
+    <div class="container mx-auto px-6 py-6">
+      <ul class="flex flex-col space-y-4">
+        {navItems.map(item => (
+          <li>
+            <a href={item.href} class="block text-lg font-semibold text-gray-900 dark:text-white hover:text-brand-dark dark:hover:text-brand transition-colors uppercase tracking-widest">
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
 </header>
+
+<script>
+  const setupMobileMenu = () => {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (button && menu && menuIcon && closeIcon) {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle menu visibility
+        menu.classList.toggle('hidden');
+        
+        // Toggle icons
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        
+        // Update accessibility
+        button.setAttribute('aria-expanded', String(!isExpanded));
+      });
+    }
+  };
+
+  // Run on page load
+  setupMobileMenu();
+  
+  // Run on view transitions
+  document.addEventListener('astro:after-swap', setupMobileMenu);
+</script>
