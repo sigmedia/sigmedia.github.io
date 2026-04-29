@@ -4,7 +4,7 @@ category: Postdoc
 title: Deirdre O'Regan
 date: 2024-11-01
 image: '../../assets/images/team/deirdreoregan.jpg'
-role: Research Fellow'
+role: Research Fellow
 permalink: 'team/deirdre-o-regan'
 social:
     linkedin: https://www.linkedin.com/in/deirdreoregan/

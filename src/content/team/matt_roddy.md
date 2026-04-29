@@ -4,7 +4,7 @@ category: alumni
 title: Matt Roddy
 date: 2020-04-28
 image: '../../assets/images/team/roddym.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/matt-roddy'
 social:
     twitter:

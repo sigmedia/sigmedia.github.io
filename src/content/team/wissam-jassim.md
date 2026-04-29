@@ -4,7 +4,7 @@ category: alumni
 title:  Wissam Jassim
 date: 2021-08-01
 image: '../../assets/images/team/jassimw.jpg'
-role: Research Fellow'
+role: Research Fellow
 permalink: 'team/jassimw'
 social:
     twitter: 

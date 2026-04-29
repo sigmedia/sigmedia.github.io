@@ -4,7 +4,7 @@ category: alumni
 title: Ciaran Donegan
 date: 2021-07-01
 image: '../../assets/images/team/cidonega.jpg'
-role: Research Assistant'
+role: Research Assistant
 permalink: 'team/cidonega'
 social:
     linkedin: https://www.linkedin.com/in/ciarandonegan-2ab8b3147/

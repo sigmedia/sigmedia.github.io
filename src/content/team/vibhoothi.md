@@ -1,10 +1,10 @@
 ---
 layout: member 
-category: PhD-Student
+category: Postdoc
 title: Vibhoothi
 date: 2020-10-01
 image: '../../assets/images/team/vibhoothi.jpg'
-role: PhD Student/Research Assistant'
+role: Research Fellow
 permalink: 'team/vibhoothi'
 social:
     twitter: 

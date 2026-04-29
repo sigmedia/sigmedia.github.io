@@ -34,7 +34,7 @@ const groupedMembers = categories.reduce((acc, cat) => {
         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 border-b-4 border-brand pb-2 inline-block">{cat.label}</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6">
           {groupedMembers[cat.id].map(member => (
-            <a href={`/team/${member.id}`} class="group">
+            <a href={`${import.meta.env.BASE_URL}team/${member.id}`} class="group">
               <div class="aspect-square overflow-hidden rounded-xl mb-3 bg-gray-100 dark:bg-gray-800 border border-gray-100 dark:border-gray-800">
                 {member.data.image ? (
                   <Image 

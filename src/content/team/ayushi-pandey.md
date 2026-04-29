@@ -4,7 +4,7 @@ category: alumni
 title: Ayushi Pandey
 date: 2019-09-24
 image: '../../assets/images/team/pandeya.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/ayushi-pandey'
 social:
     linkedin: https://linkedin.com/in/ayuship

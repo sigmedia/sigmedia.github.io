@@ -23,7 +23,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Experience in signal processing and Matlab or Python is a distinct advantage.
         </p>
         <p>
-          Please send a short CV and motivation letter, including the names of at least 2 referees, to prospective Advisors listed on the <a href="/team" class="font-bold underline">Team page</a>.
+          Please send a short CV and motivation letter, including the names of at least 2 referees, to prospective Advisors listed on the <a href={`${import.meta.env.BASE_URL}team`} class="font-bold underline">Team page</a>.
         </p>
       </section>
 
@@ -38,7 +38,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white">Internships</h3>
           <p>
-            We frequently take on talented interns. See our <a href="/" class="text-blue-600 dark:text-blue-400 hover:underline">Research page</a> to get an overview of the research in the group.
+            We frequently take on talented interns. See our <a href={import.meta.env.BASE_URL} class="text-blue-600 dark:text-blue-400 hover:underline">Research page</a> to get an overview of the research in the group.
           </p>
         </div>
       </div>
