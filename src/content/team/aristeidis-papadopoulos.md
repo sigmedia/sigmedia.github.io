@@ -9,6 +9,7 @@ permalink: 'team/aristeidis-papadopoulos'
 social:
     linkedin: https://www.linkedin.com/in/victoria-ivanova-5a48a717b
     github: https://github.com/aristosp
+    google-scholar: https://scholar.google.com/citations?user=U8fIw0MAAAAJ&hl=en
     website:
     orcid:
     email: papadoar@tcd.ie

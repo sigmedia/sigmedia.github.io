@@ -11,6 +11,7 @@ social:
     email: ganbaatb@tcd.ie
     linkedin: https://ie.linkedin.com/in/bold-erdene-ganbaatar-931b71184
     website:
+    google-scholar: 
 
 ---
 
