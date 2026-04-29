@@ -6,6 +6,8 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://frcs.github.io',
+  base: '/dev-sigmedia-website',
   vite: {
     plugins: [tailwindcss()]
   },
