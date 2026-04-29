@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import ThemeToggle from './ThemeToggle.astro';
+import logoLight from '../assets/images/sigmedia_logo_white_bg.svg';
+import logoDark from '../assets/images/sigmedia_logo_dark_bg.svg';
 
 const navItems = [
   { href: `${import.meta.env.BASE_URL}team`, label: 'Team' },
@@ -9,13 +12,20 @@ const navItems = [
   { href: `${import.meta.env.BASE_URL}jobs`, label: 'Jobs' },
   { href: `${import.meta.env.BASE_URL}blog`, label: 'Blog' },
 ];
+
+const isLandingPage = Astro.url.pathname === import.meta.env.BASE_URL || Astro.url.pathname === `${import.meta.env.BASE_URL}/`;
 ---
 <header class="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
   <div class="container mx-auto px-6">
     <nav class="flex items-center justify-between h-20">
-      <a href={import.meta.env.BASE_URL} class="text-2xl font-bold text-gray-900 dark:text-white tracking-tight hover:text-brand-dark transition-colors">
-        Sigmedia
-      </a>
+      <div class="flex items-center">
+        {!isLandingPage && (
+          <a href={import.meta.env.BASE_URL} class="flex items-center hover:opacity-80 transition-opacity">
+            <Image src={logoLight} alt="Sigmedia Logo" class="h-10 w-auto dark:hidden" loading="eager" />
+            <Image src={logoDark} alt="Sigmedia Logo" class="h-10 w-auto hidden dark:block" loading="eager" />
+          </a>
+        )}
+      </div>
       
       {/* Desktop Menu */}
       <div class="hidden md:flex items-center space-x-8">
