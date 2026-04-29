@@ -4,7 +4,7 @@ category: PhD-Student
 title: Aristeidis Papadopoulos
 date: 2024-09-01
 image: '../../assets/images/team/aristeidis.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/aristeidis-papadopoulos'
 social:
     linkedin: https://www.linkedin.com/in/victoria-ivanova-5a48a717b

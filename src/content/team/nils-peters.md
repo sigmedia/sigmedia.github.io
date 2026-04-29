@@ -4,7 +4,7 @@ category: staff
 title: Nils Peters
 image: '../../assets/images/team/petersn.jpg'
 role: Assistant Professor
-date: 2024-09-01'
+date: 2024-09-01
 permalink: 'team/nils-peters'
 social:
   twitter:

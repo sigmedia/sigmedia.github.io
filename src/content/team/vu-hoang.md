@@ -4,7 +4,7 @@ category: PhD-Student
 title:  Long Vu Hoang
 date: 2025-09-01
 image: '../../assets/images/team/vu-hoang.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/vu-hoang'
 social:
     github: https://github.com/lggvu

@@ -4,7 +4,7 @@ category: PhD-Student
 title:  Conall Daly
 date: 2023-09-01
 image: '../../assets/images/team/dalyc.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/dalyc'
 social:
     github: https://github.com/conalld

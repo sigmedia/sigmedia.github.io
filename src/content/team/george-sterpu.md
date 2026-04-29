@@ -4,7 +4,7 @@ category: alumni
 title: George Sterpu
 date: 2021-09-01
 image: '../../assets/images/team/sterpug.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/george-sterpu'
 social:
     twitter:

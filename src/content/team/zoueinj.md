@@ -4,7 +4,7 @@ category: PhD-Student
 title:  Julien Zouein
 date: 2023-09-01
 image: '../../assets/images/team/zoueinj.jpg'
-role: PhD Student/Research Assistant'
+role: PhD Student/Research Assistant
 permalink: 'team/zoueinj'
 social:
     github: https://github.com/zwayn

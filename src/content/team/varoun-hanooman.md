@@ -4,7 +4,7 @@ category: alumni
 title: Varoun Hanooman
 date: 2020-08-01
 image: '../../assets/images/team/hanoomav.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/hanoomav'
 social:
     linkedin:

@@ -1,10 +1,10 @@
 ---
 layout: member
-category: PhD-Student
+category: Postdoc
 title:  Clément Bled
 date: 2020-08-01
 image: '../../assets/images/team/bledc.jpg'
-role: PhD Student'
+role: Teaching Fellow
 permalink: 'team/bledc'
 social:
     linkedin: https://www.linkedin.com/in/cl%C3%A9ment-bled-2041b4171/

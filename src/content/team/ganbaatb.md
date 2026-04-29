@@ -4,7 +4,7 @@ category: PhD-Student
 title:  Bold-Erdene Ganbaatar
 date: 2023-09-01
 image: '../../assets/images/team/ganbaatb.jpg'
-role: PhD Student/Research Assistant'
+role: PhD Student/Research Assistant
 permalink: 'team/ganbaatb'
 social:
     github: https://github.com/bganbaatar

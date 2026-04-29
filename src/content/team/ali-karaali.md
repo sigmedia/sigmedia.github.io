@@ -4,7 +4,7 @@ category: alumni
 title: Ali Karaali
 date: 2017-08-01
 image: '../../assets/images/team/akaraali.jpg'
-role: Research Fellow'
+role: Research Fellow
 permalink: 'team/ali-karaali'
 social:
     twitter: 
