@@ -4,7 +4,7 @@ category: alumni
 title: Marco Forte
 date: 2020-09-30
 image: '../../assets/images/team/fortem.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/marco-forte'
 social:
     twitter:

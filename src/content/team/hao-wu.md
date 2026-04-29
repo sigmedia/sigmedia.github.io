@@ -4,7 +4,7 @@ category: alumni
 title: Hao Wu
 date: 2019-08-01
 image: '../../assets/images/team/haow.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/hao-wu'
 social:
     twitter:

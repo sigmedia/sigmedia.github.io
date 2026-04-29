@@ -17,7 +17,7 @@ const { title } = entry.data;
 <BaseLayout title={`${title} | Software`}>
   <div class="max-w-4xl mx-auto py-12">
     <nav class="mb-8">
-      <a href="/software" class="text-sm text-gray-500 dark:text-gray-400 hover:text-brand-dark flex items-center transition-colors">
+      <a href={`${import.meta.env.BASE_URL}software`} class="text-sm text-gray-500 dark:text-gray-400 hover:text-brand-dark flex items-center transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>

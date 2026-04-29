@@ -4,7 +4,7 @@ category: alumni
 title: Daniel J Ringis
 date: 2018-03-01
 image: '../../assets/images/team/ringisd.jpg'
-role: PhD Student/Research Assistant'
+role: PhD Student/Research Assistant
 permalink: 'team/ringisd'
 social:
     linkedin: https://www.linkedin.com/in/daniel-joseph-ringis-0a45675b/

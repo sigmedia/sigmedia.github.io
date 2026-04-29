@@ -4,7 +4,7 @@ category: alumni
 title: Mark Anderson
 date: 2019-10-01
 image: '../../assets/images/team/andersm3.jpg'
-role: PhD Student'
+role: PhD Student
 permalink: 'team/mark-anderson'
 social:
     twitter:
