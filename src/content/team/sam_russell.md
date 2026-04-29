@@ -10,6 +10,7 @@ social:
     linkedin: https://www.linkedin.com/in/sam-oc-rll/
     twitter: https://twitter.com/russelsa12
     orchid: https://orcid.org/0000-0002-4887-4749
+    google-scholar: https://scholar.google.com/citations?user=luN7YUEAAAAJ&hl=en    
     github: https://github.com/russelsa
     email: russelsa@tcd.ie
 

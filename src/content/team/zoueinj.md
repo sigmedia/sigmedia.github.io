@@ -10,8 +10,8 @@ social:
     github: https://github.com/zwayn
     email: zoueinj@tcd.ie
     linkedin: https://www.linkedin.com/in/julien-zouein/
-    website: 
-
+    website:
+    google-scholar: https://scholar.google.com/citations?hl=en&user=txNZ6l0AAAAJ
 ---
 
 Julien Zouein is a research assistant and a PhD student under Prof. Anil
