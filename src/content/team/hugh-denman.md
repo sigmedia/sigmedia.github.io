@@ -1,10 +1,10 @@
 ---
 layout: member
-category: others
+category: alumni
 title: 'Hugh Denman'
 date: 2000-07-01
 image: '../../assets/images/team/hdenman.jpg'
-role: Adjunct Assistant Professor (Part-Time)
+role: Adjunct Assistant Professor (Part-Time)/PhD Student 
 permalink: 'team/hdenman'
 social:
     twitter: 
@@ -16,6 +16,7 @@ social:
     research-gate:
     email: hdenman@tcd.ie
 ---
+
 
 Hugh Denman was not the first SigMedian to start a PhD under Prof. Kokaram, nor
 was he the first to finish, but of those who finished, he was the first to start

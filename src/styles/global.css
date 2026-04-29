@@ -6,7 +6,7 @@
 @theme {
   --color-brand: #ffd200;
   --color-brand-dark: #ccaa00;
-  --color-dark-bg: rgb(26, 27, 27);
+  --color-dark-bg: rgb(26, 27, 37);
 }
 
 /* Custom styling for Markdown code blocks to match BibTeX theme */
