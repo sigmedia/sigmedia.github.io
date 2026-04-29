@@ -11,7 +11,28 @@ const bibFiles = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib'));
 let allEntries: any[] = [];
 
 bibFiles.forEach(file => {
-  const content = fs.readFileSync(path.join(bibDir, file), 'utf8');
+  let content = fs.readFileSync(path.join(bibDir, file), 'utf8');
+  
+  // Pre-process content to handle capitalized unquoted month macros (e.g., month = Sept)
+  // which cause bibtex-parse-js to fail.
+  content = content.replace(/month\s*=\s*([A-Za-z]+)\b/g, (match, p1) => {
+    const lower = p1.toLowerCase();
+    const monthMap: Record<string, string> = {
+      january: 'jan', febuary: 'feb', february: 'feb', march: 'mar', april: 'apr',
+      may: 'may', june: 'jun', july: 'jul', august: 'aug', september: 'sep', sept: 'sep',
+      october: 'oct', november: 'nov', december: 'dec'
+    };
+    // Also handle 3-letter abbreviations
+    const months3 = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    
+    if (monthMap[lower]) {
+      return `month = ${monthMap[lower]}`;
+    } else if (months3.includes(lower)) {
+      return `month = ${lower}`;
+    }
+    return match;
+  });
+
   try {
     const entries = bibtexParse.toJSON(content);
     allEntries = allEntries.concat(entries);
@@ -108,9 +129,10 @@ function renderMath(str: string) {
 }
 
 function normalizeSearch(str: string) {
+  if (!str) return '';
   return str
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .normalize('NFD') // Decompose combined characters (e.g., 'ç' to 'c' + '◌̧')
+    .replace(/[\u0300-\u036f]/g, '') // Remove the diacritic marks
     .toLowerCase();
 }
 
