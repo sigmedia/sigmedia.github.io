@@ -181,9 +181,9 @@ function formatAuthors(authorStr: string) {
               <div 
                 class="pub-card bg-white dark:bg-dark-bg p-4 rounded-lg border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow"
                 data-search={normalizeSearch(
-                  (entry.entryTags.title || '') + ' ' + 
-                  (entry.entryTags.author || '') + ' ' + 
-                  (entry.entryTags.journal || entry.entryTags.booktitle || '')
+                  cleanValue(entry.entryTags.title || '') + ' ' + 
+                  cleanValue(entry.entryTags.author || '') + ' ' + 
+                  cleanValue(entry.entryTags.journal || entry.entryTags.booktitle || '')
                 )}
               >
                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
