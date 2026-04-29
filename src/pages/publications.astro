@@ -35,20 +35,36 @@ const years = Object.keys(groupedByYear)
 function latexToUnicode(str: string) {
   if (!str) return '';
   return str
-    .replace(/\\'([aeiouyAEIOUY])/g, '$1\u0301') // acute
-    .replace(/\\`([aeiouyAEIOUY])/g, '$1\u0300') // grave
-    .replace(/\\\^([aeiouyAEIOUY])/g, '$1\u0302') // circumflex
-    .replace(/\\"([aeiouyAEIOUY])/g, '$1\u0308') // umlaut
-    .replace(/\\~([anouANOU])/g, '$1\u0303') // tilde
-    .replace(/\\c\s*{?c}?/g, 'ç') // cedilla
+    .replace(/\\'(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0301')
+    .replace(/\\`(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0300')
+    .replace(/\\\^(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0302')
+    .replace(/\\"(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0308')
+    .replace(/\\~(?:{\\i}|\\i|([anouANOU]))/g, (m, p1) => (p1 || 'i') + '\u0303')
+    .replace(/\\v\s*{?(\\i|\\j|([a-zA-Z]))}?/g, (m, p1, p2) => {
+      const char = p2 || (p1 === '\\i' ? 'i' : 'j');
+      return char + '\u030c';
+    })
+    .replace(/\\i\b/g, 'i')
+    .replace(/\\j\b/g, 'j')
+    .replace(/\\c\s*{?c}?/g, 'ç')
     .replace(/\\c\s*{?C}?/g, 'Ç')
-    .replace(/\\v\s*{?([aeiouyAEIOUY])}?/g, '$1\u030c') // caron
+    .replace(/\\less\b/g, '<')
+    .replace(/\\greater\b/g, '>')
+    .replace(/\\&/g, '&')
+    .replace(/\\_/g, '_')
+    .replace(/\\%/g, '%')
+    .replace(/\\#/g, '#')
     .normalize('NFC');
 }
 
 function cleanValue(str: string) {
   if (!str) return '';
   let cleaned = str.replace(/{/g, '').replace(/}/g, '').trim();
+  // Handle math-escaped symbols
+  cleaned = cleaned.replace(/\$&\$/g, '&');
+  // Remove pseudo-HTML tags and their LaTeX-wrapped versions
+  cleaned = cleaned.replace(/(\$?\\less\$?)\s*\/?(inf|sub|sup|b|i|u)\s*(\$?\\greater\$?)/gi, '');
+  cleaned = cleaned.replace(/<\/?(inf|sub|sup|b|i|u)>/gi, '');
   return latexToUnicode(cleaned);
 }
 
@@ -56,12 +72,25 @@ function renderMath(str: string) {
   if (!str) return '';
   // 1. Remove outer curly braces used for BibTeX escaping
   let text = str.replace(/{/g, '').replace(/}/g, '').trim();
+
+  // Handle math-escaped symbols before splitting
+  text = text.replace(/\$&\$/g, '&');
+
+  // 2. Convert specific LaTeX pseudo-math tags to real HTML tags
+  text = text.replace(/(\$?\\less\$?)\s*inf\s*(\$?\\greater\$?)/gi, '<sub>');
+  text = text.replace(/(\$?\\less\$?)\s*\/inf\s*(\$?\\greater\$?)/gi, '</sub>');
+  text = text.replace(/(\$?\\less\$?)\s*sub\s*(\$?\\greater\$?)/gi, '<sub>');
+  text = text.replace(/(\$?\\less\$?)\s*\/sub\s*(\$?\\greater\$?)/gi, '</sub>');
+  text = text.replace(/(\$?\\less\$?)\s*sup\s*(\$?\\greater\$?)/gi, '<sup>');
+  text = text.replace(/(\$?\\less\$?)\s*\/sup\s*(\$?\\greater\$?)/gi, '</sup>');
   
-  // 2. Identify and render Math segments first
+  // 3. Identify and render remaining Math segments
   const segments = text.split(/(\$[^$]+\$)/g);
   return segments.map(seg => {
     if (seg.startsWith('$') && seg.endsWith('$')) {
-      const math = seg.slice(1, -1);
+      const math = seg.slice(1, -1)
+        .replace(/\\less\b/g, '<')
+        .replace(/\\greater\b/g, '>');
       try {
         return katex.renderToString(math, { 
           throwOnError: false, 
@@ -72,7 +101,7 @@ function renderMath(str: string) {
         return seg;
       }
     } else {
-      // 3. Apply LaTeX accent conversion ONLY to non-math segments
+      // 4. Apply LaTeX accent conversion ONLY to non-math segments
       return latexToUnicode(seg);
     }
   }).join('');
@@ -119,29 +148,29 @@ function formatAuthors(authorStr: string) {
       </div>
     </div>
 
-    <div class="space-y-16" id="publications-list">
+    <div class="space-y-10" id="publications-list">
       {years.map(year => (
         <section id={`year-${year}`} class="year-section">
-          <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-8 border-b-4 border-brand pb-2 inline-block">
+          <h2 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-4 border-b-2 border-brand pb-1 inline-block">
             {year}
           </h2>
-          <div class="space-y-8">
+          <div class="space-y-3">
             {groupedByYear[year].map((entry: any) => (
               <div 
-                class="pub-card bg-white dark:bg-dark-bg p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow"
+                class="pub-card bg-white dark:bg-dark-bg p-4 rounded-lg border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow"
                 data-search={normalizeSearch(
                   (entry.entryTags.title || '') + ' ' + 
                   (entry.entryTags.author || '') + ' ' + 
                   (entry.entryTags.journal || entry.entryTags.booktitle || '')
                 )}
               >
-                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div class="flex-grow">
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 leading-snug" set:html={renderMath(entry.entryTags.title)} />
-                    <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                    <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1 leading-snug" set:html={renderMath(entry.entryTags.title)} />
+                    <p class="text-sm text-gray-700 dark:text-gray-300 mb-0.5">
                       <span class="font-semibold">{formatAuthors(entry.entryTags.author)}</span>
                     </p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 italic">
                       {cleanValue(entry.entryTags.journal || entry.entryTags.booktitle || entry.entryTags.publisher)}
                       {entry.entryTags.volume && `, vol. ${entry.entryTags.volume}`}
                       {entry.entryTags.number && `, no. ${entry.entryTags.number}`}
@@ -149,20 +178,20 @@ function formatAuthors(authorStr: string) {
                     </p>
                   </div>
                   
-                  <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                  <div class="flex flex-wrap gap-1.5 mt-2 md:mt-0">
                     <button 
-                      class="bib-toggle px-3 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider"
+                      class="bib-toggle px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider"
                       data-target={`bib-${entry.citationKey}`}
                     >
                       BIB
                     </button>
                     {entry.entryTags.doi && (
-                      <a href={`https://doi.org/${entry.entryTags.doi}`} target="_blank" class="px-3 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
+                      <a href={`https://doi.org/${entry.entryTags.doi}`} target="_blank" class="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
                         DOI
                       </a>
                     )}
                     {entry.entryTags.url && (
-                      <a href={entry.entryTags.url} target="_blank" class="px-3 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
+                      <a href={entry.entryTags.url} target="_blank" class="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
                         URL
                       </a>
                     )}
@@ -170,9 +199,9 @@ function formatAuthors(authorStr: string) {
                 </div>
                 
                 {/* BibTeX Expandable */}
-                <div id={`bib-${entry.citationKey}`} class="hidden mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                <div id={`bib-${entry.citationKey}`} class="hidden mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
                   <div class="relative group/bib">
-                    <pre class="bg-[var(--shiki-light-bg)] dark:bg-[var(--shiki-dark-bg)] text-gray-900 dark:text-gray-100 p-6 rounded-2xl text-[11px] overflow-x-auto font-mono leading-relaxed border border-gray-100 dark:border-gray-800 shadow-inner whitespace-pre-wrap">{`@${entry.entryType}{${entry.citationKey},
+                    <pre class="bg-[var(--shiki-light-bg)] dark:bg-[var(--shiki-dark-bg)] text-gray-900 dark:text-gray-100 p-4 rounded-lg text-[10px] overflow-x-auto font-mono leading-relaxed border border-gray-100 dark:border-gray-800 shadow-inner whitespace-pre-wrap">{`@${entry.entryType}{${entry.citationKey},
 ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}
 }`}</pre>
                     <button 
