@@ -10,6 +10,7 @@ social:
     github: https://github.com/Xin-Shu
     website:
     orcid: https://orcid.org/0009-0000-8337-331X
+    google-scholar: https://scholar.google.com/citations?hl=en&user=ihISspwAAAAJ
     email: shuxi@tcd.ie
 ---
 

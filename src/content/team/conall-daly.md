@@ -11,6 +11,7 @@ social:
     email: dalyc21@tcd.ie
     orcid: https://orcid.org/0000-0001-9440-3115
     website: https://conalldaly.com/
+    google-scholar: https://scholar.google.com/citations?hl=en&user=wSp3gi0AAAAJ
 
 ---
 

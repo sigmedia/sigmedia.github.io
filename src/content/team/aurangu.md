@@ -9,6 +9,7 @@ permalink: 'team/aurangau'
 social:
     github: https://github.com/radiobenzene
     email: aurangau@tcd.ie
+    google-scholar: https://scholar.google.com/citations?hl=en&user=HY0Qd6AAAAAJ
     linkedin: https://www.linkedin.com/in/uditangshu/
     website: 
 
