@@ -6,6 +6,7 @@
 @theme {
   --color-brand: #ffd200;
   --color-brand-dark: #ccaa00;
+  --color-dark-bg: rgb(26, 27, 27);
 }
 
 /* Custom styling for Markdown code blocks to match BibTeX theme */
@@ -88,7 +89,7 @@ code {
 }
 
 .prose-research h2 + ul li {
-  @apply bg-gray-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex flex-col gap-1 text-sm m-0!;
+  @apply bg-gray-50 dark:bg-dark-bg p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex flex-col gap-1 text-sm m-0!;
 }
 
 .prose-research h2 + ul li .field-label {
