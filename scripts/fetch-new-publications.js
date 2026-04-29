@@ -7,6 +7,9 @@ const TEAM_DIR = 'src/content/team';
 const BIB_DIR = 'src/data/publis';
 const MIN_YEAR = 2024; // Only look for papers from 2024 onwards
 
+// Helper for sleep/delay
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 // Normalize titles for comparison
 function normalizeTitle(title) {
   return title.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -23,7 +26,19 @@ async function getActiveMembers() {
 
     try {
       const frontmatter = yaml.load(match[1]);
+      
+      // Filter for active members only
       if (frontmatter.category === 'alumni') continue;
+      
+      // Focus on Academics and Postdocs (plus staff/PIs)
+      const isPriorityMember = frontmatter.category && (
+        frontmatter.category.toLowerCase().includes('academic') || 
+        frontmatter.category.toLowerCase().includes('postdoc') ||
+        frontmatter.category.toLowerCase().includes('professor') ||
+        frontmatter.category.toLowerCase().includes('staff')
+      );
+      
+      if (!isPriorityMember) continue;
 
       const scholarUrl = frontmatter.social?.['google-scholar'];
       let scholarId = null;
@@ -43,6 +58,7 @@ async function getActiveMembers() {
 
         members.push({
           name: frontmatter.title,
+          category: frontmatter.category,
           scholarId,
           joinDate: joinDate,
           joinYear: joinDate.getFullYear(),
@@ -79,7 +95,9 @@ async function fetchScholarPapers(scholarId) {
   const url = `https://scholar.google.com/citations?user=${scholarId}&hl=en&cstart=0&pagesize=100`;
   const response = await fetch(url, {
     headers: {
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Referer': 'https://scholar.google.com/'
     }
   });
   if (!response.ok) {
@@ -150,17 +168,26 @@ async function fetchBibtexAndDateFromCrossref(title, expectedYear) {
 }
 
 async function main() {
-  console.log('Fetching active members and existing publications...');
+  console.log('Fetching active priority members (Academics/Postdocs) and existing publications...');
   const members = await getActiveMembers();
   const existingTitles = getExistingTitles();
   const foundInThisRun = new Set();
   const newPapers = [];
 
-  console.log(`Found ${members.length} active members with Google Scholar IDs.`);
+  console.log(`Found ${members.length} priority members with Google Scholar IDs.`);
   console.log(`Filtering for papers from ${MIN_YEAR} onwards and after member join date.\n`);
 
-  for (const member of members) {
-    console.log(`Checking publications for ${member.name} (Joined: ${member.joinDate.toISOString().split('T')[0]})...`);
+  for (let i = 0; i < members.length; i++) {
+    const member = members[i];
+    
+    // Rate limiting delay between member fetches (except the first one)
+    if (i > 0) {
+      const waitTime = Math.floor(Math.random() * 4000) + 3000; // 3-7 seconds delay
+      console.log(`Waiting ${waitTime/1000}s to prevent rate limiting...`);
+      await sleep(waitTime);
+    }
+
+    console.log(`Checking publications for ${member.name} [${member.category}] (Joined: ${member.joinDate.toISOString().split('T')[0]})...`);
     const papers = await fetchScholarPapers(member.scholarId);
     
     let count = 0;
