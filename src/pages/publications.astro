@@ -114,7 +114,7 @@ function formatAuthors(authorStr: string) {
           type="text" 
           id="pub-search" 
           placeholder="Search by title, author, or venue..." 
-          class="block w-full pl-11 pr-4 py-4 bg-white dark:bg-gray-900 border-2 border-gray-100 dark:border-gray-800 rounded-2xl shadow-lg focus:ring-4 focus:ring-brand/20 focus:border-brand transition-all outline-none text-lg dark:text-white dark:placeholder-gray-500"
+          class="block w-full pl-11 pr-4 py-4 bg-white dark:bg-dark-bg border-2 border-gray-100 dark:border-gray-800 rounded-2xl shadow-lg focus:ring-4 focus:ring-brand/20 focus:border-brand transition-all outline-none text-lg dark:text-white dark:placeholder-gray-500"
         />
       </div>
     </div>
@@ -128,7 +128,7 @@ function formatAuthors(authorStr: string) {
           <div class="space-y-8">
             {groupedByYear[year].map((entry: any) => (
               <div 
-                class="pub-card bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow"
+                class="pub-card bg-white dark:bg-dark-bg p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow"
                 data-search={normalizeSearch(
                   (entry.entryTags.title || '') + ' ' + 
                   (entry.entryTags.author || '') + ' ' + 
@@ -176,7 +176,7 @@ function formatAuthors(authorStr: string) {
 ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}
 }`}</pre>
                     <button 
-                      class="copy-bib absolute top-4 right-4 p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:border-brand hover:text-brand-dark dark:hover:text-brand rounded-xl text-gray-400 dark:text-gray-500 transition-all opacity-0 group-hover/bib:opacity-100"
+                      class="copy-bib absolute top-4 right-4 p-2 bg-white dark:bg-dark-bg border border-gray-200 dark:border-gray-800 shadow-sm hover:border-brand hover:text-brand-dark dark:hover:text-brand rounded-xl text-gray-400 dark:text-gray-500 transition-all opacity-0 group-hover/bib:opacity-100"
                       data-bib={`@${entry.entryType}{${entry.citationKey},\n${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}\n}`}
                       title="Copy BibTeX"
                     >
