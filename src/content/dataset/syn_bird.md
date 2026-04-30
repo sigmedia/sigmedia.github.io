@@ -4,12 +4,12 @@ title: Synth Birds Database - Synthesized Birds Database with Ground Truth Pitch
 permalink: /datasets/syn_bird/
 ---
 
-## Global Information
+## Information
 
+  - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie)   <br> The
+    subject must start with the tag [SynthBirdsDB Request] <br> (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">Download link</span> [Google Drive](https://drive.google.com/file/d/14kQmAWQvFDxYuTRQ--jxV9GSEwETmptH/view?usp=sharing)
-  - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [SynthBirdsDB Question] (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span>
 
 ```bibtex
 @article{OReilly2017,
@@ -37,3 +37,7 @@ The synthesized birds database contains the following:
   5. Matlab file "a1_plot_all.m" that plots the original recording's spectrogram, the synthesized recording's spectrogram and the ground truth pitch.
 
 The bird song recordings were grouped into whistles (107 examples, 40m 09s), trills (65 examples, 13m 02s) and nasal (63 examples, 12m 32s) sounds. This data set was used in experiments for work currently submitted to Interspeech 2016.
+
+
+
+

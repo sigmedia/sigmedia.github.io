@@ -4,11 +4,13 @@ title: Political Speech Database
 permalink: /datasets/poli_sd/
 ---
 
-## Global Information
+## Information
 
-  - <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [PSD Request] (If the tag is not provided or invalid, your email will be ignored)
+  - <span class="field-label">Contact</span>
+    [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) <br> The
+    subject <b>must start</b> with the tag [PSD Request] <br> (If the tag is not provided or invalid, your email will be ignored)
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span>
+
 
 ```bibtex
 @article{Cullen2018Jun,
@@ -25,6 +27,7 @@ permalink: /datasets/poli_sd/
     issn         = {1574-0218},
 }
 ```
+
 
 ## Description
 
@@ -46,3 +49,5 @@ Annotations have been crowd-sourced for six attributes:
   - Persuasion
 
 Thus the database may be used to explore the evolution of speaking style over time, and to automatically predict these six attributes from the speech.
+
+

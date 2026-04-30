@@ -4,12 +4,11 @@ title: ViSQOLAudio Audio Quality Metric
 permalink: /software/visqol_aqm
 ---
 
-## Global Information
+## Information
 
   - <span class="field-label">Repository</span> <https://github.com/google/visqol>
-  - <span class="field-label">Contact</span>
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span>
+
 
 ```bibtex
 @article{hines2015visqolaudio,
@@ -29,3 +28,5 @@ permalink: /software/visqol_aqm
 ## Description
 
 Streaming services seek to optimise their use of bandwidth across audio and visual channels to maximise the quality of experience for users. This letter evaluates whether objective quality metrics can predict the audio quality for music encoded at low bitrates by comparing objective predictions with results from listener tests. Three objective metrics were benchmarked: PEAQ, POLQA and VISQOLAudio. The results demonstrate objective metrics designed for speech quality assessment have a strong potential for quality assessment of low bitrate audio codecs.
+
+
