@@ -7,9 +7,16 @@ permalink: /software/avsr_tf1
 ## Global Information
 
   - <span class="field-label">Repository</span> <https://github.com/georgesterpu/AVSR-tf1>
-  - <span class="field-label">Contact</span>
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span>
+
+## Description
+
+AVSR-tf1 is an open-source research system for Speech Recognition.
+
+Written entirely in Python, AVSR-tf1 aims to provide a simple and reproducible way of training and evaluating speech recognition models based on sequence to sequence neural networks. AVSR-tf1 can exploit both auditory and visual speech modalities, considered either independently (ASR, VSR) or together (AVSR).
+
+## Reference
+
 
 ```bibtex
 @article{Sterpu2020Mar,
@@ -25,9 +32,3 @@ permalink: /software/avsr_tf1
   doi          = {10.1109/TASLP.2020.2980436}
 }
 ```
-
-## Description
-
-AVSR-tf1 is an open-source research system for Speech Recognition.
-
-Written entirely in Python, AVSR-tf1 aims to provide a simple and reproducible way of training and evaluating speech recognition models based on sequence to sequence neural networks. AVSR-tf1 can exploit both auditory and visual speech modalities, considered either independently (ASR, VSR) or together (AVSR).

@@ -4,16 +4,12 @@ title: TCD-MUSHRA Web App
 permalink: /software/tcd_mushra
 ---
 
-## Global Information
+## Information
 
   - <span class="field-label">Repository</span>
-  - <span class="field-label">Contact</span>
   - <span class="field-label">License</span> Non-commercial only
-  - <span class="field-label">Reference</span>
 
 ## Description
-
-[FIXME: figure]
 
 The TCD-MUSHRA Web UI was created to perform MUSHRA (MUlti Stimulus test with Hidden Reference and Anchor, see [Recommendation ITU-R BS.1534-1](http://www.itu.int/rec/R-REC-BS.1534)) tests on a Nexus 7 tablet. Several MUSHRA experiments were run using the application in Spring/Summer 2014. The application is written in HTML5 and Javascript, with PHP scripts used to load test information and save user scores.
 
