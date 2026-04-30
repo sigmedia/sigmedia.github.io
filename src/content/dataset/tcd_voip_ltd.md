@@ -4,12 +4,13 @@ title: TCD-VoIP (Sigmedia-VoIP) Listener Test Database
 permalink: /datasets/tcd_voip_ltd/
 ---
 
-## Global Information
-
+## Information
+- <span class="field-label">Contact</span>
+  [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie)
+      <br> The subject must start with the tag [TCDVoIP Question] <br> (If the tag is not provided or invalid, your email will be ignored)
 - <span class="field-label">Download link</span> [Google Drive](https://drive.google.com/file/d/1rHJN34vP-W8SJtjpNUnx5RIks3o5L5he/view?usp=sharing)
-- <span class="field-label">Contact</span> [sigmedia_database@tcd.ie](mailto:sigmediag_database@tcd.ie) - The subject **must start** with the tag [TCDVoIP Question] (If the tag is not provided or invalid, your email will be ignored)
 - <span class="field-label">License</span> Non-commercial only
-- <span class="field-label">Reference</span>
+
 
 ```bibtex
 @inproceedings{harte2015tcd,
@@ -42,3 +43,6 @@ There are many types of degradation which can occur in Voice over IP calls. Degr
 | Noise             | 20         |   Noise Type | Car, Street, Office, Babble |
 |                   |            |          SNR |                      5-55dB |
 | MNRU              | 4          |      SNR (Q) |              48, 36, 24, 12 |
+
+
+
