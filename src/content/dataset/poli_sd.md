@@ -5,6 +5,20 @@ permalink: /datasets/poli_sd/
 category: Audio
 license: Non-commercial
 bibtex: true
+bibtex_snippet: |
+  @article{Cullen2018Jun,
+      title        = {A longitudinal database of Irish political speech with annotations of speaker ability},
+      author       = {Cullen, Ailbhe and Harte, Naomi},
+      year         = 2018,
+      month        = jun,
+      journal      = {Lang. Resources {\&}. Evaluation},
+      publisher    = {Springer Netherlands},
+      volume       = 52,
+      number       = 2,
+      pages        = {401--432},
+      doi          = {10.1007/s10579-017-9401-z},
+      issn         = {1574-0218},
+  }
 ---
 
 ## Information

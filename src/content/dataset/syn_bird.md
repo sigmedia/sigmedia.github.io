@@ -6,6 +6,19 @@ category: Audio
 license: Non-commercial
 link: https://drive.google.com/file/d/14kQmAWQvFDxYuTRQ--jxV9GSEwETmptH/view?usp=sharing
 bibtex: true
+bibtex_snippet: |
+  @article{OReilly2017,
+      title        = {Pitch tracking of bird vocalizations and an automated process using YIN-bird},
+      author       = {O'Reilly, Colm and Harte, Naomi},
+      year         = 2017,
+      month        = jan,
+      journal      = {Cogent Biology},
+      publisher    = {Cogent OA},
+      volume       = 3,
+      number       = 1,
+      pages        = 1322025,
+      doi          = {10.1080/23312025.2017.1322025},
+  }
 ---
 
 ## Information
