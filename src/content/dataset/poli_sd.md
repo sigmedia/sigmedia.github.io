@@ -2,6 +2,8 @@
 layout: post
 title: Political Speech Database
 permalink: /datasets/poli_sd/
+category: Audio
+license: Non-commercial
 ---
 
 ## Information

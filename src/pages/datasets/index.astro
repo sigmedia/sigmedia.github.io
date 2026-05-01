@@ -14,15 +14,61 @@ const datasets = await getCollection('dataset');
 
     <div class="divide-y divide-gray-100 dark:divide-gray-800">
       {datasets.map(dataset => (
-        <a href={`${import.meta.env.BASE_URL}datasets/${dataset.id}`} class="group flex items-center justify-between py-4 hover:bg-gray-50/50 dark:hover:bg-gray-900/30 px-4 -mx-4 rounded-xl transition-all">
-          <h2 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{dataset.data.title}</h2>
-          <div class="flex items-center text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0">
-            <span class="text-sm font-medium mr-2">View details</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-            </svg>
+        <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+          <div class="flex-grow">
+            <div class="flex items-center gap-3 mb-1">
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <a href={`${import.meta.env.BASE_URL}datasets/${dataset.id}`}>
+                  {dataset.data.title}
+                </a>
+              </h2>
+              {dataset.data.license && (
+                <span class="px-2 py-0.5 text-xs font-medium border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 rounded-full">
+                  {dataset.data.license}
+                </span>
+              )}
+            </div>
+            
+            <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+              {dataset.data.category && (
+                <div class="flex items-center gap-1.5">
+                  <span class={`w-3 h-3 rounded-full ${
+                    dataset.data.category === 'Audio' ? 'bg-blue-500' : 
+                    dataset.data.category === 'Video' ? 'bg-pink-500' : 
+                    dataset.data.category === 'Audio-Visual' ? 'bg-purple-500' : 
+                    dataset.data.category === 'Multimodal' ? 'bg-green-500' : 'bg-gray-400'
+                  }`}></span>
+                  {dataset.data.category}
+                </div>
+              )}
+              
+              {dataset.data.link && (
+                <a 
+                  href={dataset.data.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download
+                </a>
+              )}
+            </div>
           </div>
-        </a>
+          
+          <div class="flex items-center gap-2">
+            <a 
+              href={`${import.meta.env.BASE_URL}datasets/${dataset.id}`}
+              class="px-4 py-1.5 text-sm font-medium bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shadow-sm"
+            >
+              Details
+            </a>
+          </div>
+        </div>
       ))}
     </div>
   </div>
