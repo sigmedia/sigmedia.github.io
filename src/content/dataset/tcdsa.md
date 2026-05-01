@@ -5,6 +5,18 @@ permalink: /datasets/tcdsa/
 category: Audio
 license: Academic
 bibtex: true
+bibtex_snippet: |
+  @inproceedings{Kelly2012,
+      title        = {Speaker verification with long-term ageing data},
+      author       = {Kelly, Finnian and Drygajlo, Andrzej and Harte, Naomi},
+      year         = 2012,
+      month        = mar,
+      booktitle    = {5th IAPR International Conference on Biometrics (ICB)}},
+      publisher    = {IEEE},
+      pages        = {478--483},
+      doi          = {10.1109/ICB.2012.6199796},
+      issn         = {2376-4201},
+  }
 ---
 
 ## Information

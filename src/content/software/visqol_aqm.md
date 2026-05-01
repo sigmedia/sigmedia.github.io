@@ -6,6 +6,19 @@ repository: https://github.com/google/visqol
 language: C++
 license: Apache-2.0
 bibtex: true
+bibtex_snippet: |
+  @article{hines2015visqolaudio,
+    title        = {ViSQOLAudio: An objective audio quality metric for low bitrate codecs},
+    author       = {Hines, Andrew and Gillen, Eoin and Kelly, Damien and Skoglund, Jan and Kokaram,
+                    Anil and Harte, Naomi},
+    journal      = {The Journal of the Acoustical Society of America},
+    volume       = {137},
+    number       = {6},
+    pages        = {EL449--EL455},
+    year         = {2015},
+    publisher    = {Acoustical Society of America},
+    doi          = {10.1121/1.4921674}
+  }
 ---
 
 ## Information
