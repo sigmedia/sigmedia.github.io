@@ -28,6 +28,9 @@ const dataset = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx,markdown}', base: "./src/content/dataset" }),
   schema: z.object({
     title: z.string(),
+    category: z.string().optional(),
+    license: z.string().optional(),
+    link: z.string().url().optional(),
   }),
 });
 

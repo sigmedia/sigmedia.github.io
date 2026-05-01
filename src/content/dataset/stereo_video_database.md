@@ -2,6 +2,8 @@
 layout: post
 title: Stereo Video Database
 permalink: /datasets/stereo_video_database/
+category: Video
+license: Non-commercial
 ---
 
 ## Information
