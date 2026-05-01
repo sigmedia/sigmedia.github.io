@@ -11,7 +11,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/co
 ---
 
 <div class="my-16">
-  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Research Bodies</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-16">
     {collaborations.research_bodies.map((body: any) => {
       const imagePath = body.logo.replace('../assets/images/collaborations/', '');
@@ -48,7 +47,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/co
     })}
   </div>
 
-  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Industrial Collaborations</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6">
     {collaborations.industrial_collaborations.map((corp: any) => {
       const imagePath = corp.logo.replace('../assets/images/collaborations/', '');

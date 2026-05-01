@@ -29,7 +29,7 @@ const themes = [
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
   {themes.map(theme => (
-    <a href={`#section-${theme.id}`} class="bg-white dark:bg-dark-bg p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-brand/50 transition-all duration-300 flex flex-col items-start group relative overflow-hidden">
+    <div class="bg-white dark:bg-dark-bg p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-brand/50 transition-all duration-300 flex flex-col items-start group relative overflow-hidden">
       <div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 dark:bg-brand/10 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
       
       <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center mb-6 text-gray-900 shadow-sm relative z-10 group-hover:scale-110 transition-transform">
@@ -46,12 +46,12 @@ const themes = [
         {theme.description}
       </p>
       
-      <div class="flex items-center text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 group-hover:text-brand-dark dark:group-hover:text-brand transition-colors relative z-10">
+<!--      <div class="flex items-center text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 group-hover:text-brand-dark dark:group-hover:text-brand transition-colors relative z-10">
         View Research Topics
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
-      </div>
-    </a>
+      </div> -->
+    </div> 
   ))}
 </div>
