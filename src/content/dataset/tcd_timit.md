@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TCD Timit Audio-Visual Speech Database.
+title: TCD Timit Audio-Visual Speech Database
 permalink: /datasets/tcd_timit/
 category: Audio-Visual
 license: Non-commercial
