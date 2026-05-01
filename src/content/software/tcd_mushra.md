@@ -1,7 +1,9 @@
 ---
 layout: post
-title: TCD-MUSHRA Web App
-permalink: /software/tcd_mushra
+title: TCD-MUSHRA Web UI
+permalink: /software/tcd_mushra/
+language: JavaScript
+license: MIT
 ---
 
 ## Information

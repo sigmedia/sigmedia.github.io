@@ -2,6 +2,9 @@
 layout: post
 title: ViSQOLAudio Audio Quality Metric
 permalink: /software/visqol_aqm
+repository: https://github.com/google/visqol
+language: C++
+license: Apache-2.0
 ---
 
 ## Information

@@ -12,12 +12,15 @@ const datasets = await getCollection('dataset');
       Sigmedia research group provides several datasets for the community.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="divide-y divide-gray-100 dark:divide-gray-800">
       {datasets.map(dataset => (
-        <a href={`${import.meta.env.BASE_URL}datasets/${dataset.id}`} class="block p-8 bg-white dark:bg-dark-bg border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-100 dark:hover:border-blue-900 transition-all group">
-          <h2 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mb-3">{dataset.data.title}</h2>
-          <div class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
-            View dataset details and download links.
+        <a href={`${import.meta.env.BASE_URL}datasets/${dataset.id}`} class="group flex items-center justify-between py-4 hover:bg-gray-50/50 dark:hover:bg-gray-900/30 px-4 -mx-4 rounded-xl transition-all">
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{dataset.data.title}</h2>
+          <div class="flex items-center text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0">
+            <span class="text-sm font-medium mr-2">View details</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
           </div>
         </a>
       ))}
