@@ -5,6 +5,7 @@ permalink: /datasets/tcd_voip_ltd/
 category: Audio
 license: Non-commercial
 link: https://drive.google.com/file/d/1rHJN34vP-W8SJtjpNUnx5RIks3o5L5he/view?usp=sharing
+bibtex: true
 ---
 
 ## Information
