@@ -2,6 +2,9 @@
 layout: post
 title: RoomReader Corpus.
 permalink: /datasets/room_reader/
+category: Multimodal
+license: Non-commercial
+link: https://sigmedia.tcd.ie/
 ---
 
 ## Information

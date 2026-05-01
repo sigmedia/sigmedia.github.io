@@ -2,6 +2,8 @@
 layout: post
 title: Trinity College Dublin Speaker Ageing (TCDSA) Database
 permalink: /datasets/tcdsa/
+category: Audio
+license: Academic
 ---
 
 ## Information
