@@ -2,6 +2,9 @@
 layout: post
 title: Colour Transfer Algorithm
 permalink: /software/colour_transfer/
+repository: https://github.com/frcs/colour-transfer
+language: Matlab
+license: GPL-2.0
 ---
 
 ## Information

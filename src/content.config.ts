@@ -35,6 +35,9 @@ const software = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx,markdown}', base: "./src/content/software" }),
   schema: z.object({
     title: z.string(),
+    repository: z.string().url().optional(),
+    language: z.string().optional(),
+    license: z.string().optional(),
   }),
 });
 
