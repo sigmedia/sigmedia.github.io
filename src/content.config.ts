@@ -31,6 +31,7 @@ const dataset = defineCollection({
     category: z.string().optional(),
     license: z.string().optional(),
     link: z.string().url().optional(),
+    bibtex: z.boolean().optional(),
   }),
 });
 
@@ -41,6 +42,7 @@ const software = defineCollection({
     repository: z.string().url().optional(),
     language: z.string().optional(),
     license: z.string().optional(),
+    bibtex: z.boolean().optional(),
   }),
 });
 

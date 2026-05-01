@@ -5,6 +5,7 @@ permalink: /datasets/tcd_timit/
 category: Audio-Visual
 license: Non-commercial
 link: https://sigmedia.tcd.ie/
+bibtex: true
 ---
 
 ## Information
