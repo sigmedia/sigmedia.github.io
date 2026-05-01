@@ -6,6 +6,17 @@ category: Audio-Visual
 license: Non-commercial
 link: https://sigmedia.tcd.ie/
 bibtex: true
+bibtex_snippet: |
+  @article{harte2015tcd,
+    title        = {TCD-TIMIT: An audio-visual corpus of continuous speech},
+    author       = {Harte, Naomi and Gillen, Eoin},
+    journal      = {IEEE Transactions on Multimedia},
+    volume       = {17},
+    number       = {5},
+    pages        = {603--615},
+    year         = {2015},
+    publisher    = {IEEE}
+  }
 ---
 
 ## Information

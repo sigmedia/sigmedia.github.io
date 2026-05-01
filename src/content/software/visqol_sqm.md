@@ -6,6 +6,18 @@ repository: https://github.com/google/visqol
 language: C++
 license: Apache-2.0
 bibtex: true
+bibtex_snippet: |
+  @article{hines2015visqol,
+    title        = {ViSQOL: an objective speech quality model},
+    author       = {Hines, Andrew and Skoglund, Jan and Kokaram, Anil C and Harte, Naomi},
+    journal      = {EURASIP Journal on Audio, Speech, and Music Processing},
+    volume       = {2015},
+    number       = {1},
+    pages        = {1--18},
+    year         = {2015},
+    publisher    = {SpringerOpen},
+    doi          = {10.1186/s13636-015-0054-9}
+  }
 ---
 
 ## Global Information

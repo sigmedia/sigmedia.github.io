@@ -6,6 +6,16 @@ category: Audio
 license: Non-commercial
 link: https://drive.google.com/file/d/1rHJN34vP-W8SJtjpNUnx5RIks3o5L5he/view?usp=sharing
 bibtex: true
+bibtex_snippet: |
+  @inproceedings{harte2015tcd,
+    title        = {TCD-VoIP, a research database of degraded speech for assessing quality in VoIP
+                    applications},
+    author       = {Harte, Naomi and Gillen, Eoin and Hines, Andrew},
+    booktitle    = {2015 Seventh International Workshop on Quality of Multimedia Experience (QoMEX)},
+    pages        = {1--6},
+    year         = {2015},
+    organization = {IEEE}
+  }
 ---
 
 ## Information

@@ -6,6 +6,22 @@ category: Multimodal
 license: Non-commercial
 link: https://sigmedia.tcd.ie/
 bibtex: true
+bibtex_snippet: |
+  @inproceedings{reverdy2021,
+      title = "{R}oomReader: A Multimodal Corpus of Online Multiparty Conversational Interactions",
+      author = "Reverdy, Justine  and
+        O'Connor Russell, Sam  and
+        Duquenne, Louise  and
+        Garaialde, Diego  and
+        Cowan, Benjamin  and
+        Harte, Naomi",
+      booktitle = "Proceedings of the Thirteenth International Conference on Language Resources and Evaluation ({LREC}{'}21)",
+      month = june,
+      year = "2021",
+      address = "Marseille, France",
+      publisher = "European Language Resources Association (ELRA)",
+      url = "https://lrec2022.lrec-conf.org/en/conference-programme/accepted-papers/",
+  }
 ---
 
 ## Information

@@ -6,6 +6,19 @@ repository: https://github.com/georgesterpu/AVSR-tf1
 language: Python
 license: GPL-3.0
 bibtex: true
+bibtex_snippet: |
+  @article{Sterpu2020Mar,
+    author       = {Sterpu, George and Saam, Christian and Harte, Naomi},
+    title        = {{How to Teach DNNs to Pay Attention to the Visual Modality in Speech Recognition}},
+    journal      = {IEEE/ACM Trans. Audio Speech Lang. Process.},
+    volume       = {28},
+    pages        = {1052--1064},
+    year         = {2020},
+    month        = {Mar},
+    issn         = {2329-9304},
+    publisher    = {IEEE},
+    doi          = {10.1109/TASLP.2020.2980436}
+  }
 ---
 
 ## Global Information
