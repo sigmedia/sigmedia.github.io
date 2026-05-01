@@ -2,6 +2,9 @@
 layout: post
 title: AVSR-tf1 - Audio-Visual Speech Recognition using Sequence to Sequence Models
 permalink: /software/avsr_tf1
+repository: https://github.com/georgesterpu/AVSR-tf1
+language: Python
+license: GPL-3.0
 ---
 
 ## Global Information

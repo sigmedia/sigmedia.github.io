@@ -2,6 +2,9 @@
 layout: post
 title: ViSQOL - an objective speech quality model
 permalink: /software/visqol_sqm
+repository: https://github.com/google/visqol
+language: C++
+license: Apache-2.0
 ---
 
 ## Global Information
