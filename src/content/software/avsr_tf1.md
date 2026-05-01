@@ -5,6 +5,7 @@ permalink: /software/avsr_tf1
 repository: https://github.com/georgesterpu/AVSR-tf1
 language: Python
 license: GPL-3.0
+bibtex: true
 ---
 
 ## Global Information

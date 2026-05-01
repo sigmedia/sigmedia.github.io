@@ -5,6 +5,7 @@ permalink: /datasets/syn_bird/
 category: Audio
 license: Non-commercial
 link: https://drive.google.com/file/d/14kQmAWQvFDxYuTRQ--jxV9GSEwETmptH/view?usp=sharing
+bibtex: true
 ---
 
 ## Information
