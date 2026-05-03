@@ -1,8 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import ThemeToggle from './ThemeToggle.astro';
-import logoLight from '../assets/images/sigmedia_logo_white_bg.svg';
-import logoDark from '../assets/images/sigmedia_logo_dark_bg.svg';
+import logoLightShort from '../assets/images/sigmedia_logo_white_bg_short.svg';
+import logoDarkShort from '../assets/images/sigmedia_logo_dark_bg_short.svg';
+import logoLightFull from '../assets/images/sigmedia_logo_white_bg.svg';
+import logoDarkFull from '../assets/images/sigmedia_logo_dark_bg.svg';
 
 const navItems = [
   { href: `${import.meta.env.BASE_URL}team`, label: 'Team' },
@@ -17,12 +19,20 @@ const isLandingPage = Astro.url.pathname === import.meta.env.BASE_URL || Astro.u
 ---
 <header class="bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
   <div class="container mx-auto px-6">
-    <nav class="flex items-center justify-between h-20">
+    <nav class="flex items-center justify-between h-20 md:gap-8">
       <div class="flex items-center">
         {!isLandingPage && (
           <a href={import.meta.env.BASE_URL} class="flex items-center hover:opacity-80 transition-opacity">
-            <Image src={logoLight} alt="Sigmedia Logo" class="h-14 w-auto dark:hidden" loading="eager" />
-            <Image src={logoDark} alt="Sigmedia Logo" class="h-14 w-auto hidden dark:block" loading="eager" />
+            {/* Short logo for Mobile & Tablet */}
+            <div class="lg:hidden flex items-center">
+              <Image src={logoLightShort} alt="Sigmedia Logo" class="h-16 md:h-20 w-auto dark:hidden" loading="eager" />
+              <Image src={logoDarkShort} alt="Sigmedia Logo" class="h-16 md:h-20 w-auto hidden dark:block" loading="eager" />
+            </div>
+            {/* Full logo for Desktop */}
+            <div class="hidden lg:flex items-center">
+              <Image src={logoLightFull} alt="Sigmedia Logo" class="h-16 w-auto dark:hidden" loading="eager" />
+              <Image src={logoDarkFull} alt="Sigmedia Logo" class="h-16 w-auto hidden dark:block" loading="eager" />
+            </div>
           </a>
         )}
       </div>
