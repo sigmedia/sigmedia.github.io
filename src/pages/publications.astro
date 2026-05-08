@@ -154,7 +154,7 @@ function formatAuthors(authorStr: string) {
     <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight text-center">Publications</h1>
 
     {/* Search Bar */}
-    <div class="mb-12 sticky top-24 z-20">
+    <div class="mb-12 sticky top-20 z-40 bg-white/90 dark:bg-dark-bg/90 backdrop-blur-md py-4">
       <div class="relative max-w-2xl mx-auto">
         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <svg class="h-5 w-5 text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -172,7 +172,7 @@ function formatAuthors(authorStr: string) {
 
     <div class="space-y-10" id="publications-list">
       {years.map(year => (
-        <section id={`year-${year}`} class="year-section">
+        <section id={`year-${year}`} class="year-section scroll-mt-48">
           <h2 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-4 border-b-2 border-brand pb-1 inline-block">
             {year}
           </h2>
