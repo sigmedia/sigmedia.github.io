@@ -188,11 +188,11 @@ function formatAuthors(authorStr: string) {
               >
                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div class="flex-grow">
-                    <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1 leading-snug" set:html={renderMath(entry.entryTags.title)} />
+                    <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1 leading-snug highlightable" set:html={renderMath(entry.entryTags.title)} />
                     <p class="text-sm text-gray-700 dark:text-gray-300 mb-0.5">
-                      <span class="font-semibold">{formatAuthors(entry.entryTags.author)}</span>
+                      <span class="font-semibold highlightable">{formatAuthors(entry.entryTags.author)}</span>
                     </p>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 italic">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 italic highlightable">
                       {cleanValue(entry.entryTags.journal || entry.entryTags.booktitle || entry.entryTags.publisher)}
                       {entry.entryTags.volume && `, vol. ${entry.entryTags.volume}`}
                       {entry.entryTags.number && `, no. ${entry.entryTags.number}`}
@@ -263,6 +263,12 @@ ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')
   const yearSections = document.querySelectorAll('.year-section');
   const noResults = document.getElementById('no-results');
 
+  // Store original HTML/text to restore it
+  const originalContent = new Map<Element, string>();
+  document.querySelectorAll('.highlightable').forEach(el => {
+    originalContent.set(el, el.innerHTML);
+  });
+
   function normalizeSearch(str: string) {
     return str
       .normalize('NFD')
@@ -270,8 +276,56 @@ ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')
       .toLowerCase();
   }
 
+  function highlight(el: Element, query: string) {
+    const original = originalContent.get(el) || el.innerHTML;
+    if (!query) {
+      el.innerHTML = original;
+      return;
+    }
+
+    const normalizedQuery = normalizeSearch(query);
+    if (!normalizedQuery) {
+      el.innerHTML = original;
+      return;
+    }
+
+    // Split by HTML tags to only highlight text content
+    const parts = original.split(/(<[^>]+>)/g);
+    const highlightedParts = parts.map(part => {
+      if (part.startsWith('<')) return part;
+      
+      let result = "";
+      let remainingText = part;
+      
+      while (remainingText.length > 0) {
+        const normalizedText = normalizeSearch(remainingText);
+        const index = normalizedText.indexOf(normalizedQuery);
+        
+        if (index === -1) {
+          result += remainingText;
+          break;
+        }
+        
+        // Append text before the match
+        result += remainingText.substring(0, index);
+        
+        // Extract the original match (preserving accents/case)
+        const matchText = remainingText.substring(index, index + normalizedQuery.length);
+        result += `<mark class="bg-brand/40 dark:bg-brand/80 text-inherit p-0 rounded-sm">${matchText}</mark>`;
+        
+        // Advance remaining text
+        remainingText = remainingText.substring(index + normalizedQuery.length);
+      }
+      
+      return result;
+    });
+    
+    el.innerHTML = highlightedParts.join('');
+  }
+
   searchInput?.addEventListener('input', (e) => {
-    const query = normalizeSearch((e.target as HTMLInputElement).value);
+    const rawQuery = (e.target as HTMLInputElement).value;
+    const query = normalizeSearch(rawQuery);
     let totalVisible = 0;
 
     yearSections.forEach(section => {
@@ -280,10 +334,17 @@ ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')
 
       cards.forEach(card => {
         const searchText = (card as HTMLElement).dataset.search || '';
-        if (searchText.includes(query)) {
+        const isMatch = searchText.includes(query);
+        
+        if (isMatch) {
           (card as HTMLElement).style.display = 'block';
           visibleInYear++;
           totalVisible++;
+          
+          // Apply highlighting
+          card.querySelectorAll('.highlightable').forEach(el => {
+            highlight(el, rawQuery.trim());
+          });
         } else {
           (card as HTMLElement).style.display = 'none';
         }
