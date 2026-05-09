@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import tcdLogo from '../assets/images/tcd_logo.png';
-import tcdLogoWhite from '../assets/images/tcd_logo_white.png';
+import tcdLogoLight from '../assets/images/logo/tcd-logo-whitebg.png';
+import tcdLogoDark from '../assets/images/logo/tcd-logo-darkbg.png';
 const year = new Date().getFullYear();
 ---
 <footer class="bg-gray-50 dark:bg-dark-bg border-t-4 border-brand pt-16 pb-8 transition-colors duration-300">
@@ -10,8 +10,8 @@ const year = new Date().getFullYear();
       <div>
         <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Sigmedia</h3>
         <a href="https://www.tcd.ie/" class="block max-w-[200px]">
-          <Image src={tcdLogo} alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity dark:hidden" />
-          <Image src={tcdLogoWhite} alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity hidden dark:block" />
+          <Image src={tcdLogoLight} alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity dark:hidden" />
+          <Image src={tcdLogoDark} alt="Trinity College Dublin" class="h-auto w-full opacity-80 hover:opacity-100 transition-opacity hidden dark:block" />
         </a>
       </div>
       
@@ -21,6 +21,11 @@ const year = new Date().getFullYear();
           <li>
             <a href="https://github.com/sigmedia" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               Github
+            </a>
+          </li>
+          <li>
+            <a href={`${import.meta.env.BASE_URL}privacy-policy`} class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Privacy Policy
             </a>
           </li>
         </ul>
