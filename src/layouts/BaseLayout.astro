@@ -9,6 +9,8 @@ interface Props {
 }
 
 const { title = "Sigmedia - Signal Processing for Media Applications", description = "Research group in Trinity College Dublin focused on signal processing for video and audio." } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const googleAnalyticsId = 'G-Q0MK4XR118';
 ---
 
 <!DOCTYPE html>
@@ -16,9 +18,9 @@ const { title = "Sigmedia - Signal Processing for Media Applications", descripti
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href={`${import.meta.env.BASE_URL}favicon-32x32.png`}>
-    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}apple-touch-icon.png`}>
+    <link rel="icon" href={`${baseUrl}favicon.ico`} sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}favicon-32x32.png`}>
+    <link rel="apple-touch-icon" href={`${baseUrl}apple-touch-icon.png`}>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -26,6 +28,34 @@ const { title = "Sigmedia - Signal Processing for Media Applications", descripti
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <link rel="stylesheet" href={`${baseUrl}assets/team-icons.css`}>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
+    <script define:vars={{ googleAnalyticsId }} is:inline>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag(){ window.dataLayer.push(arguments); };
+
+      window.gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+      });
+
+      window.gtag('js', new Date());
+      window.gtag('config', googleAnalyticsId, {
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
+
+      try {
+        const consent = window.localStorage.getItem('cookieConsent');
+        if (consent === 'accepted') {
+          window.gtag('consent', 'update', {
+            ad_storage: 'granted',
+            analytics_storage: 'granted',
+          });
+        }
+      } catch (_) {}
+    </script>
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -51,6 +81,85 @@ const { title = "Sigmedia - Signal Processing for Media Applications", descripti
       <slot />
     </main>
     <Footer />
+    <div
+      id="cookie-consent-banner"
+      hidden
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl rounded-2xl border border-gray-200 bg-white/95 p-4 shadow-xl backdrop-blur dark:border-gray-700 dark:bg-gray-900/95"
+    >
+      <p class="text-sm text-gray-700 dark:text-gray-200">
+        This website uses cookies, including Google Analytics, to improve your experience.
+        <a href={`${baseUrl}privacy-policy`} class="font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">Learn more</a>.
+      </p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <button
+          id="accept-cookies"
+          type="button"
+          class="rounded-lg bg-green-600 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
+        >
+          Accept
+        </button>
+        <button
+          id="reject-cookies"
+          type="button"
+          class="rounded-lg bg-red-600 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-red-700"
+        >
+          Reject
+        </button>
+      </div>
+    </div>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('cookie-consent-banner');
+        const acceptButton = document.getElementById('accept-cookies');
+        const rejectButton = document.getElementById('reject-cookies');
+
+        if (!(banner instanceof HTMLElement) || !(acceptButton instanceof HTMLButtonElement) || !(rejectButton instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const updateConsent = (adStorage, analyticsStorage) => {
+          if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+              ad_storage: adStorage,
+              analytics_storage: analyticsStorage,
+            });
+          }
+        };
+
+        let consent = null;
+        try {
+          consent = window.localStorage.getItem('cookieConsent');
+        } catch (_) {}
+
+        if (consent === 'accepted') {
+          updateConsent('granted', 'granted');
+          return;
+        }
+
+        if (consent === 'rejected') {
+          updateConsent('denied', 'denied');
+          return;
+        }
+
+        banner.hidden = false;
+
+        acceptButton.addEventListener('click', () => {
+          try {
+            window.localStorage.setItem('cookieConsent', 'accepted');
+          } catch (_) {}
+          updateConsent('granted', 'granted');
+          banner.hidden = true;
+        });
+
+        rejectButton.addEventListener('click', () => {
+          try {
+            window.localStorage.setItem('cookieConsent', 'rejected');
+          } catch (_) {}
+          updateConsent('denied', 'denied');
+          banner.hidden = true;
+        });
+      });
+    </script>
   </body>
 </html>
 
@@ -59,6 +168,7 @@ const { title = "Sigmedia - Signal Processing for Media Applications", descripti
     --accent: 255, 210, 0;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #facc15 30%, white 60%);
   }
+
   html {
     font-family: 'Inter', system-ui, sans-serif;
     scroll-behavior: smooth;

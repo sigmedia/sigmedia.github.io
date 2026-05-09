@@ -9,6 +9,52 @@
   --color-dark-bg: rgb(26, 27, 37);
 }
 
+.sig-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.sig-icon::before {
+  display: block;
+}
+
+.sig-icon-compact {
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.95rem;
+}
+
+.sig-icon-tiny {
+  width: 0.875rem;
+  height: 0.875rem;
+  font-size: 0.8rem;
+}
+
+.sig-icon-brand {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.sig-icon-solid {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.sig-icon-twitter::before { content: '\f099'; }
+.sig-icon-linkedin::before { content: '\f0e1'; }
+.sig-icon-github::before { content: '\f09b'; }
+.sig-icon-website::before { content: '\f0ac'; }
+.sig-icon-email::before { content: '\f0e0'; }
+.sig-icon-orcid::before { content: '\f8d2'; }
+.sig-icon-research-gate::before { content: '\f4f8'; }
+.sig-icon-wikipedia::before { content: '\f266'; }
+.sig-icon-google-scholar::before { content: '\f19d'; }
+
 /* Custom styling for Markdown code blocks to match BibTeX theme */
 pre.astro-code {
   @apply p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-inner text-[13px] leading-relaxed my-8 overflow-x-auto;
