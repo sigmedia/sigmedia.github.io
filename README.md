@@ -1,13 +1,15 @@
 # SIGMEDIA Astro Website
 
-This is the main Astro project for the SIGMEDIA website.
+This is the main Astro project for the Sigmedia website.
 
 ## 🚀 Quick Start
 
-1. **Install dependencies**:
+1. **Install [bun](https://bun.com) and its dependencies**:
    ```sh
    bun install
    ```
+
+> Bun can be installed following instructions at https://bun.com/docs/installation
 
 2. **Start development server**:
    ```sh
