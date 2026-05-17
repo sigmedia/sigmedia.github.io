@@ -1,3 +1,10 @@
+---
+date: 2026-05-14
+layout: post
+title: Charles Poynton's Surprise Visit to Sigmedia Lab
+categories: video
+---
+
 Sigmedia had a surprise visitor last week, [Charles Ponyton](https://www.poynton.ca/),
 
 The [Sigmedia Team](www.sigmedia.tv) welcomed Charles to Trinity College Dublin and Trinity College Dublin School of Engineering on on a rainy Thursday.
