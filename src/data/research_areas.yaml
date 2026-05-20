@@ -1,8 +1,13 @@
-audio:
+speech:
   - "Multi-modal Turn-taking Prediction"
   - "Low-Resource Speech Recognition"
   - "Speech Model Distillation"
   - "Linguistics & Speech AI"
+
+audio:
+  - "Spatial Audio Upmixing"
+  - "Acoustic Digital Twins"
+  - "Computational Scene Understanding"
 
 video:
   - "Efficient Image Denoising"
@@ -12,4 +17,5 @@ video:
 
 overlap:
   - "Audio/Visual Speech Recognition"
+  - "Media Streaming" 
   - "Wildlife Monitoring"
