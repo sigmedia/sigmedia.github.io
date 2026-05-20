@@ -13,7 +13,19 @@ const research = yaml.load(fs.readFileSync(dataPath, 'utf8')) as any;
     Current Research Projects & Topics
   </h3>
   
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div id="section-speech">
+      <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Speech</h4>
+      <ul class="space-y-3">
+        {research.speech.map((item: string) => (
+          <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start">
+            <span class="text-brand mr-2">•</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
     <div id="section-audio">
       <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Audio</h4>
       <ul class="space-y-3">
