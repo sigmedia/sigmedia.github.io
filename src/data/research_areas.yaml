@@ -3,19 +3,20 @@ speech:
   - "Low-Resource Speech Recognition"
   - "Speech Model Distillation"
   - "Linguistics & Speech AI"
+  - "Audio/Visual Speech Recognition"
 
 audio:
   - "Spatial Audio Upmixing"
   - "Acoustic Digital Twins"
   - "Computational Scene Understanding"
 
-video:
-  - "Efficient Image Denoising"
-  - "Video Compression Pipelines"
-  - "Motion Picture Enhancement"
+video compression:
+  - "AI for Optimising Video Compression"
+  - "AI for Enhancing Picture Quality"
+  - "Video Processing with Compressed Streams"
+ 
+Image & Video Enhancement:
   - "Frame Interpolation"
-
-overlap:
-  - "Audio/Visual Speech Recognition"
-  - "Media Streaming" 
-  - "Wildlife Monitoring"
+  - "Efficient Image Denoising"
+  - "Film Grain Synthesis"
+  - "Colour Grading"
