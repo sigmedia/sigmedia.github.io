@@ -10,6 +10,7 @@ social:
     linkedin: https://www.linkedin.com/in/chaufang-lin/
     github: https://github.com/chaufanglin
     website: https://chaufanglin.github.io/
+    google-scholar: https://scholar.google.com/citations?user=ulomGhAAAAAJ
     email: linzh@tcd.ie
 ---
 
