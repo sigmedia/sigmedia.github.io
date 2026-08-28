@@ -1,10 +1,10 @@
 ---
 layout: member
-category: Postdoc
+category: staff
 title: Darren Ramsook
 date: 2020-08-01
 image: '../../assets/images/team/ramsookd.jpg'
-role: Research Fellow
+role: Assistant Professor
 permalink: 'team/ramsookd'
 social:
     linkedin: https://ie.linkedin.com/in/darren-ramsook
