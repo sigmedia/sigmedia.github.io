@@ -3,7 +3,7 @@ layout: member
 category: PhD-Student
 title: Aristeidis Papadopoulos
 date: 2024-09-01
-image: '../../assets/images/team/aristeidis.png'
+image: '../../assets/images/team/aristeidis.jpg'
 role: PhD Student
 permalink: 'team/aristeidis-papadopoulos'
 social:
