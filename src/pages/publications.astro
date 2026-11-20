@@ -53,14 +53,25 @@ const years = Object.keys(groupedByYear)
   .filter(year => year !== 'Unknown')
   .sort((a, b) => b.localeCompare(a));
 
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function latexToUnicode(str: string) {
   if (!str) return '';
   return str
-    .replace(/\\'(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0301')
-    .replace(/\\`(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0300')
-    .replace(/\\\^(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0302')
-    .replace(/\\"(?:{\\i}|\\i|([aeiouyAEIOUY]))/g, (m, p1) => (p1 || 'i') + '\u0308')
-    .replace(/\\~(?:{\\i}|\\i|([anouANOU]))/g, (m, p1) => (p1 || 'i') + '\u0303')
+    .replace(/\\'(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0301')
+    .replace(/\\`(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0300')
+    .replace(/\\\^(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0302')
+    .replace(/\\"(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0308')
+    .replace(/\\~(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0303')
+    .replace(/\\=(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0304')
+    .replace(/\\\.(?:{\\i}|\\i|([a-zA-Z]))/g, (m, p1) => (p1 || 'i') + '\u0307')
+    .replace(/\\H\s*{?([a-zA-Z])}?/g, (m, p1) => p1 + '\u030b')
     .replace(/\\v\s*{?(\\i|\\j|([a-zA-Z]))}?/g, (m, p1, p2) => {
       const char = p2 || (p1 === '\\i' ? 'i' : 'j');
       return char + '\u030c';
@@ -69,10 +80,16 @@ function latexToUnicode(str: string) {
       const char = p2 || (p1 === '\\i' ? 'i' : 'j');
       return char + '\u0306';
     })
+    .replace(/\\c\s*{?([a-zA-Z])}?/g, (m, p1) => p1 + '\u0327')
+    .replace(/\\aa\b/g, 'å')
+    .replace(/\\AA\b/g, 'Å')
+    .replace(/\\o\b/g, 'ø')
+    .replace(/\\O\b/g, 'Ø')
+    .replace(/\\l\b/g, 'ł')
+    .replace(/\\L\b/g, 'Ł')
+    .replace(/\\ss\b/g, 'ß')
     .replace(/\\i\b/g, 'i')
     .replace(/\\j\b/g, 'j')
-    .replace(/\\c\s*{?c}?/g, 'ç')
-    .replace(/\\c\s*{?C}?/g, 'Ç')
     .replace(/\\less\b/g, '<')
     .replace(/\\greater\b/g, '>')
     .replace(/\\&/g, '&')
@@ -101,13 +118,13 @@ function renderMath(str: string) {
   // Handle math-escaped symbols before splitting
   text = text.replace(/\$&\$/g, '&');
 
-  // 2. Convert specific LaTeX pseudo-math tags to real HTML tags
-  text = text.replace(/(\$?\\less\$?)\s*inf\s*(\$?\\greater\$?)/gi, '<sub>');
-  text = text.replace(/(\$?\\less\$?)\s*\/inf\s*(\$?\\greater\$?)/gi, '</sub>');
-  text = text.replace(/(\$?\\less\$?)\s*sub\s*(\$?\\greater\$?)/gi, '<sub>');
-  text = text.replace(/(\$?\\less\$?)\s*\/sub\s*(\$?\\greater\$?)/gi, '</sub>');
-  text = text.replace(/(\$?\\less\$?)\s*sup\s*(\$?\\greater\$?)/gi, '<sup>');
-  text = text.replace(/(\$?\\less\$?)\s*\/sup\s*(\$?\\greater\$?)/gi, '</sup>');
+  // 2. Convert specific LaTeX pseudo-math tags to safe sentinels before escaping
+  text = text.replace(/(\$?\\less\$?)\s*inf\s*(\$?\\greater\$?)/gi, '\u0000sub\u0000');
+  text = text.replace(/(\$?\\less\$?)\s*\/inf\s*(\$?\\greater\$?)/gi, '\u0000/sub\u0000');
+  text = text.replace(/(\$?\\less\$?)\s*sub\s*(\$?\\greater\$?)/gi, '\u0000sub\u0000');
+  text = text.replace(/(\$?\\less\$?)\s*\/sub\s*(\$?\\greater\$?)/gi, '\u0000/sub\u0000');
+  text = text.replace(/(\$?\\less\$?)\s*sup\s*(\$?\\greater\$?)/gi, '\u0000sup\u0000');
+  text = text.replace(/(\$?\\less\$?)\s*\/sup\s*(\$?\\greater\$?)/gi, '\u0000/sup\u0000');
   
   // 3. Identify and render remaining Math segments
   const segments = text.split(/(\$[^$]+\$)/g);
@@ -123,11 +140,12 @@ function renderMath(str: string) {
           output: 'html' 
         });
       } catch (e) {
-        return seg;
+        return escapeHtml(seg);
       }
     } else {
-      // 4. Apply LaTeX accent conversion ONLY to non-math segments
-      return latexToUnicode(seg);
+      // 4. Apply LaTeX accent conversion and HTML escaping ONLY to non-math segments
+      return escapeHtml(latexToUnicode(seg))
+        .replace(/\u0000(\/?(?:sub|sup))\u0000/g, '<$1>');
     }
   }).join('');
 }
@@ -168,6 +186,7 @@ function formatAuthors(authorStr: string) {
         <input 
           type="text" 
           id="pub-search" 
+          aria-label="Search publications by title, author, or venue"
           placeholder="Search by title, author, or venue..." 
           class="block w-full pl-11 pr-4 py-4 bg-white dark:bg-dark-bg border-2 border-gray-100 dark:border-gray-800 rounded-2xl shadow-lg focus:ring-4 focus:ring-brand/20 focus:border-brand transition-all outline-none text-lg dark:text-white dark:placeholder-gray-500"
         />
@@ -218,12 +237,12 @@ function formatAuthors(authorStr: string) {
                       BIB
                     </button>
                     {entry.entryTags.doi && (
-                      <a href={`https://doi.org/${entry.entryTags.doi}`} target="_blank" class="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
+                      <a href={`https://doi.org/${entry.entryTags.doi}`} target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
                         DOI
                       </a>
                     )}
                     {entry.entryTags.url && (
-                      <a href={entry.entryTags.url} target="_blank" class="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
+                      <a href={entry.entryTags.url} target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-[10px] font-bold hover:bg-brand hover:text-gray-900 transition-colors uppercase tracking-wider">
                         URL
                       </a>
                     )}
@@ -288,49 +307,67 @@ ${Object.entries(entry.entryTags).map(([k, v]) => `  ${k} = {${v}}`).join(',\n')
 
   function highlight(el: Element, query: string) {
     const original = originalContent.get(el) || el.innerHTML;
-    if (!query) {
-      el.innerHTML = original;
-      return;
-    }
+    el.innerHTML = original;
+    if (!query) return;
 
     const normalizedQuery = normalizeSearch(query);
-    if (!normalizedQuery) {
-      el.innerHTML = original;
-      return;
+    if (!normalizedQuery) return;
+
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const textNodes: Text[] = [];
+    let node: Node | null;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue) textNodes.push(node as Text);
     }
 
-    // Split by HTML tags to only highlight text content
-    const parts = original.split(/(<[^>]+>)/g);
-    const highlightedParts = parts.map(part => {
-      if (part.startsWith('<')) return part;
-      
-      let result = "";
-      let remainingText = part;
-      
-      while (remainingText.length > 0) {
-        const normalizedText = normalizeSearch(remainingText);
-        const index = normalizedText.indexOf(normalizedQuery);
-        
-        if (index === -1) {
-          result += remainingText;
-          break;
+    for (const textNode of textNodes) {
+      const text = textNode.nodeValue || '';
+      // Map each normalized character back to its [start, end) range in the original string
+      const normChars: string[] = [];
+      const charRanges: [number, number][] = [];
+      for (let i = 0; i < text.length; ) {
+        const cp = text.codePointAt(i)!;
+        const ch = String.fromCodePoint(cp);
+        const nextIdx = i + ch.length;
+        const norm = normalizeSearch(ch);
+        for (const nc of norm) {
+          normChars.push(nc);
+          charRanges.push([i, nextIdx]);
         }
-        
-        // Append text before the match
-        result += remainingText.substring(0, index);
-        
-        // Extract the original match (preserving accents/case)
-        const matchText = remainingText.substring(index, index + normalizedQuery.length);
-        result += `<mark class="bg-brand/40 dark:bg-brand/80 text-inherit p-0 rounded-sm">${matchText}</mark>`;
-        
-        // Advance remaining text
-        remainingText = remainingText.substring(index + normalizedQuery.length);
+        i = nextIdx;
       }
-      
-      return result;
-    });
-    
-    el.innerHTML = highlightedParts.join('');
+
+      const normStr = normChars.join('');
+      let searchPos = 0;
+      const matches: [number, number][] = [];
+      while (searchPos <= normStr.length - normalizedQuery.length) {
+        const idx = normStr.indexOf(normalizedQuery, searchPos);
+        if (idx === -1) break;
+        const origStart = charRanges[idx][0];
+        const origEnd = charRanges[idx + normalizedQuery.length - 1][1];
+        matches.push([origStart, origEnd]);
+        searchPos = idx + normalizedQuery.length;
+      }
+
+      if (matches.length === 0) continue;
+
+      const frag = document.createDocumentFragment();
+      let cursor = 0;
+      for (const [start, end] of matches) {
+        if (start > cursor) {
+          frag.appendChild(document.createTextNode(text.slice(cursor, start)));
+        }
+        const mark = document.createElement('mark');
+        mark.className = 'bg-brand/40 dark:bg-brand/80 text-inherit p-0 rounded-sm';
+        mark.textContent = text.slice(start, end);
+        frag.appendChild(mark);
+        cursor = end;
+      }
+      if (cursor < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(cursor)));
+      }
+      textNode.parentNode?.replaceChild(frag, textNode);
+    }
   }
 
   searchInput?.addEventListener('input', (e) => {

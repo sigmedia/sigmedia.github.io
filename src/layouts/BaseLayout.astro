@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import 'katex/dist/katex.min.css';
 import '../styles/global.css';
 
 interface Props {
@@ -27,7 +28,6 @@ const googleAnalyticsId = 'G-Q0MK4XR118';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
     <link rel="stylesheet" href={`${baseUrl}assets/team-icons.css`}>
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
     <script define:vars={{ googleAnalyticsId }} is:inline>
@@ -58,9 +58,11 @@ const googleAnalyticsId = 'G-Q0MK4XR118';
     </script>
     <script is:inline>
       const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
+        try {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+          }
+        } catch (_) {}
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
           return 'dark';
         }
@@ -72,7 +74,9 @@ const googleAnalyticsId = 'G-Q0MK4XR118';
       } else {
         document.documentElement.classList.add('dark');
       }
-      window.localStorage.setItem('theme', theme);
+      try {
+        window.localStorage.setItem('theme', theme);
+      } catch (_) {}
     </script>
   </head>
   <body class="min-h-screen bg-white dark:bg-dark-bg font-sans text-gray-900 dark:text-gray-100 flex flex-col transition-colors duration-300">
