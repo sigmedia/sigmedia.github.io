@@ -65,6 +65,10 @@ function latexToUnicode(str: string) {
       const char = p2 || (p1 === '\\i' ? 'i' : 'j');
       return char + '\u030c';
     })
+    .replace(/\\u\s*{?(\\i|\\j|([a-zA-Z]))}?/g, (m, p1, p2) => {
+      const char = p2 || (p1 === '\\i' ? 'i' : 'j');
+      return char + '\u0306';
+    })
     .replace(/\\i\b/g, 'i')
     .replace(/\\j\b/g, 'j')
     .replace(/\\c\s*{?c}?/g, 'ç')
