@@ -6,7 +6,7 @@ const team = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     category: z.string().optional(),
-    date: z.any().optional(),
+    date: z.coerce.date().optional(),
     image: image().optional(),
     role: z.string().optional(),
     permalink: z.string().optional(),
@@ -18,7 +18,7 @@ const posts = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx,markdown}', base: "./src/content/posts" }),
   schema: z.object({
     title: z.string(),
-    date: z.any().optional(),
+    date: z.coerce.date().optional(),
     categories: z.string().optional(),
     tags: z.string().optional(),
   }),
