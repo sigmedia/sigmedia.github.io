@@ -4,21 +4,19 @@ This is the main Astro project for the Sigmedia website.
 
 ## 🚀 Quick Start
 
-1. **Install [bun](https://bun.com) and its dependencies**:
+1. **Install dependencies**:
    ```sh
-   bun install
+   npm install
    ```
-
-> Bun can be installed following instructions at https://bun.com/docs/installation
 
 2. **Start development server**:
    ```sh
-   bun dev
+   npm run dev
    ```
 
 3. **Build for production**:
    ```sh
-   bun build
+   npm run build
    ```
 
 ## 📂 Project Structure
@@ -36,7 +34,7 @@ The site's publications are driven by `.bib` files in `src/data/publis/`. To mai
 ### 1. Discover New Papers
 Run the discovery script to fetch missing publications from Google Scholar for all active team members:
 ```sh
-bun scripts/fetch-new-publications.js
+node scripts/fetch-new-publications.js
 ```
 - This script checks all active (non-alumni) members with a `google-scholar` ID in their profile.
 - It only suggests papers published **after** the member's join date and from **2024** onwards.
@@ -49,7 +47,7 @@ bun scripts/fetch-new-publications.js
 ### 3. Tidy & Standardize
 After adding new entries, run `bibtex-tidy` to ensure consistent formatting and key naming (`[Author][Year]`):
 ```sh
-bun x bibtex-tidy src/data/publis/*.bib -m --curly --numeric --months --space=2 --align=13 --sort=key --duplicates=key,doi --strip-enclosing-braces --drop-all-caps --trailing-commas --remove-empty-fields --sort-fields --generate-keys='[auth][year]' --wrap=80
+npx bibtex-tidy src/data/publis/*.bib -m --curly --numeric --months --space=2 --align=13 --sort=key --duplicates=key,doi --strip-enclosing-braces --drop-all-caps --trailing-commas --remove-empty-fields --sort-fields --generate-keys='[auth][year]' --wrap=80
 ```
 
 ## 📖 Documentation
