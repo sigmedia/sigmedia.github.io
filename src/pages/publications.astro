@@ -188,7 +188,13 @@ function formatAuthors(authorStr: string) {
               >
                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div class="flex-grow">
-                    <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1 leading-snug highlightable" set:html={renderMath(entry.entryTags.title)} />
+                    <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1 leading-snug highlightable">
+                      {entry.entryTags.url ? (
+                        <a href={entry.entryTags.url} target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors" set:html={renderMath(entry.entryTags.title)} />
+                      ) : (
+                        <span set:html={renderMath(entry.entryTags.title)} />
+                      )}
+                    </h3>
                     <p class="text-sm text-gray-700 dark:text-gray-300 mb-0.5">
                       <span class="font-semibold highlightable">{formatAuthors(entry.entryTags.author)}</span>
                     </p>

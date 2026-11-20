@@ -1,6 +1,6 @@
 ---
 layout: member
-category: Postdoc
+category: alumni
 title:  Clément Bled
 date: 2020-08-01
 image: '../../assets/images/team/bledc.jpg'

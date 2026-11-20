@@ -1,6 +1,6 @@
 ---
 layout: member
-category: PhD-Student
+category: alumni
 title: Sam O’Connor Russell
 date: 2021-07-01
 image: '../../assets/images/team/russelsa.jpg'

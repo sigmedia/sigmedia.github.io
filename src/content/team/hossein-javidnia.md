@@ -17,9 +17,11 @@ social:
   email: Hossein.Javidnia@tcd.ie
 ---
 
-Dr. Javidnia is currently an Assistant Professor in Computational Engineering
-with the School of Engineering, Trinity College Dublin. Prior to taking this
-post, Dr. Javidnia was an Assitant Professor in Software Engineering in Dublin
+Dr Javidnia was an Assistant Professor in Computational Engineering
+with the School of Engineering, Trinity College Dublin. 
+
+
+Before taking this post, Dr. Javidnia was an Assistant Professor in Software Engineering in Dublin
 City University for three years. Dr. Javidnia obtained his Ph.D. degree in
 Electronic and Electrical Engineering from National University of Ireland
 Galway, in 2018, examining the Contributions to the Measurement of Depth in

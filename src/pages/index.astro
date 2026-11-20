@@ -4,16 +4,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchThemes from '../components/ResearchThemes.astro';
 import ResearchAreas from '../components/ResearchAreas.astro';
 import Collaborations from '../components/Collaborations.astro';
-import logoLight from '../assets/images/logo/sigmedia-logo-whitebg.png';
-import logoDark from '../assets/images/logo/sigmedia-logo-darkbg.png';
+import logoLight from '../assets/images/sigmedia_logo_white_bg.svg';
+import logoDark from '../assets/images/sigmedia_logo_dark_bg.svg';
 ---
 
 <BaseLayout>
   <div class="max-w-4xl mx-auto">
     <section class="pt-2 pb-8 md:pt-4 md:pb-12 flex flex-col items-start">
       <div class="relative mb-6 md:mb-8 w-full max-w-3xl">
-        <Image src={logoLight} alt="Sigmedia Logo" class="w-full h-auto max-h-[250px] dark:hidden" loading="eager" />
-        <Image src={logoDark} alt="Sigmedia Logo" class="w-full h-auto max-h-[250px] hidden dark:block" loading="eager" />
+        <Image src={logoLight} alt="Sigmedia Logo" class="w-full h-auto max-h-[200px] dark:hidden" loading="eager" />
+        <Image src={logoDark} alt="Sigmedia Logo" class="w-full h-auto max-h-[200px] hidden dark:block" loading="eager" />
       </div>
       <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-4 md:mb-6">
         The Signal Processing for Media Applications (Sigmedia) Group is a research group in the 

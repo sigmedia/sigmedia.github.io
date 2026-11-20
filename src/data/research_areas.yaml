@@ -1,15 +1,22 @@
-audio:
+speech:
   - "Multi-modal Turn-taking Prediction"
   - "Low-Resource Speech Recognition"
   - "Speech Model Distillation"
   - "Linguistics & Speech AI"
-
-video:
-  - "Efficient Image Denoising"
-  - "Video Compression Pipelines"
-  - "Motion Picture Enhancement"
-  - "Frame Interpolation"
-
-overlap:
   - "Audio/Visual Speech Recognition"
-  - "Wildlife Monitoring"
+
+audio:
+  - "Spatial Audio Upmixing"
+  - "Acoustic Digital Twins"
+  - "Computational Scene Understanding"
+
+video compression:
+  - "AI for Optimising Video Compression"
+  - "AI for Enhancing Picture Quality"
+  - "Video Processing with Compressed Streams"
+ 
+Image & Video Enhancement:
+  - "Frame Interpolation"
+  - "Efficient Image Denoising"
+  - "Film Grain Synthesis"
+  - "Colour Grading"
