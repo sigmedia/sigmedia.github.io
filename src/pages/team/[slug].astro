@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RedirectLayout from '../../layouts/RedirectLayout.astro';
 import { getTeamAliases, getTeamSlug } from '../../utils/routes';
+import { normalizeTeamSocial, socialIcons } from '../../utils/team';
 
 export async function getStaticPaths() {
   const members = await getCollection('team');
@@ -30,22 +31,7 @@ const isRedirect = Boolean(redirectTarget);
 const { Content } = isRedirect ? { Content: null } : await render(entry);
 const { title, role, image, social } = isRedirect ? { title: '', role: '', image: undefined, social: undefined } : entry.data;
 
-const socialIcons: Record<string, string> = {
-  twitter: 'sig-icon sig-icon-brand sig-icon-twitter',
-  linkedin: 'sig-icon sig-icon-brand sig-icon-linkedin',
-  github: 'sig-icon sig-icon-brand sig-icon-github',
-  website: 'sig-icon sig-icon-solid sig-icon-website',
-  email: 'sig-icon sig-icon-solid sig-icon-email',
-  'google-scholar': 'sig-icon sig-icon-solid sig-icon-google-scholar',
-  orcid: 'sig-icon sig-icon-brand sig-icon-orcid',
-  'research-gate': 'sig-icon sig-icon-brand sig-icon-research-gate',
-  wikipedia: 'sig-icon sig-icon-brand sig-icon-wikipedia'
-};
-
-const normalizedSocial = social ? {
-  ...social,
-  orcid: social.orcid || social.orchid,
-} : undefined;
+const normalizedSocial = normalizeTeamSocial(social);
 
 const socialEntries = normalizedSocial
   ? Object.entries(normalizedSocial).filter(([platform, url]) => Boolean(url) && Boolean(socialIcons[platform]))
